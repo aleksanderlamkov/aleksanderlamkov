@@ -17,15 +17,15 @@
             let angle = theta * 180 / Math.PI - 90; //convert rad in degrees
             let offsetPoster = $menu.data('offset');
             let transformPoster = 'translate3d(0, ' + -offsetX * offsetPoster + 'px, 0) rotateX(' + (-offsetY * offsetPoster) + 'deg) rotateY(' + (offsetX * (offsetPoster * 2)) + 'deg)'; //poster transform
-   
+
             //get angle between 0-360
             if (angle < 0) {
                angle = angle + 360;
             }
-   
+
             //poster transform
             $menu.css('transform', transformPoster);
-   
+
             //parallax for each layer
             $item.each(function() {
                let $this = $(this);
@@ -33,47 +33,31 @@
                let transformLayer = 'translate3d(' + offsetX * offsetLayer + 'px, ' + offsetY * offsetLayer + 'px, 20px)';
                $this.css('transform', transformLayer);
             });
-         });         
+         });
       }
 
       let returnLink = $('.return__link');
 
-      $('.menu__item').click(function() {
+      $item.click(function() {
          $menu.hide();
-         returnLink.slideToggle(300);  
+         returnLink.slideToggle(300);
          let sectionName = $(this).data('name');
-         $(`section.${sectionName}`).slideToggle(800).addClass('active');       
+         $(`section.${sectionName}`).slideToggle(800).addClass('active');
       });
 
       returnLink.click(function() {
          $(`section.active`).hide();
-         $menu.slideToggle(300);  
-         returnLink.slideToggle(300);  
+         $menu.slideToggle(300);
+         returnLink.slideToggle(300);
       });
 
-      // function getAge(dateString) {
-      //    let today = new Date();
-      //    let birthDate = new Date(dateString);
-      //    let age = today.getFullYear() - birthDate.getFullYear();
-      //    let m = today.getMonth() - birthDate.getMonth();
-      //    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
-      //       age--;
-      //    }
-      //    return age;
-      // }
-      
-      // let myAge = getAge('1996.02.04');      
-      // $('#age').text(myAge);
-
-      function calculate_age(dob) { 
+      function calculate_age(dob) {
          var diff_ms = Date.now() - dob.getTime();
-         var age_dt = new Date(diff_ms);        
+         var age_dt = new Date(diff_ms);
          return Math.abs(age_dt.getUTCFullYear() - 1970);
       }
 
       let myAge = calculate_age(new Date(1996, 2, 4));
       $('#age').text(myAge);
-
-
    });
 })(jQuery);
