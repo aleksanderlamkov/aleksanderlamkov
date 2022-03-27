@@ -1,0 +1,89 @@
+@import "../mixins.pcss";
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  --marginBottom: 40px;
+  --tabletFontSize: 32px;
+  --mobileFontSize: 24px;
+
+  display: block;
+  font-weight: 300;
+  line-height: 1.2;
+
+  @media (--tablet) {
+    --marginBottom: 30px;
+
+    font-size: var(--tabletFontSize) !important;
+  }
+
+  @media (--mobile) {
+    --marginBottom: 20px;
+
+    font-size: var(--mobileFontSize) !important;
+  }
+
+  &:not([class]):not(:first-child) {
+    margin-top: 40px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: var(--marginBottom);
+  }
+
+  &:not(:first-child) {
+    margin-top: 40px;
+  }
+}
+
+h1,
+.h1 {
+  --tabletFontSize: 36px;
+  --mobileFontSize: 24px;
+
+  @mixin fluid-text 52, 28;
+}
+
+h2,
+.h2 {
+  --tabletFontSize: 36px;
+  --mobileFontSize: 24px;
+
+  @mixin fluid-text 44, 28;
+}
+
+h3,
+.h3 {
+  --marginBottom: 20px;
+  --tabletFontSize: 24px;
+  --mobileFontSize: 20px;
+
+  @mixin fluid-text 32, 20;
+}
+
+h4,
+.h4 {
+  --tabletFontSize: 22px;
+  --mobileFontSize: 18px;
+
+  @mixin fluid-text 28, 18;
+}
+
+h5,
+.h5 {
+  --tabletFontSize: 18px;
+  --mobileFontSize: 18px;
+
+  font-size: 18px;
+}
+
+h6,
+.h6 {
+  --tabletFontSize: 18px;
+  --mobileFontSize: 18px;
+
+  font-size: 18px;
+}

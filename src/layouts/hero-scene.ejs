@@ -1,0 +1,40 @@
+<div class="hero-scene">
+  <img
+    class="hero-scene__all-image"
+    src="./images/hero/all.svg"
+    alt=""
+    width="600" height="600" loading="lazy"
+  />
+  <div class="hero-scene__laptop-bottom-shadow"></div>
+  <div class="hero-scene__laptop-bottom"></div>
+  <div class="hero-scene__laptop-keyboard-panel scroll-effect" data-js-scroll-effect>
+    <%
+      const buttonsIndexesWithOneAndHalfSize = [0, 25, 26, 50, 63]
+      const buttonsIndexesWithTwiceSize = [39]
+      const buttonsIndexesWithTwiceAndHalfSize = [51]
+      const buttonsIndexesWithFourteenSize = [66]
+    %>
+
+    <% for (let i = 0; i < 70; i++) { %>
+      <%
+        let laptopKeyboardKeyClass = 'hero-scene__laptop-keyboard-key '
+
+        if (buttonsIndexesWithOneAndHalfSize.includes(i)) {
+          laptopKeyboardKeyClass += 'hero-scene__laptop-keyboard-key--3'
+        }
+        if (buttonsIndexesWithTwiceSize.includes(i)) {
+          laptopKeyboardKeyClass += 'hero-scene__laptop-keyboard-key--4'
+        }
+        if (buttonsIndexesWithTwiceAndHalfSize.includes(i)) {
+          laptopKeyboardKeyClass += 'hero-scene__laptop-keyboard-key--5'
+        }
+        if (buttonsIndexesWithFourteenSize.includes(i)) {
+          laptopKeyboardKeyClass += 'hero-scene__laptop-keyboard-key--14'
+        }
+
+        laptopKeyboardKeyClass = laptopKeyboardKeyClass.trim()
+      %>
+      <button class="<%= laptopKeyboardKeyClass.trim() %>" type="button"></button>
+    <% } %>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+{
+  "extraClasses": "",
+  "extraAttrs": "",
+  "name": "attachment",
+  "multiple": false,
+  "label": "Прикрепить файл",
+  "filter": "doc, docx, xls, xlsx, txt, rtf, zip, rar, 7z, jpg, png, pdf, jpeg"
+}

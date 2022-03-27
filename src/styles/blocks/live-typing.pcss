@@ -1,0 +1,31 @@
+@import "../mixins.pcss";
+
+.live-typing {
+  &__stage,
+  &__char {
+    &:not(.is-visible) {
+      display: none;
+    }
+  }
+
+  &__stage {
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__char {
+    &.is-visible + .live-typing__char:not(.is-visible) {
+      display: inline;
+      color: transparent;
+
+      &::after {
+        @mixin transition 0s;
+
+        content: "|";
+        animation: blink 0.7s linear infinite;
+        color: var(--c-light);
+      }
+    }
+  }
+}

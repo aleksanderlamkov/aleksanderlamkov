@@ -1,0 +1,799 @@
+<% const data = {
+	title: 'Типографика',
+	flowContainerClass: '',
+	crumbs: [
+		{
+			name: 'Главная',
+			link: '/'
+		},
+		{
+			name: 'Типографика'
+		},
+	]
+} %>
+
+<%- require('../layouts/head.ejs')(data) %>
+
+<div class="content__sections">
+	<div class="page-header container">
+		<div class="page-header__breadcrumbs">
+			<%- require('../components/breadcrumbs/template.ejs')(data.crumbs) %>
+		</div>
+		<h1 class="page-header__title">
+			<%= data.title %>
+		</h1>
+	</div>
+
+	<section class="section container">
+		<header class="section__header">
+			<h2 class="section__title">
+				Headings
+			</h2>
+		</header>
+		<div class="section__body">
+			<h2 class="h1">H1 - Arial, bold, 42 px</h2>
+			<h2>H2 - Arial, bold, 36 px</h2>
+			<h3>H3 - Arial, bold, 28 px</h3>
+			<h4>H4 - Arial, bold, 24 px</h4>
+			<h5>H5 - Arial, bold, 20 px</h5>
+			<h6>H6 - Arial, bold, 18 px</h6>
+		</div>
+	</section>
+
+	<section class="section container">
+		<header class="section__header">
+			<h2 class="section__title">
+				Text
+			</h2>
+		</header>
+		<div class="section__body">
+			<p>Lorem
+				<mark>marked text</mark>
+				dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur dignissimos illo neque nihil nulla
+				obcaecati quae tempore? Alias architecto debitis enim eveniet iure maiores molestias, mollitia sit velit vitae.
+			</p>
+			<p>Lorem ipsum dolor
+				<mark>marked text</mark>
+				amet, consectetur adipisicing elit. Assumenda consequuntur dignissimos illo neque nihil nulla obcaecati quae
+				tempore? Alias architecto debitis enim eveniet iure maiores molestias, mollitia sit velit vitae.
+			</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur dignissimos illo neque nihil
+				nulla obcaecati quae tempore? Alias architecto debitis enim eveniet iure maiores molestias, mollitia sit velit
+				vitae.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur dignissimos illo neque nihil
+				nulla obcaecati quae tempore? Alias architecto debitis enim eveniet iure maiores molestias, mollitia sit velit
+				vitae.</p>
+		</div>
+	</section>
+
+	<section class="section container">
+		<header class="section__header">
+			<h2 class="section__title">
+				Lists
+			</h2>
+		</header>
+		<div class="section__body">
+			<h3 class="h4">Default list</h3>
+			<ul>
+				<li>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur dignissimos illo neque nihil
+					nulla obcaecati quae tempore?
+					<ul>
+						<li>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur dignissimos illo neque
+							nihil nulla obcaecati quae tempore?
+							<ul>
+								<li>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur dignissimos illo
+									neque nihil nulla obcaecati quae tempore?
+									<ul>
+										<li>
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur dignissimos illo
+											neque nihil nulla obcaecati quae tempore?
+											<ul>
+												<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur dignissimos
+													illo neque nihil nulla obcaecati quae tempore?
+												<li>ПLorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur
+													dignissimos illo neque nihil nulla obcaecati quae tempore?
+												</li>
+											</ul>
+										</li>
+										<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur dignissimos
+											illo neque nihil nulla obcaecati quae tempore?
+										</li>
+									</ul>
+								</li>
+								<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur dignissimos illo
+									neque nihil nulla obcaecati quae tempore?
+								</li>
+								<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur dignissimos illo
+									neque nihil nulla obcaecati quae tempore?
+								</li>
+							</ul>
+						</li>
+						<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur dignissimos illo neque
+							nihil nulla obcaecati quae tempore?
+						</li>
+					</ul>
+				</li>
+				<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur dignissimos illo neque
+					nihil nulla obcaecati quae tempore?
+				</li>
+				<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur dignissimos illo neque
+					nihil nulla obcaecati quae tempore?
+				</li>
+				<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur dignissimos illo neque
+					nihil nulla obcaecati quae tempore?
+				</li>
+			</ul>
+
+			<h3 class="h4">Numbered list</h3>
+			<ol>
+				<li>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur dignissimos illo neque nihil
+					nulla obcaecati quae tempore?
+					<ol>
+						<li>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur dignissimos illo neque
+							nihil nulla obcaecati quae tempore?
+							<ol>
+								<li>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur dignissimos illo
+									neque nihil nulla obcaecati quae tempore?
+									<ol>
+										<li>
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur dignissimos illo
+											neque nihil nulla obcaecati quae tempore?
+											<ol>
+												<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur dignissimos
+													illo neque nihil nulla obcaecati quae tempore?
+												</li>
+												<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur dignissimos
+													illo neque nihil nulla obcaecati quae tempore?
+												</li>
+											</ol>
+										</li>
+										<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur dignissimos
+											illo neque nihil nulla obcaecati quae tempore?
+										</li>
+									</ol>
+								</li>
+								<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur dignissimos illo
+									neque nihil nulla obcaecati quae tempore?
+								</li>
+								<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur dignissimos illo
+									neque nihil nulla obcaecati quae tempore?
+								</li>
+							</ol>
+						</li>
+						<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur dignissimos illo neque
+							nihil nulla obcaecati quae tempore?
+						</li>
+					</ol>
+				</li>
+				<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur dignissimos illo neque
+					nihil nulla obcaecati quae tempore?
+				</li>
+				<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur dignissimos illo neque
+					nihil nulla obcaecati quae tempore?
+				</li>
+				<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur dignissimos illo neque
+					nihil nulla obcaecati quae tempore?
+				</li>
+			</ol>
+		</div>
+	</section>
+
+	<section class="section container">
+		<header class="section__header">
+			<h2 class="section__title">
+				Colors
+			</h2>
+		</header>
+		<div class="section__body">
+			<h3 class="h4">Main</h3>
+			<div class="flow">
+				<div class="color-example">
+					<div class="color-example__square" style="--bgColor: var(--c-dark);"></div>
+					<div class="color-example__hex-code">#000000</div>
+				</div>
+				<div class="color-example">
+					<div class="color-example__square" style="--bgColor: var(--c-light);"></div>
+					<div class="color-example__hex-code">#FFFFFF</div>
+				</div>
+			</div>
+
+			<h3 class="h4">Brand</h3>
+			<div class="flow">
+				<div class="color-example">
+					<div class="color-example__square" style="--bgColor: var(--c-brand);"></div>
+					<div class="color-example__hex-code">#002e5e</div>
+				</div>
+				<div class="color-example">
+					<div class="color-example__square" style="--bgColor: var(--c-accent);"></div>
+					<div class="color-example__hex-code">#c0c7d4</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section container">
+		<header class="section__header">
+			<h2 class="section__title">
+				Buttons
+			</h2>
+		</header>
+		<div class="section__body">
+			<div class="flow mb50">
+				<%- require('../components/button/template.ejs')() %>
+				<%- require('../components/button/template.ejs')({
+					caption: {
+						text: 'Default button'
+					}
+				}) %>
+				<%- require('../components/button/template.ejs')({
+					href: '/',
+					caption: {
+						text: 'Default button-link'
+					}
+				}) %>
+				<%- require('../components/button/template.ejs')({
+					icon: {
+						name: 'arrow-right',
+						position: 'after'
+					},
+					caption: {
+						text: 'With icon after'
+					}
+				}) %>
+				<%- require('../components/button/template.ejs')({
+					icon: {
+						name: 'arrow-left',
+						position: 'before'
+					},
+					caption: {
+						text: 'With icon before'
+					}
+				}) %>
+			</div>
+			<div class="flow">
+				<div>
+					<span>With icon only:&nbsp;&nbsp;</span>
+					<%- require('../components/button/template.ejs')({
+						icon: {
+							name: 'search'
+						},
+						caption: {
+							text: 'With icon only',
+							isHidden: true
+						}
+					}) %>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section container">
+		<header class="section__header">
+			<h2 class="section__title">
+				Inputs
+			</h2>
+		</header>
+		<div class="section__body">
+			<ul class="grid grid--4 mb50">
+				<li class="grid__item">
+					<%- require('../components/input/template.ejs')({
+						extraClasses: '',
+						extraAttrs: '',
+						name: 'test-input-1',
+						type: 'text',
+						label: {
+							text: 'Simple',
+							isHidden: false
+						},
+						required: false,
+					}) %>
+				</li>
+				<li class="grid__item">
+					<%- require('../components/input/template.ejs')({
+						extraClasses: '',
+						extraAttrs: '',
+						name: 'test-input-2',
+						type: 'text',
+						label: {
+							text: 'With placeholder',
+							isHidden: false
+						},
+						placeholder: 'Enter value',
+						required: false,
+					}) %>
+				</li>
+				<li class="grid__item">
+					<%- require('../components/input/template.ejs')({
+						extraClasses: '',
+						extraAttrs: '',
+						name: 'test-input-3',
+						type: 'text',
+						label: {
+							text: 'With value',
+							isHidden: false
+						},
+						value: 'Lorem ipsum',
+						required: false,
+					}) %>
+				</li>
+				<li class="grid__item">
+					<%- require('../components/input/template.ejs')({
+						extraClasses: '',
+						extraAttrs: '',
+						name: 'test-input-4',
+						type: 'text',
+						label: {
+							text: 'Disabled',
+							isHidden: false
+						},
+						disabled: true,
+						required: false,
+					}) %>
+				</li>
+				<li class="grid__item">
+					<%- require('../components/input/template.ejs')({
+						extraClasses: '',
+						extraAttrs: '',
+						name: 'test-input-5',
+						type: 'text',
+						label: {
+							text: 'Readonly',
+							isHidden: false
+						},
+						value: 'Just look at me',
+						readonly: true,
+						required: false,
+					}) %>
+				</li>
+				<li class="grid__item">
+					<%- require('../components/input/template.ejs')({
+						extraClasses: 'is-invalid',
+						extraAttrs: '',
+						wrapperExtraClasses: 'is-invalid',
+						name: 'test-input-6',
+						type: 'text',
+						label: {
+							text: 'Has error',
+							isHidden: false
+						},
+						value: '123123123',
+						readonly: false,
+						required: false,
+						isShowError: 'Некорректные данные',
+					}) %>
+				</li>
+			</ul>
+			<ul class="grid grid--4 mb50">
+				<li class="grid__item">
+					<%- require('../components/input/template.ejs')({
+						name: 'test-input-7',
+						type: 'text',
+						label: {
+							text: 'Hidden label',
+							isHidden: true
+						},
+						required: false,
+						placeholder: 'Hidden label',
+						extraClasses: '',
+						extraAttrs: ''
+					}) %>
+				</li>
+			</ul>
+			<ul class="grid grid--4 mb50">
+				<li class="grid__item">
+					<%- require('../components/input/template.ejs')({
+						name: 'test-input-8',
+						type: 'textarea',
+						label: {
+							text: 'Textarea',
+							isHidden: false
+						},
+						required: false,
+						extraClasses: '',
+						extraAttrs: ''
+					}) %>
+				</li>
+				<li class="grid__item">
+					<%- require('../components/input/template.ejs')({
+						name: 'test-input-9',
+						type: 'password',
+						label: {
+							text: 'Password',
+							isHidden: false
+						},
+						required: false,
+						extraClasses: '',
+						extraAttrs: '',
+						hasPasswordEye: true,
+					}) %>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="section container">
+		<header class="section__header">
+			<h2 class="section__title">
+				Checkboxes and radios
+			</h2>
+		</header>
+		<div class="section__body">
+			<ul class="grid grid--4 mb50">
+				<li class="grid__item">
+					<%- require('../components/checkbox/template.ejs')({
+						extraClasses: '',
+						extraAttrs: '',
+						name: 'test-checkbox-1',
+						id: 'test-checkbox-1',
+						type: 'checkbox',
+						label: 'Checkbox',
+						disabled: false,
+						checked: false,
+						isShowError: true,
+						required: false
+					}) %>
+				</li>
+				<li class="grid__item">
+					<%- require('../components/checkbox/template.ejs')({
+						extraClasses: '',
+						extraAttrs: '',
+						name: 'test-checkbox-2',
+						id: 'test-checkbox-2',
+						type: 'checkbox',
+						label: 'Checkbox checked',
+						disabled: false,
+						checked: true,
+						isShowError: true,
+						required: false
+					}) %>
+				</li>
+				<li class="grid__item">
+					<%- require('../components/checkbox/template.ejs')({
+						extraClasses: '',
+						extraAttrs: '',
+						name: 'test-checkbox-3',
+						id: 'test-checkbox-3',
+						type: 'checkbox',
+						label: 'Checkbox checked disabled',
+						disabled: true,
+						checked: true,
+						isShowError: true,
+						required: false
+					}) %>
+				</li>
+				<li class="grid__item">
+					<%- require('../components/checkbox/template.ejs')({
+						extraClasses: 'is-invalid',
+						extraAttrs: '',
+						name: 'test-checkbox-11',
+						id: 'test-checkbox-11',
+						type: 'checkbox',
+						label: 'Checkbox',
+						disabled: false,
+						checked: false,
+						isShowError: 'Необходимо поставить галочку',
+						required: false
+					}) %>
+				</li>
+			</ul>
+			<ul class="grid grid--4 mb50">
+				<li class="grid__item">
+					<%- require('../components/checkbox/template.ejs')({
+						extraClasses: '',
+						extraAttrs: '',
+						name: 'test-radio',
+						id: 'test-radio-1',
+						type: 'radio',
+						label: 'Radio',
+						disabled: false,
+						checked: false,
+						isShowError: true,
+						required: false
+					}) %>
+				</li>
+				<li class="grid__item">
+					<%- require('../components/checkbox/template.ejs')({
+						extraClasses: '',
+						extraAttrs: '',
+						name: 'test-radio',
+						id: 'test-radio-2',
+						type: 'radio',
+						label: 'Radio checked',
+						disabled: false,
+						checked: true,
+						isShowError: true,
+						required: false
+					}) %>
+				</li>
+				<li class="grid__item">
+					<%- require('../components/checkbox/template.ejs')({
+						extraClasses: '',
+						extraAttrs: '',
+						name: 'test-radio',
+						id: 'test-radio-3',
+						type: 'radio',
+						label: 'Radio disabled',
+						disabled: true,
+						checked: false,
+						isShowError: true,
+						required: false
+					}) %>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="section container">
+		<header class="section__header">
+			<h2 class="section__title">
+				File attach
+			</h2>
+		</header>
+		<div class="section__body">
+			<ul class="grid grid--4">
+				<li class="grid__item">
+					<%- require('../components/file-attach/template.ejs')({
+						name: 'attachment-1',
+						label: 'Attach file',
+					}) %>
+				</li>
+				<li class="grid__item">
+					<%- require('../components/file-attach/template.ejs')({
+						name: 'attachment-2',
+						label: 'Attach files',
+						multiple: true
+					}) %>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="section container">
+		<header class="section__header">
+			<h2 class="section__title">
+				Form (success with static modal)
+			</h2>
+		</header>
+		<div class="section__body">
+			<% const formCfg = {
+				url: './json/form/successWithStaticModalExample.json',
+				method: 'post',
+			} %>
+			<form class="form" novalidate data-js-form="<%= JSON.stringify(formCfg) %>">
+				<div class="form__body grid grid--4">
+					<div class="grid__item">
+						<%- require('../components/input/template.ejs')({
+							name: 'name',
+							type: 'text',
+							label: {
+								text: 'Name',
+								isHidden: false
+							},
+							isShowError: true,
+							required: true,
+							extraClasses: '',
+							extraAttrs: ''
+						}) %>
+					</div>
+					<div class="grid__item">
+						<%- require('../components/button/template.ejs')({
+							type: 'submit',
+							icon: false,
+							caption: {
+								text: 'Send'
+							}
+						}) %>
+					</div>
+				</div>
+			</form>
+		</div>
+	</section>
+
+	<section class="section container">
+		<header class="section__header">
+			<h2 class="section__title">
+				Form (success with dynamic modal)
+			</h2>
+		</header>
+		<div class="section__body">
+			<% const formCfg2 = {
+				url: './json/form/successWithDynamicModalExample.json',
+				method: 'post',
+				type: 'json'
+			} %>
+			<form class="form" novalidate data-js-form="<%= JSON.stringify(formCfg2) %>">
+				<div class="form__body grid grid--4">
+					<div class="grid__item">
+						<%- require('../components/input/template.ejs')({
+							name: 'name-2',
+							type: 'text',
+							label: {
+								text: 'Name',
+								isHidden: false
+							},
+							required: true,
+							isShowError: true,
+							extraClasses: '',
+							extraAttrs: ''
+						}) %>
+					</div>
+					<div class="grid__item">
+						<%- require('../components/button/template.ejs')({
+							type: 'submit',
+							icon: false,
+							caption: {
+								text: 'Send'
+							}
+						}) %>
+					</div>
+				</div>
+			</form>
+		</div>
+	</section>
+
+	<section class="section container">
+		<header class="section__header">
+			<h2 class="section__title">
+				Form (success with redirect)
+			</h2>
+		</header>
+		<div class="section__body">
+			<% const formCfg3 = {
+				url: './json/form/successWithRedirectExample.json',
+				method: 'post',
+				type: 'json'
+			} %>
+			<form class="form" novalidate data-js-form="<%= JSON.stringify(formCfg3) %>">
+				<div class="form__body grid grid--4">
+					<div class="grid__item">
+						<%- require('../components/input/template.ejs')({
+							name: 'name-3',
+							type: 'text',
+							label: {
+								text: 'Name',
+								isHidden: false
+							},
+							required: true,
+							isShowError: true,
+							extraClasses: '',
+							extraAttrs: ''
+						}) %>
+					</div>
+					<div class="grid__item">
+						<%- require('../components/button/template.ejs')({
+							type: 'submit',
+							icon: false,
+							caption: {
+								text: 'Send'
+							}
+						}) %>
+					</div>
+				</div>
+			</form>
+		</div>
+	</section>
+
+	<section class="section container">
+		<header class="section__header">
+			<h2 class="section__title">
+				Form (success:false with static modal and custom error messages)
+			</h2>
+		</header>
+		<div class="section__body">
+			<% const formCfg4 = {
+				url: './json/form/successFalseWithStaticModalExample.json',
+				method: 'post',
+			} %>
+			<form class="form" novalidate data-js-form="<%= JSON.stringify(formCfg4) %>">
+				<div class="form__body grid grid--4">
+					<div class="grid__item">
+						<%- require('../components/input/template.ejs')({
+							name: 'name-4',
+							type: 'text',
+							label: {
+								text: 'Name',
+								isHidden: false
+							},
+							required: true,
+							isShowError: true,
+							extraClasses: '',
+							extraAttrs: ''
+						}) %>
+					</div>
+					<div class="grid__item">
+						<%- require('../components/button/template.ejs')({
+							type: 'submit',
+							icon: false,
+							caption: {
+								text: 'Send'
+							}
+						}) %>
+					</div>
+				</div>
+			</form>
+		</div>
+	</section>
+
+	<section class="section container">
+		<header class="section__header">
+			<h2 class="section__title">
+				Accordion
+			</h2>
+		</header>
+		<div class="section__body">
+			<%- require('../components/accordion/template.ejs')({
+				items: [
+					{
+						title: 'Accordion title 1',
+						content: `<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos earum excepturi explicabo explicabo minima modi numquam quam quia ratione, rem soluta vitae?</p>`,
+					},
+					{
+						title: 'Accordion title 2',
+						content: `<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos earum excepturi explicabo explicabo minima modi numquam quam quia ratione, rem soluta vitae?</p>`,
+					},
+					{
+						title: 'Accordion title 3',
+						content: `<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos earum excepturi explicabo explicabo minima modi numquam quam quia ratione, rem soluta vitae?</p>`,
+					}
+				]
+			}) %>
+		</div>
+	</section>
+
+	<section class="section container">
+		<header class="section__header">
+			<h2 class="section__title">
+				Accordions (title is link, isAutoClosing: false, wholeSummaryClickable: false)
+			</h2>
+		</header>
+		<div class="section__body">
+			<%- require('../components/accordion/template.ejs')({
+				isAutoClosing: false,
+				wholeSummaryClickable: false,
+				items: [
+					{
+						title: '<a href="#">Accordion link-title</a>',
+						content: `<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos earum excepturi explicabo explicabo minima modi numquam quam quia ratione, rem soluta vitae?</p>`,
+					},
+					{
+						title: '<a href="#">Accordion link-title</a>',
+						content: `<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos earum excepturi explicabo explicabo minima modi numquam quam quia ratione, rem soluta vitae?</p>`,
+					},
+					{
+						title: '<a href="#">Accordion link-title</a>',
+						content: `<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos earum excepturi explicabo explicabo minima modi numquam quam quia ratione, rem soluta vitae?</p>`,
+					}
+				]
+			}) %>
+		</div>
+	</section>
+
+	<section class="section container">
+		<header class="section__header">
+			<h2 class="section__title">
+				Article
+			</h2>
+		</header>
+		<div class="section__body">
+			<article class="article">
+				<header class="article__header">
+					<div class="article__title">Article title</div>
+					<time class="article__date" datetime="2022-01-02">2 january 2022</time>
+				</header>
+				<div class="article__body">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, mollitia?</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad asperiores at facilis fugit magnam mollitia
+						optio possimus repudiandae vitae voluptatem?</p>
+				</div>
+			</article>
+		</div>
+	</section>
+</div>
+
+<%- require('../layouts/foot.ejs')() %>

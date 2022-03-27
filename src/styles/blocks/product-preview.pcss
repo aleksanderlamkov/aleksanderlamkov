@@ -1,0 +1,37 @@
+@import "../mixins.pcss";
+
+.product-preview {
+  --mainImgWidth: 360px;
+  --mainImgHeight: 360px;
+  --thumbImgWidth: 60px;
+  --thumbImgHeight: 60px;
+  --thumbCounter: 4;
+  --thumbMarginX: 10px;
+
+  max-width: var(--mainImgWidth);
+
+  &__secondary-slider {
+    max-width: calc(var(--thumbImgWidth) * var(--thumbCounter) + var(--thumbMarginX) * (var(--thumbCounter) - 1));
+  }
+
+  &__secondary-slider-item {
+    width: var(--thumbImgWidth);
+    height: var(--thumbImgHeight);
+  }
+
+  &__main-slider-image,
+  &__secondary-slider-image {
+    display: flex;
+    object-fit: cover;
+  }
+
+  &__main-slider-image {
+    width: var(--mainImgWidth);
+    height: var(--mainImgHeight);
+  }
+
+  &__secondary-slider-image {
+    width: var(--thumbImgWidth);
+    height: var(--thumbImgHeight);
+  }
+}

@@ -1,0 +1,11 @@
+@import "../mixins.pcss";
+
+.section {
+  padding-block: var(--sectionPaddingY);
+
+  &__header {
+    &:not(:last-child) {
+      margin-bottom: calc(var(--sectionPaddingY) * 0.8);
+    }
+  }
+}

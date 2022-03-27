@@ -1,0 +1,37 @@
+<%
+const { classNames } = require("../../js/ejsUtils")
+const cfg = { ...require("./data.json"), ...arguments?.[0] }
+const {
+	extraClasses,
+	extraAttrs
+} = cfg
+%>
+
+<%
+const classes = classNames(extraClasses, 'theme-switcher')
+const attrs = Array.isArray(extraAttrs) ? extraAttrs.join(' ') : extraAttrs
+%>
+
+<label
+	class="<%= classes %>"
+	<%- attrs %>
+	data-js-theme-switcher
+>
+	<input
+	  class="theme-switcher__checkbox visually-hidden"
+	  type="checkbox"
+	  data-js-theme-switcher-checkbox
+	/>
+	<span class="theme-switcher__body">
+		<span class="theme-switcher__icon-wrapper theme-switcher__icon-wrapper--dark-theme">
+			<svg class="i-icon">
+				<use href="#icon-moon"></use>
+			</svg>
+		</span>
+		<span class="theme-switcher__icon-wrapper theme-switcher__icon-wrapper--light-theme">
+			<svg class="i-icon">
+				<use href="#icon-sun"></use>
+			</svg>
+		</span>
+	</span>
+</label>

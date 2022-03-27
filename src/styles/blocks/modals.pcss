@@ -1,0 +1,175 @@
+@import "../mixins.pcss";
+
+.modal {
+  --maxWidth: 574px;
+  --contentMargin: 40px;
+  --margin: 40px;
+  --padding: 60px;
+  --titlePadding: 0 10%;
+  --modalAlign: middle;
+  --textAlign: center;
+  --color: var(--c-dark);
+  --bg: var(--c-light);
+  --transformOrigin: 50% 50%;
+
+  position: relative;
+  display: none;
+  align-self: center;
+  width: 100%;
+  max-width: var(--maxWidth);
+  margin: auto var(--margin);
+  padding: var(--padding);
+  vertical-align: var(--modalAlign);
+  text-align: var(--textAlign);
+  color: var(--color);
+  background: var(--bg);
+  transform-origin: var(--transformOrigin);
+  animation-fill-mode: backwards;
+  cursor: default;
+
+  &.fancybox__content,
+  .carousel__slide & {
+    display: block;
+  }
+
+  &--auth {
+    --maxWidth: 640px;
+  }
+
+  &--confirm {
+    .modal__closer {
+      .button {
+        --buttonWidth: 180px;
+      }
+    }
+  }
+
+  &-show {
+    animation: show-modal 0.15s ease;
+  }
+
+  &-hide {
+    animation: hide-modal 0.15s ease;
+  }
+
+  &__closer {
+    margin-top: var(--contentMargin);
+    display: flex;
+    justify-content: center;
+
+    .button {
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  &__heading {
+    --marginBottom: 20px;
+
+    padding: var(--titlePadding);
+
+    & + .modal__closer {
+      margin-top: 0;
+    }
+  }
+
+  &__body {
+    &:empty {
+      display: none;
+    }
+  }
+}
+
+.fancybox {
+  &__counter {
+    display: none;
+  }
+
+  &__button {
+    &--fullscreen,
+    &--slideshow {
+      display: none;
+    }
+  }
+
+  &-error {
+    width: 420px;
+    height: 160px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 125%;
+    max-width: 90vw;
+  }
+
+  &__slide {
+    &.has-error {
+      animation: show-modal .25s;
+    }
+  }
+}
+
+.carousel {
+  &__button {
+    --carousel-button-width: 36px;
+    --carousel-button-height: 36px;
+    --carousel-button-border-radius: 0;
+    --carousel-button-color: var(--c-light);
+    --hover-carousel-button-color: var(--c-dark);
+
+    &.is-close .i-icon {
+      --carousel-button-svg-stroke-width: 0;
+    }
+
+    &:hover .i-icon * {
+      fill: var(--hover-carousel-button-color);
+    }
+
+    .i-icon {
+      --carousel-button-svg-width: 50%;
+      --carousel-button-svg-height: 50%;
+      --carousel-button-svg-stroke-width: 1px;
+      --carousel-button-border-radius: 0;
+      --carousel-button-svg-filter: none;
+
+      * {
+        fill: var(--carousel-button-color);
+      }
+    }
+  }
+}
+
+[data-fancybox-close] * {
+  pointer-events: none;
+}
+
+.fancybox__container {
+  html.safari :focus,
+  :focus-visible {
+    outline: 1px dashed var(--c-light);
+  }
+
+  html.safari :focus {
+    @media (--mobile) {
+      outline: none;
+    }
+  }
+
+  :focus {
+    outline: none;
+  }
+}
+
+.fancybox__button--zoom {
+  display: none;
+}
+
+.fancybox__container.is-animated[aria-hidden="false"] .fancybox__backdrop,
+.fancybox__container.is-animated[aria-hidden="false"] .fancybox__caption,
+.fancybox__container.is-animated[aria-hidden="false"] .fancybox__nav,
+.fancybox__container.is-animated[aria-hidden="false"] .carousel__dots,
+.fancybox__container.is-animated[aria-hidden="false"] .carousel__button.is-close {
+  @mixin transition;
+}

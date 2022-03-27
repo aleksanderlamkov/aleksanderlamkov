@@ -1,0 +1,75 @@
+<%
+const {classNames} = require('../../js/ejsUtils')
+const cfg = {...require('./data.json'), ...arguments?.[0]}
+const {
+	extraClasses,
+	extraAttrs,
+	type,
+	href,
+	icon,
+	label,
+	disabled,
+} = cfg
+%>
+
+<%
+const getIconMarkup = () => {
+	if (!icon) return ''
+	return `
+		<svg class="button__icon i-icon">
+			<use href="#icon-${icon.name}"></use>
+		</svg>
+	`
+}
+
+const getButtonBodyMarkup = () => {
+	const classes = classNames('button__label', {
+		'visually-hidden': label.isHidden
+	})
+	return `
+		${icon.position !== 'after' ? getIconMarkup() : ''}
+		<span class="${classes}">${label.text}</span>
+		${icon.position === 'after' ? getIconMarkup() : ''}
+	`
+}
+
+const classes = classNames('button', extraClasses, {
+	'button--icon-only': icon && label.isHidden
+})
+
+let dataAttrs = ''
+if (!label.isHidden) {
+	dataAttrs += ' data-js-button'
+}
+%>
+
+<% if (href) { %>
+	<a
+		class="<%= classes %>"
+		href="<%= href %>"
+		<% if (label.isHidden) { %>
+			title="<%= label.text %>"
+			aria-label="<%= label.text %>"
+		<% } %>
+		<%- dataAttrs %>
+		<%- extraAttrs %>
+	>
+		<%- getButtonBodyMarkup() %>
+	</a>
+<% } else { %>
+	<button
+		class="<%= classes %>"
+		type="<%= type %>"
+		<% if (label.isHidden) { %>
+			title="<%= label.text %>"
+			aria-label="<%= label.text %>"
+		<% } %>
+		<% if (disabled) { %>
+			disabled
+		<% } %>
+		<%- dataAttrs %>
+		<%- extraAttrs %>
+	>
+		<%- getButtonBodyMarkup() %>
+	</button>
+<% } %>

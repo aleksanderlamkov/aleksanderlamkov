@@ -1,0 +1,60 @@
+<%
+const { classNames } = require("../../js/ejsUtils")
+const cfg = { ...require("./data.json"), ...arguments?.[0] }
+const {
+	extraClasses,
+	extraAttrs,
+	isAutoClosing,
+	wholeSummaryClickable,
+	animationParams,
+	items
+} = cfg
+%>
+
+<%
+	const jsCfg = JSON.stringify({
+		isAutoClosing,
+		wholeSummaryClickable,
+		animationParams
+	})
+%>
+
+<div
+	class="<%= classNames("accordion", extraClasses) %>"
+  data-js-accordion='<%- jsCfg %>'
+	<%- extraAttrs %>
+>
+	<% items.forEach(({ title, content }) => { %>
+		<details class="accordion__item" data-js-accordion-item>
+			<summary class="accordion__summary" data-js-accordion-summary>
+				<div class="accordion__summary-inner">
+					<div class="accordion__title">
+						<%- title %>
+					</div>
+					<button
+						class="accordion__button"
+					  type="button"
+					  data-js-accordion-button
+					>
+            <span class="accordion__button-caption accordion__button-caption--before">
+              Развернуть
+            </span>
+						<span class="accordion__button-caption accordion__button-caption--after">
+              Свернуть
+            </span>
+						<span class="accordion__button-icon-wrapper">
+              <svg class="i-icon">
+                <use href="#icon-arrow-down"></use>
+              </svg>
+            </span>
+					</button>
+				</div>
+			</summary>
+			<div class="accordion__content" data-js-accordion-content>
+				<div class="accordion__content-inner">
+					<%- content %>
+				</div>
+			</div>
+		</details>
+	<% }) %>
+</div>

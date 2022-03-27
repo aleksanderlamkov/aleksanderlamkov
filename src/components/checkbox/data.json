@@ -1,0 +1,14 @@
+{
+  "extraClasses": "",
+  "extraAttrs": "",
+  "id": "checkbox-1",
+  "name": "checkbox",
+  "type": "checkbox",
+  "label": "Checkbox",
+  "value": "Y",
+  "disabled": false,
+  "checked": false,
+  "isShowError": false,
+  "required": false,
+  "form": false
+}

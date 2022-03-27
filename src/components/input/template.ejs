@@ -1,0 +1,148 @@
+<%
+const { classNames } = require("../../js/ejsUtils")
+const cfg = { ...require("./data.json"), ...arguments?.[0] }
+const {
+  extraClasses,
+  extraAttrs,
+  name,
+  type,
+  label,
+  value,
+  placeholder,
+  required,
+  disabled,
+  readonly,
+  isShowError,
+  maxlength,
+  tabindex,
+  inputMode,
+  form,
+  autocomplete,
+  wrapperExtraClasses,
+} = cfg
+%>
+
+<%
+  let wrapperAttrs = ''
+  let inputAttrs = ''
+
+  const inputClasses = classNames('form-input', extraClasses)
+%>
+
+<label class="form-item">
+  <span
+    class="<%= classNames('form-input-wrapper', wrapperExtraClasses) %>"
+    data-js-input-wrapper
+    <%- wrapperAttrs %>
+  >
+    <% if (type === 'textarea') { %>
+      <textarea
+        class="<%= inputClasses %>"
+        id="<%= name %>"
+        name="<%= name %>"
+
+        <% if (placeholder) { %>
+          placeholder="<%= placeholder %>"
+        <% } %>
+
+        <% if (tabindex) { %>
+          tabindex="<%= tabindex %>"
+        <% } %>
+
+        <% if (inputMode) { %>
+          inputMode="<%= inputMode %>"
+        <% } %>
+
+        <% if (maxlength) { %>
+          maxlength="<%= maxlength %>"
+        <% } %>
+
+        <% if (required) { %>
+          data-js-input-required="<%= required %>"
+          required
+        <% } %>
+
+        <% if (disabled) { %>
+          disabled
+        <% } %>
+
+        <% if (readonly) { %>
+          readonly
+        <% } %>
+
+        <% if (form) { %>
+          form="<%= form %>"
+        <% } %>
+
+        <%- extraAttrs %>
+      ><%= value %></textarea>
+    <% } else { %>
+      <input
+        class="<%= inputClasses %>"
+        id="<%= name %>"
+        name="<%= name %>"
+        type="<%= type %>"
+
+        <% if (value) { %>
+          value="<%= value %>"
+        <% } %>
+
+        <% if (placeholder) { %>
+          placeholder="<%= placeholder %>"
+        <% } %>
+
+        <% if (required) { %>
+          data-js-input-required="<%= required %>"
+          required
+        <% } %>
+
+        <% if (disabled) { %>
+          disabled
+        <% } %>
+
+        <% if (readonly) { %>
+          readonly
+        <% } %>
+
+        <% if (maxlength) { %>
+          maxlength="<%= maxlength %>"
+        <% } %>
+
+        <% if (tabindex) { %>
+          tabindex="<%= tabindex %>"
+        <% } %>
+
+        <% if (inputMode) { %>
+          inputMode="<%= inputMode %>"
+        <% } %>
+
+        <% if (form) { %>
+          form="<%= form %>"
+        <% } %>
+
+        <% if (autocomplete) { %>
+          autocomplete="<%= autocomplete %>"
+        <% } %>
+
+        <%- inputAttrs %>
+
+        <%- extraAttrs %>
+      >
+    <% } %>
+  </span>
+
+  <span class="<%= classNames('form-label', {
+    'visually-hidden': label.isHidden
+  }) %>">
+    <%= label.text %>
+  </span>
+
+  <% if (isShowError) { %>
+    <span
+      class="form-error"
+      data-js-form-error-msg="<%= isShowError %>"
+    >
+      <%= isShowError %>
+    </span>
+  <% } %>
+</label>

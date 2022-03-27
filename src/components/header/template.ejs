@@ -1,0 +1,32 @@
+<% const menuItems = [
+	'About',
+	'Skills',
+	'Portfolio',
+	'Work Experience',
+	'Contacts'
+] %>
+
+<header class="header">
+	<div class="header__inner container">
+		<%- require('../logo/template.ejs')({
+			extraClasses: 'header__logo'
+		}) %>
+		<nav class="header__menu">
+			<ul class="header__menu-list">
+				<% menuItems.forEach((item) => { %>
+					<li class="header__menu-item">
+						<button
+						  class="header__menu-button"
+						  type="button"
+						>
+						  <%= item %>
+						</button>
+					</li>
+				<% }) %>
+			</ul>
+		</nav>
+		<%- require('../theme-switcher/template.ejs')({
+			extraClasses: 'header__theme-switcher'
+		}) %>
+	</div>
+</header>

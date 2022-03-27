@@ -1,0 +1,108 @@
+@import "../../styles/mixins.pcss";
+
+.checkbox {
+  --size: 20px;
+  --marginRight: 10px;
+  --border: var(--borderWidth) solid var(--borderColor);
+  --borderWidth: 1px;
+  --borderColor: var(--c-dark);
+  --borderRadius: 2px;
+  --markerColor: var(--c-main);
+  --checkboxMarkerSize: 85%;
+  --radioMarkerSize: 65%;
+
+  --hoverBorderColor: var(--c-accent);
+
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  cursor: pointer;
+  user-select: none;
+
+  &:hover {
+    .checkbox__emulator {
+      border-color: var(--hoverBorderColor);
+    }
+  }
+
+  &__input {
+    &:checked {
+      & ~ .checkbox__emulator .i-icon,
+      & ~ .checkbox__emulator::after {
+        opacity: 1;
+      }
+
+      & ~ .checkbox__emulator::after {
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    &:focus-visible {
+      & ~ .checkbox__label {
+        outline: var(--focusOutline);
+      }
+    }
+
+    &[disabled] {
+      & ~ * {
+        cursor: not-allowed;
+        filter: opacity(0.5);
+      }
+    }
+
+    &.is-invalid {
+      &:checked ~ .form-error {
+        display: none;
+      }
+
+      &:not(:checked) ~ .checkbox__emulator {
+        border-color: var(--c-error);
+      }
+    }
+  }
+
+  &__emulator {
+    @mixin transition;
+
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--size);
+    height: var(--size);
+    border: var(--border);
+    border-radius: var(--borderRadius);
+
+    &:not(:last-child) {
+      margin-right: var(--marginRight);
+    }
+
+    .i-icon {
+      --size: var(--checkboxMarkerSize);
+      --color: var(--markerColor);
+
+      opacity: 0;
+    }
+  }
+
+  &--radio {
+    --borderRadius: 50%;
+
+    .checkbox__emulator {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: var(--radioMarkerSize);
+        height: var(--radioMarkerSize);
+        transform: translate(-50%, -50%) scale(0);
+        background-color: var(--markerColor);
+        border-radius: inherit;
+        opacity: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,80 @@
+@import "../mixins.pcss";
+
+.adaptive-table {
+  --shadowFixSize: 40px;
+  --shadowStart: rgba(255, 255, 255, 1);
+  --shadowEnd: rgba(255, 255, 255, 0);
+
+  width: 100%;
+  position: relative;
+
+  @media (--tablet) {
+    --shadowFixSize: 1px;
+  }
+
+  &__wrapper {
+    @mixin shadow-fix var(--shadowFixSize);
+
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+
+    @media(--tablet) {
+
+      table {
+        min-width: 150%;
+      }
+    }
+
+    @media(--mobile-xs) {
+      table {
+        min-width: 200%;
+      }
+    }
+  }
+
+  &.is-left-edge {
+    &::before {
+      @mixin hide;
+    }
+  }
+
+  &.is-right-edge {
+    &::after {
+      @mixin hide;
+    }
+  }
+
+  &::before,
+  &::after {
+    @mixin transition;
+
+    position: absolute;
+    height: 100%;
+    width: 25%;
+    pointer-events: none;
+    background: linear-gradient(to right, var(--shadowStart), var(--shadowEnd));
+    z-index: 2;
+    top: 0;
+
+    @media(--tablet) {
+      content: "";
+    }
+
+    @media(--mobile-xs) {
+      width: 15%;
+    }
+  }
+
+  &::before {
+    left: calc(-1px - var(--shadowFixSize));
+  }
+
+  &::after {
+    --shadowStart: rgba(255, 255, 255, 0);
+    --shadowEnd: rgba(255, 255, 255, 1);
+
+    right: calc(-1px - var(--shadowFixSize));
+  }
+
+  @mixin hide-scrollbar;
+}

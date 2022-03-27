@@ -1,0 +1,63 @@
+<%
+const { classNames } = require("../../js/ejsUtils")
+const cfg = {...require('./data.json'), ...arguments?.[0]}
+const {
+	extraClasses,
+	extraAttrs,
+	id,
+	name,
+	type,
+	label,
+	value,
+	disabled,
+	checked,
+	isShowError,
+	required,
+	form,
+} = cfg
+%>
+
+<label
+	class="<%= classNames('checkbox', `checkbox--${type}`) %>"
+>
+	<input
+		class="<%= classNames('checkbox__input visually-hidden', extraClasses) %>"
+		id="<%= id %>"
+		name="<%= name %>"
+		type="<%= type %>"
+		value="<%= value %>"
+		autocomplete="off"
+
+		<% if (disabled) { %>
+			disabled
+		<% } %>
+
+		<% if (checked) { %>
+			checked
+		<% } %>
+
+		<% if (required) { %>
+			required
+			data-js-input-required="<%= type %>"
+		<% } %>
+	>
+
+	<span class="checkbox__emulator">
+		<% if (type === 'checkbox') { %>
+			<svg class="i-icon">
+				<use href="#icon-check"></use>
+			</svg>
+		<% } %>
+	</span>
+
+	<span class="checkbox__label"><%= label %></span>
+
+	<% if (isShowError) { %>
+		<span
+			class="form-error"
+			data-js-form-error-msg="<%= isShowError %>"
+		>
+      <%= isShowError %>
+    </span>
+	<% } %>
+</label>

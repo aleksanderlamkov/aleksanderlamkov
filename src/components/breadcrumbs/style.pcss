@@ -1,0 +1,33 @@
+@import "../../styles/mixins.pcss";
+
+.breadcrumbs {
+  --marginX: 32px;
+  --marginY: 12px;
+
+  font-size: 14px;
+
+  &__list {
+    &.flow {
+      --columnGap: var(--marginX);
+      --rowGap: var(--marginY);
+    }
+  }
+
+  &__item {
+    &:last-child {
+      pointer-events: none;
+    }
+
+    &:not(:last-child) {
+      position: relative;
+
+      &::after {
+        content: "/";
+        position: absolute;
+        top: 50%;
+        left: calc(100% + calc(var(--marginX) / 2));
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}

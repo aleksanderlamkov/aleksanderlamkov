@@ -1,0 +1,45 @@
+@import "../mixins.pcss";
+
+.attachment {
+  --iconOffsetX: 10px;
+
+  display: flex;
+
+  &__icon {
+    &:not(:last-child) {
+      margin-right: var(--iconOffsetX);
+    }
+  }
+
+  &__name {
+    font-weight: 700;
+    width: 100%;
+  }
+
+  &__info {
+    display: flex;
+    flex-flow: column;
+    position: relative;
+  }
+
+  &__size {
+    color: var(--c-gray);
+  }
+
+  &__remove {
+    @mixin reset-button;
+
+    position: absolute;
+    top: 0.35em;
+    right: -25px;
+    cursor: pointer;
+
+    &:hover .i-icon * {
+      fill: var(--c-brand);
+    }
+
+    * {
+      pointer-events: none;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title><%= title %></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<meta name="format-detection" content="address=no"/>
+	<link rel="shortcut icon" href="./images/favicon.ico" type="image/ico"/>
+	<link rel="apple-touch-icon-precomposed" href="./images/apple-touch-icon.png">
+	<link rel="preload" href="./bundle.js" as="script"/>
+</head>
+<% const appGlobals = {
+	lang: 'ru',
+	isAuth: false,
+	tplPath: null,
+	googleCaptchaKey: null,
+	yandexMapsKey: null,
+	svgSpriteRevision: null
+} %>
+<body data-js-app-globals='<%- JSON.stringify(appGlobals) %>'>
+<div class="flow-container <%= flowContainerClass %>">
+
+	<!-- header -->
+	<%- require('../components/header/template.ejs')() %>
+	<!-- /header -->
+	<main class="content">

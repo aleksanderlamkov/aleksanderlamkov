@@ -1,0 +1,11 @@
+{
+  "extraClasses": "",
+  "extraAttrs": "",
+  "isAutoClosing": true,
+  "wholeSummaryClickable": true,
+  "animationParams": {
+    "duration": 500,
+    "easing": "ease"
+  },
+  "children": []
+}

@@ -1,0 +1,41 @@
+@import "../mixins.pcss";
+
+.tabs {
+  &__nav-list {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__nav-item {
+    @mixin transition;
+
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-right: var(--marginRight, 30px);
+    }
+
+    &:not(.is-active) {
+      color: var(--c-gray-2);
+      cursor: pointer;
+    }
+
+    &.is-active {
+      pointer-events: none;
+    }
+
+    * {
+      pointer-events: none;
+    }
+  }
+
+  &__content-wrapper {
+    position: relative;
+  }
+
+  &__content {
+    &:not(.is-active) {
+      display: none;
+    }
+  }
+}

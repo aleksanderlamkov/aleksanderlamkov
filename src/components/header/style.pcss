@@ -1,0 +1,23 @@
+@import "../../styles/mixins.pcss";
+
+.header {
+  padding-block: 24px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__menu {
+    &-list {
+      @mixin gapX 40px;
+
+      display: flex;
+    }
+
+    &-button {
+      padding-block: 20px;
+    }
+  }
+}

@@ -1,0 +1,64 @@
+@import "mixins.pcss";
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+
+  &::before,
+  &::after {
+    box-sizing: inherit;
+  }
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  height: 100% !important;
+  font: var(--baseFontWeight) var(--baseFontSize)/var(--baseLineHeight) var(--baseFontFamily);
+  text-size-adjust: none;
+
+  &.is-light-theme-enabled {
+    --c-text: var(--c-dark);
+    --c-background: var(--c-light);
+    --c-light: var(--c-gray);
+  }
+}
+
+body {
+  min-width: var(--siteMinWidth);
+  min-height: inherit;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font: inherit;
+  color: var(--c-text);
+  background-color: var(--c-background);
+
+  &.compensate-for-scrollbar,
+  .with-fancybox & {
+    overflow: hidden !important;
+    touch-action: none;
+  }
+}
+
+template,
+#svg-sprite {
+  display: none !important;
+}
+
+svg {
+  display: block;
+  fill: currentColor;
+}
+
+.flow-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: inherit;
+  margin: auto;
+}

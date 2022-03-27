@@ -1,0 +1,15 @@
+@import "../../styles/mixins.pcss";
+
+.footer {
+  --paddingY: 16px;
+
+  padding-top: var(--paddingY);
+  padding-bottom: var(--paddingY);
+  background-color: var(--c-gray-3);
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

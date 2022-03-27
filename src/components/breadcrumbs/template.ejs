@@ -1,0 +1,33 @@
+<%
+const items = (arguments.length) ? [ ...arguments?.[0] ] : require("./data.json")
+%>
+
+<nav class="breadcrumbs" aria-label="breadcrumb">
+  <ol
+    class="breadcrumbs__list flow"
+    itemscope
+    itemtype="https://schema.org/BreadcrumbList"
+  >
+    <% items.forEach(({name, href}, index) => { %>
+      <li
+        class="breadcrumbs__item"
+        title="<%= name %>"
+        itemprop="itemListElement"
+        itemscope
+        itemtype="https://schema.org/ListItem"
+      >
+        <a
+          class="breadcrumbs__link"
+          href="<%= href %>"
+          itemprop="item"
+          <% if (index === items.length - 1) { %>
+            aria-current="page"
+          <% } %>
+        >
+          <span itemprop="name"><%= name %></span>
+        </a>
+        <meta itemprop="position" content="<%= index + 1 %>"/>
+      </li>
+    <% }) %>
+  </ol>
+</nav>

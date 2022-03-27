@@ -1,0 +1,143 @@
+@import "../mixins.pcss";
+
+svg,
+svg *,
+a,
+button,
+input,
+textarea,
+label,
+::before,
+::after,
+::placeholder {
+  @mixin transition;
+}
+
+p,
+ul, ol,
+img,
+blockquote {
+  &:not([class]) {
+    --marginY: 24px;
+  }
+}
+
+li,
+li ol,
+li ul {
+  &:not([class]) {
+    --marginY: 12px;
+  }
+}
+
+p,
+ul, ol, li,
+img,
+blockquote {
+  &:not([class]):not(:last-child) {
+    margin-bottom: var(--marginY);
+  }
+}
+
+ul,
+ol {
+  &:not([class]) {
+    ol,
+    ul {
+      margin-top: var(--marginY);
+    }
+  }
+}
+
+a,
+button {
+  display: inline-flex;
+  color: var(--c-text);
+
+  &:hover {
+    color: var(--c-accent);
+  }
+
+  html.safari &:focus,
+  &:focus-visible {
+    outline: var(--focusOutline);
+  }
+
+  html.safari &:focus {
+    @media (--mobile) {
+      outline: none;
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+
+  &[href^="tel:"],
+  &[href^="mailto:"],
+  &[href^="fax:"] {
+    white-space: nowrap;
+  }
+}
+
+button {
+  @mixin reset-button;
+
+  font-size: 100%;
+  cursor: pointer;
+
+  * {
+    pointer-events: none;
+  }
+}
+
+.p {
+  font-weight: 400;
+  font-size: 100%;
+}
+
+b,
+strong,
+.bold {
+  font-weight: 700;
+}
+
+small {
+  font-size: 80%;
+}
+
+img {
+  @mixin img-block;
+
+  height: auto;
+  user-select: none;
+
+  &[height]:not([class]) {
+    @media (--mobile) {
+      height: auto;
+    }
+  }
+}
+
+iframe,
+video,
+object {
+  @mixin img-block;
+}
+
+cite {
+  display: block;
+  text-align: right;
+  color: var(--c-dark);
+}
+
+address {
+  display: block;
+  font-style: normal;
+}
+
+.mb50 {
+  &:not(:last-child) {
+    margin-bottom: 50px;
+  }
+}

@@ -1,0 +1,17 @@
+@import "../mixins.pcss";
+
+.hero {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__body {
+    flex: 0 0 40%;
+
+    &:not(:last-child) {
+      margin-right: max(40px, 10%);
+    }
+  }
+}

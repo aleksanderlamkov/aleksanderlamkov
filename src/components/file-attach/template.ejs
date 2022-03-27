@@ -1,0 +1,44 @@
+<%
+const { classNames } = require("../../js/ejsUtils")
+const cfg = { ...require("./data.json"), ...arguments?.[0] }
+const {
+	extraClasses,
+	extraAttrs,
+  multiple,
+	name,
+	filter,
+	label
+} = cfg
+%>
+
+<div
+	class="<%= classNames('file-attach', extraClasses) %>"
+	data-js-file-attach
+	<%- extraAttrs %>
+>
+	<input
+		class="file-attach__input"
+		id="<%= name %>"
+		name="<%= name %>"
+		<% if (multiple) { %>
+			multiple
+		<% } %>
+		autocomplete="off"
+		type="file"
+		data-js-file-attach-filter="<%= filter %>"
+		data-js-file-attach-input
+	>
+	<label
+		class="file-attach__button"
+	  data-js-file-attach-add-button
+	  for="<%= name %>"
+	>
+		<svg class="file-attach__icon i-icon">
+			<use href="#icon-attachment"></use>
+		</svg>
+		<span class="file-attach__label">
+      <%= label %>
+    </span>
+	</label>
+	<div class="file-attach__list" data-js-file-attach-file-list></div>
+</div>

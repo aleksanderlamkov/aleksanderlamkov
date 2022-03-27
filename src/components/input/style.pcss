@@ -1,0 +1,80 @@
+@import "../../styles/mixins.pcss";
+
+.form-input {
+  --textColor: var(--c-dark);
+  --bgColor: var(--c-accent-2);
+  --border: 1px solid var(--borderColor);
+  --borderColor: var(--c-main);
+  --borderRadius: var(--border-radius);
+
+  --placeholderColor: var(--c-gray-4);
+
+  --hoverTextColor: var(--c-light);
+  --hoverBgColor: var(--c-main);
+  --hoverBorderColor: var(--c-main);
+  --hoverPlaceholderColor: var(--c-light);
+
+  --focusTextColor: var(--c-dark);
+  --focusBgColor: var(--c-light);
+  --focusBorderColor: var(--c-accent);
+
+  --textAreaMinHeight: 100px;
+
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  padding: var(--inputPadding);
+  height: var(--inputHeight);
+  font-size: 100%;
+  color: var(--textColor);
+  background-color: var(--bgColor);
+  border: var(--border);
+  border-radius: var(--borderRadius);
+
+  textarea& {
+    --paddingY: 16px;
+    --borderRadius: var(--border-radius-2);
+
+    min-height: var(--textAreaMinHeight);
+    padding-top: var(--paddingY);
+    padding-bottom: var(--paddingY);
+    resize: none;
+  }
+
+  &::placeholder {
+    color: var(--placeholderColor);
+  }
+
+  &:hover {
+    color: var(--hoverTextColor);
+    background-color: var(--hoverBgColor);
+    border-color: var(--hoverBorderColor);
+
+    &::placeholder {
+      color: var(--hoverPlaceholderColor);
+    }
+  }
+
+  &:focus {
+    color: var(--focusTextColor);
+    background-color: var(--focusBgColor);
+    border-color: var(--focusBorderColor);
+  }
+
+  &[disabled],
+  &[readonly] {
+    --bgColor: var(--c-gray);
+  }
+
+  &[disabled] {
+    cursor: not-allowed;
+  }
+
+  &.is-invalid {
+    --borderColor: var(--c-error);
+  }
+
+  &--has-button {
+    padding-right: calc(var(--inputButtonSize) + var(--inputPaddingX) / 2);
+  }
+}

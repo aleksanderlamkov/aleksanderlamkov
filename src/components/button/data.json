@@ -1,0 +1,12 @@
+{
+  "extraClasses": "",
+  "extraAttrs": "",
+  "type": "button",
+  "href": "",
+  "label": {
+    "text": "Button",
+    "isHidden": false
+  },
+  "icon": false,
+  "disabled": false
+}

@@ -1,0 +1,18 @@
+@import "../../styles/mixins.pcss";
+
+.logo {
+  --size: 64px;
+
+  &__svg {
+    width: var(--size);
+    height: var(--size);
+
+    * {
+      fill: var(--c-light);
+
+      .is-light-theme-enabled & {
+        fill: var(--c-dark);
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@import "../../styles/mixins.pcss";
+
+.gre {
+  min-width: 304px;
+  min-height: 78px;
+  background-color: var(--c-gray);
+
+  &.is-rendered.is-invalid {
+    animation: shake .25s ease-in-out 2;
+  }
+
+  &.is-rendered {
+    background-color: var(--c-light);
+  }
+
+  &:not(.is-rendered) {
+    cursor: wait;
+
+    * {
+      pointer-events: none;
+    }
+
+  }
+
+}

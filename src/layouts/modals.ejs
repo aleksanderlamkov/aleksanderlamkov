@@ -1,0 +1,80 @@
+<div class="modal modal--success" id="modal-success" data-js-modal='{}'>
+	<header class="modal__heading h3">
+		Успешная заявка
+	</header>
+	<div class="modal__body">
+		<p>Ваша заявка принята, в&nbsp;ближайшее время она попадет на&nbsp;рассмотрение к&nbsp;нашим специалистам.</p>
+	</div>
+	<footer class="modal__closer">
+		<button data-js-modal-close type="button" class="button">
+			<span class="button__label">Продолжить</span>
+		</button>
+	</footer>
+</div>
+
+<div class="modal modal--error" id="modal-error" data-js-modal='{}'>
+	<header class="modal__heading h3">
+		Произошла ошибка
+	</header>
+	<div class="modal__body" data-js-modal-error-text>
+		<p>Что-то пошло не так, попробуйте позже.</p>
+	</div>
+	<footer class="modal__closer">
+		<button data-js-modal-close type="button" class="button">
+			<span class="button__label">Продолжить</span>
+		</button>
+	</footer>
+</div>
+
+<div class="modal modal--confirm" id="modal-confirm" data-js-modal='{}'>
+	<header class="modal__heading h3">
+		Подтвердите действие
+	</header>
+	<footer class="modal__closer">
+		<button data-js-modal-submit type="button" class="button">
+			<span class="button__label">Подтвердить</span>
+		</button>
+		<button data-js-modal-cancel type="button" class="button button--gray">
+			<span class="button__label">Отменить</span>
+		</button>
+	</footer>
+</div>
+
+<div class="modal modal--feedback" id="modal-feedback" data-js-modal='{}'>
+	<header class="modal__heading h3">
+		Свяжитесь с нами
+	</header>
+	<div class="modal__body">
+		<% const formCfg = {
+			url: './json/form/successWithStaticModalExample.json',
+			method: 'post',
+		} %>
+		<form class="form" novalidate data-js-form="<%= JSON.stringify(formCfg) %>">
+			<div class="form__body grid grid--2">
+				<div class="grid__item">
+					<%- require('../components/input/template.ejs')({
+						name: 'name-10',
+						type: 'text',
+						label: {
+							text: 'Name',
+							isHidden: false
+						},
+						isShowError: true,
+						required: true,
+						extraClasses: '',
+						extraAttrs: ''
+					}) %>
+				</div>
+				<div class="grid__item">
+					<%- require('../components/button/template.ejs')({
+						type: 'submit',
+						icon: false,
+						caption: {
+							text: 'Send'
+						}
+					}) %>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>

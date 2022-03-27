@@ -1,0 +1,15 @@
+@import "../mixins.pcss";
+
+.page-header {
+  margin-bottom: calc(var(--sectionPaddingY) / 2);
+
+  &__breadcrumbs {
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__title {
+    --marginBottom: 16px;
+  }
+}

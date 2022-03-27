@@ -1,0 +1,73 @@
+@import "../../styles/mixins.pcss";
+
+.theme-switcher {
+  --padding: 2px;
+  --iconWrapperWidth: 42px;
+  --iconWrapperHeight: 28px;
+  --iconSize: 20px;
+
+  background-color: var(--c-dark);
+  border-radius: var(--border-radius-3);
+  box-shadow: var(--box-shadow-3);
+  cursor: pointer;
+
+  .is-light-theme-enabled & {
+    background-color: var(--c-light);
+    box-shadow: var(--box-shadow-4);
+  }
+
+  &__body {
+    @mixin gapX var(--padding);
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: var(--padding);
+    border-radius: inherit;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 2px;
+      width: var(--iconWrapperWidth);
+      height: var(--iconWrapperHeight);
+      background-color: var(--c-white);
+      border-radius: inherit;
+      transform: translateY(-50%);
+
+      .is-light-theme-enabled & {
+        left: calc(var(--iconWrapperWidth) + var(--padding) * 2);
+      }
+    }
+  }
+
+  &__icon-wrapper {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--iconWrapperWidth);
+    height: var(--iconWrapperHeight);
+
+    .i-icon {
+      --size: var(--iconSize);
+      --color: var(--c-white);
+    }
+
+    &--dark-theme {
+      .i-icon {
+        --color: var(--c-dark);
+      }
+    }
+
+    &--light-theme {
+      .i-icon {
+        .is-light-theme-enabled & {
+          --color: var(--c-dark);
+        }
+      }
+    }
+  }
+}

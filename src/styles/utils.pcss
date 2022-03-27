@@ -1,0 +1,66 @@
+@import "mixins.pcss";
+
+.container {
+  width: 100%;
+  max-width: calc(var(--gridWidth) + var(--gridPadding) * 2);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--gridPadding);
+  padding-right: var(--gridPadding);
+}
+
+.hidden {
+  display: none;
+}
+
+.hidden-mobile {
+  @media (--mobile) {
+    display: none !important;
+  }
+}
+
+.visible-mobile {
+  @media (--mobile-above) {
+    display: none !important;
+  }
+}
+
+.visible-desktop-m {
+  @media (--desktop-m) {
+    display: none !important;
+  }
+}
+
+.visible-desktop {
+  @media (--tablet) {
+    display: none !important;
+  }
+}
+
+.visible-tablet {
+  @media (--tablet-above) {
+    display: none !important;
+  }
+}
+
+.hidden-tablet-xs {
+  @media (--tablet-xs) {
+    display: none !important;
+  }
+}
+
+.visually-hidden {
+  @mixin visually-hidden;
+}
+
+.full-card-link {
+  @mixin abs-cover;
+
+  span {
+    @mixin visually-hidden;
+  }
+}
+
+.accent-color {
+  color: var(--c-accent);
+}

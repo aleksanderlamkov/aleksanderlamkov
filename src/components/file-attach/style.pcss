@@ -1,0 +1,61 @@
+@import "../../styles/mixins.pcss";
+
+.file-attach {
+  --iconOffsetX: 14px;
+
+  position: relative;
+
+  &.is-invalid {
+    .button {
+      --buttonColor: var(--c-error);
+    }
+
+    .file-attach__icon {
+      animation: shake 0.2s linear 4;
+    }
+  }
+
+  &__list {
+    user-select: none;
+
+    &:empty {
+      display: none;
+    }
+
+    &:not(:first-child) {
+      margin-top: 30px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+    &-item {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__input {
+    display: none;
+  }
+
+  &__button {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--c-main);
+    }
+
+    .i-icon {
+      --size: 20px;
+
+      &:not(:last-child) {
+        margin-right: var(--iconOffsetX);
+      }
+    }
+  }
+}

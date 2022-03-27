@@ -1,0 +1,119 @@
+@import "../mixins.pcss";
+
+.hero-scene {
+  --size: 600px;
+
+  position: relative;
+  width: var(--size);
+  height: var(--size);
+  border: 1px solid #FF0000;
+
+  & > * {
+    position: absolute;
+  }
+
+  &__all-image {
+    position: static;
+    opacity: 0.4;
+  }
+
+  &__laptop-bottom-shadow,
+  &__laptop-bottom,
+  &__laptop-keyboard-panel {
+    transform: rotate(35deg) skew(-25deg, -5deg);
+  }
+
+  &__laptop-bottom-shadow,
+  &__laptop-bottom {
+    top: 52.5%;
+    left: 20.5%;
+    width: 50.8%;
+    height: 28.5%;
+    border-radius: 20px;
+  }
+
+  &__laptop-bottom-shadow {
+    top: 56%;
+    background: #B592D9;
+  }
+
+  &__laptop-bottom {
+    background: linear-gradient(90deg, #3D065F 0%, #5F27BD 100%);
+    border: 5px solid #2C1458;
+    box-shadow: 10px 10px 0px 0px #10054D;
+  }
+
+  &__laptop-keyboard-panel {
+    top: 57.3%;
+    left: 30.4%;
+    display: grid;
+    grid-template-columns: repeat(27, 1fr);
+    grid-template-rows: 5px;
+    gap: 4px;
+    width: 39.1%;
+    height: 15.3%;
+    padding: 1.5%;
+    background: linear-gradient(13.47deg, #3D065F 795.72%, #10054D 10150.27%);
+    border-radius: 10px;
+  }
+
+  &__laptop-keyboard-key {
+    --columns: 2;
+    --shadowSize: 1.5px;
+
+    grid-column: span var(--columns);
+    background-color: #6A3689;
+    border-radius: 3px;
+    box-shadow: var(--shadowSize) var(--shadowSize) 0 0 #8A58A5;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #d8c2e3;
+    }
+
+    &:active {
+      box-shadow: var(--shadowSize) var(--shadowSize) 2px 2px #8A58A5;
+    }
+
+    &--3 {
+      --columns: 3;
+    }
+
+    &--4 {
+      --columns: 4;
+    }
+
+    &--5 {
+      --columns: 5;
+    }
+
+    &--14 {
+      --columns: 14;
+    }
+
+    .scroll-effect & {
+      @mixin hide;
+
+      transform: translate3d(-100px, -100px, 0);
+      transition-timing-function: ease;
+      transition-property: opacity, transform;
+
+      .dom-is-ready & {
+        transition-duration: 1s, 0.8s;
+      }
+    }
+
+    .scroll-effect--visible & {
+      @mixin show;
+
+      transform: initial;
+      transition-delay: var(--delay);
+
+      @for $i from 1 to 70 {
+        &:nth-child($i) {
+          --delay: calc($i * 0.05s);
+        }
+      }
+    }
+  }
+}
