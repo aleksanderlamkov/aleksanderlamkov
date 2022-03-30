@@ -144,13 +144,13 @@ export default class ScrollEffects {
   }
 
   bindEvents() {
-    const debouncedHandler = debounce(() => this.handleResize())
+    // const debouncedHandler = debounce(() => this.handleResize())
     window.addEventListener('scroll', () => {
       this.handleScroll()
     })
-    window.addEventListener('resize', () => {
-      debouncedHandler()
-    })
+    // window.addEventListener('resize', () => {
+    //   debouncedHandler()
+    // })
   }
 
   getSettings(from) {

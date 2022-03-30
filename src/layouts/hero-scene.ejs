@@ -1,40 +1,59 @@
-<div class="hero-scene">
+<div class="hero-scene scroll-effect" data-js-scroll-effect>
   <img
     class="hero-scene__all-image"
     src="./images/hero/all.svg"
     alt=""
     width="600" height="600" loading="lazy"
   />
-  <div class="hero-scene__laptop-bottom-shadow"></div>
-  <div class="hero-scene__laptop-bottom"></div>
-  <div class="hero-scene__laptop-keyboard-panel scroll-effect" data-js-scroll-effect>
-    <%
+  <div class="laptop-bottom-panel">
+    <div class="laptop-bottom-panel__shadow"></div>
+    <div class="laptop-bottom-panel__base"></div>
+    <div class="laptop-bottom-panel__keyboard">
+      <%
       const buttonsIndexesWithOneAndHalfSize = [0, 25, 26, 50, 63]
       const buttonsIndexesWithTwiceSize = [39]
       const buttonsIndexesWithTwiceAndHalfSize = [51]
       const buttonsIndexesWithFourteenSize = [66]
-    %>
-
-    <% for (let i = 0; i < 70; i++) { %>
-      <%
-        let laptopKeyboardKeyClass = 'hero-scene__laptop-keyboard-key '
-
-        if (buttonsIndexesWithOneAndHalfSize.includes(i)) {
-          laptopKeyboardKeyClass += 'hero-scene__laptop-keyboard-key--3'
-        }
-        if (buttonsIndexesWithTwiceSize.includes(i)) {
-          laptopKeyboardKeyClass += 'hero-scene__laptop-keyboard-key--4'
-        }
-        if (buttonsIndexesWithTwiceAndHalfSize.includes(i)) {
-          laptopKeyboardKeyClass += 'hero-scene__laptop-keyboard-key--5'
-        }
-        if (buttonsIndexesWithFourteenSize.includes(i)) {
-          laptopKeyboardKeyClass += 'hero-scene__laptop-keyboard-key--14'
-        }
-
-        laptopKeyboardKeyClass = laptopKeyboardKeyClass.trim()
       %>
-      <button class="<%= laptopKeyboardKeyClass.trim() %>" type="button"></button>
-    <% } %>
+
+      <% for (let i = 0; i < 70; i++) { %>
+        <%
+          let laptopKeyboardKeyClass = 'laptop-bottom-panel__key '
+
+          if (buttonsIndexesWithOneAndHalfSize.includes(i)) {
+            laptopKeyboardKeyClass += 'laptop-bottom-panel__key--3'
+          }
+          if (buttonsIndexesWithTwiceSize.includes(i)) {
+            laptopKeyboardKeyClass += 'laptop-bottom-panel__key--4'
+          }
+          if (buttonsIndexesWithTwiceAndHalfSize.includes(i)) {
+            laptopKeyboardKeyClass += 'laptop-bottom-panel__key--5'
+          }
+          if (buttonsIndexesWithFourteenSize.includes(i)) {
+            laptopKeyboardKeyClass += 'laptop-bottom-panel__key--14'
+          }
+
+          laptopKeyboardKeyClass = laptopKeyboardKeyClass.trim()
+        %>
+        <button class="<%= laptopKeyboardKeyClass.trim() %>" type="button"></button>
+      <% } %>
+    </div>
+  </div>
+  <div class="laptop-top-panel">
+    <div class="laptop-top-panel__base"></div>
+    <div class="laptop-top-panel__screen"></div>
+  </div>
+  <div class="uml-diagram">
+    <div class="uml-diagram__ellipse uml-diagram__ellipse--top"></div>
+    <div class="uml-diagram__direction-arrow uml-diagram__direction-arrow--top"></div>
+    <div class="uml-diagram__rhombus">
+      <\>
+    </div>
+    <div class="uml-diagram__direction-arrow uml-diagram__direction-arrow--left"></div>
+    <div class="uml-diagram__direction-arrow uml-diagram__direction-arrow--right"></div>
+    <div class="uml-diagram__rectangle uml-diagram__rectangle--left"></div>
+    <div class="uml-diagram__rectangle uml-diagram__rectangle--right"></div>
+    <div class="uml-diagram__direction-arrow uml-diagram__direction-arrow--bottom"></div>
+    <div class="uml-diagram__ellipse uml-diagram__ellipse--bottom"></div>
   </div>
 </div>

@@ -1,21 +1,22 @@
 @import "../../styles/mixins.pcss";
 
 .button {
-  --paddingX: 32px;
+  --height: var(--inputHeight);
+  --paddingX: 28px;
   --textColor: var(--c-light);
-  --bgColor: var(--c-main);
+  --bgColor: var(--c-dark);
   --border: 1px solid var(--borderColor);
   --borderColor: transparent;
   --borderRadius: var(--border-radius);
-  --boxShadow: none;
+  --boxShadow: var(--box-shadow-3);
   --rippleAnimation: ripple 0.8s ease-in;
 
   --hoverTextColor: var(--c-light);
-  --hoverBgColor: var(--c-brand);
-  --hoverBorderColor: transparent;
-  --hoverShadow: none;
+  --hoverBgColor: var(--c-dark);
+  --hoverBorderColor: var(--c-accent);
+  --hoverShadow: var(--box-shadow-3);
 
-  --activeRippleColor: var(--c-accent-2);
+  --activeRippleColor: var(--c-accent);
 
   --disabledTextColor: var(--c-light);
   --disabledBgColor: var(--c-gray);
@@ -28,10 +29,9 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  height: var(--inputHeight);
+  height: var(--height);
   overflow: hidden;
-  padding-left: var(--paddingX);
-  padding-right: var(--paddingX);
+  padding-inline: var(--paddingX);
   font-size: 100%;
   color: var(--textColor);
   background-color: var(--bgColor);

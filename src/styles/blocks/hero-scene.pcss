@@ -8,42 +8,69 @@
   height: var(--size);
   border: 1px solid #FF0000;
 
+  &__all-image {
+    position: static;
+    opacity: 0.3;
+  }
+}
+
+.laptop-bottom-panel,
+.laptop-top-panel,
+.uml-diagram {
   & > * {
     position: absolute;
   }
+}
 
-  &__all-image {
-    position: static;
-    opacity: 0.4;
+.laptop-bottom-panel {
+  & > * {
+    .scroll-effect & {
+      @mixin hide;
+    
+      transform: rotate(35deg) skew(-25deg, -5deg) translate3d(-100px, -100px, 0);
+      transition-timing-function: ease;
+      transition-property: opacity, transform;
+    
+      .dom-is-ready & {
+        transition-duration: 1s, 0.8s;
+      }
+    }
+  
+    .scroll-effect--visible & {
+      @mixin show;
+  
+      transform: rotate(35deg) skew(-25deg, -5deg);
+      transition-delay: var(--delay);
+  
+      @for $i from 1 to 3 {
+        &:nth-child($i) {
+          --delay: calc($i * 0.15s);
+        }
+      }
+    }
   }
-
-  &__laptop-bottom-shadow,
-  &__laptop-bottom,
-  &__laptop-keyboard-panel {
-    transform: rotate(35deg) skew(-25deg, -5deg);
-  }
-
-  &__laptop-bottom-shadow,
-  &__laptop-bottom {
-    top: 52.5%;
+  
+  &__shadow,
+  &__base {
     left: 20.5%;
-    width: 50.8%;
-    height: 28.5%;
+    width: 51.8%;
+    height: 29.5%;
     border-radius: 20px;
   }
-
-  &__laptop-bottom-shadow {
-    top: 56%;
+  
+  &__shadow {
+    top: 55.9%;
     background: #B592D9;
   }
-
-  &__laptop-bottom {
+  
+  &__base {
+    top: 52.3%;
     background: linear-gradient(90deg, #3D065F 0%, #5F27BD 100%);
     border: 5px solid #2C1458;
     box-shadow: 10px 10px 0px 0px #10054D;
   }
-
-  &__laptop-keyboard-panel {
+  
+  &__keyboard {
     top: 57.3%;
     left: 30.4%;
     display: grid;
@@ -56,64 +83,152 @@
     background: linear-gradient(13.47deg, #3D065F 795.72%, #10054D 10150.27%);
     border-radius: 10px;
   }
-
-  &__laptop-keyboard-key {
+  
+  
+  &__key {
     --columns: 2;
     --shadowSize: 1.5px;
-
+    
     grid-column: span var(--columns);
     background-color: #6A3689;
     border-radius: 3px;
     box-shadow: var(--shadowSize) var(--shadowSize) 0 0 #8A58A5;
     cursor: pointer;
-
+    
     &:hover {
       background-color: #d8c2e3;
     }
-
+    
     &:active {
       box-shadow: var(--shadowSize) var(--shadowSize) 2px 2px #8A58A5;
     }
-
+    
     &--3 {
       --columns: 3;
     }
-
+    
     &--4 {
       --columns: 4;
     }
-
+    
     &--5 {
       --columns: 5;
     }
-
+    
     &--14 {
       --columns: 14;
     }
-
+    
     .scroll-effect & {
       @mixin hide;
-
+      
       transform: translate3d(-100px, -100px, 0);
       transition-timing-function: ease;
       transition-property: opacity, transform;
-
+      
       .dom-is-ready & {
         transition-duration: 1s, 0.8s;
       }
     }
-
+    
     .scroll-effect--visible & {
       @mixin show;
-
+      
       transform: initial;
       transition-delay: var(--delay);
-
+      
       @for $i from 1 to 70 {
         &:nth-child($i) {
           --delay: calc($i * 0.05s);
         }
       }
+    }
+  }
+}
+
+.laptop-top-panel {
+  & > * {
+    .scroll-effect & {
+      @mixin hide;
+      
+      transform: rotate(35deg) skew(35deg, -5deg) translate3d(-100px, 100px, 0);
+      transition-timing-function: ease;
+      transition-property: opacity, transform;
+      
+      .dom-is-ready & {
+        transition-duration: 1.4s, 0.8s;
+      }
+    }
+    
+    .scroll-effect--visible & {
+      @mixin show;
+      
+      transform: rotate(35deg) skew(35deg, -5deg);
+      transition-delay: var(--delay);
+      
+      @for $i from 1 to 2 {
+        &:nth-child($i) {
+          --delay: calc($i * 0.35s);
+        }
+      }
+    }
+  }
+  
+  &__base {
+    top: 25.4%;
+    left: 36.1%;
+    width: 49.4%;
+    height: 30.5%;
+    background: linear-gradient(131.36deg, #311B61 20740.6%, #290F52 24472.38%, #200041 29883.45%, #0F001F 39399.47%);
+    border: 4px solid #200041;
+    border-left: none;
+    border-bottom: none;
+    border-radius: 20px;
+  }
+  
+  &__screen {
+    top: 27%;
+    left: 37.9%;
+    width: 45.3%;
+    height: 27.3%;
+    background: linear-gradient(335.1deg, #2A0C5C 3.62%, #5F27BD 68.17%, #B4299A 97.16%);
+    border-radius: 15px;
+  }
+}
+
+.uml-diagram {
+  & > * {
+    transform: rotate(35deg) skew(35deg, -5deg);
+  }
+  
+  &__ellipse,
+  &__rhombus,
+  &__rectangle {
+    background: rgba(242, 167, 140, 0.8);
+  }
+  
+  &__ellipse {
+    width: 13.2%;
+    height: 3.2%;
+    border-radius: 25px;
+    
+    &--top {
+      top: 14.9%;
+      left: 46.6%;
+    }
+  }
+  
+  &__rectangle {
+    width: 12.4%;
+    height: 4.6%;
+    
+    &--left {
+      top: 25.9%;
+      left: 37.2%;
+    }
+    
+    &--right {
+    
     }
   }
 }
