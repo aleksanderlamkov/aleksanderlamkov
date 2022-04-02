@@ -11,13 +11,14 @@
 		<%- require('../logo/template.ejs')({
 			extraClasses: 'header__logo'
 		}) %>
-		<nav class="header__menu">
+		<nav class="header__menu hidden-mobile">
 			<ul class="header__menu-list">
 				<% menuItems.forEach((item) => { %>
 					<li class="header__menu-item">
 						<button
 						  class="header__menu-button"
 						  type="button"
+							data-js-scroll-to='{"anchor": "#<%= item.replaceAll(' ', '-').trim().toLowerCase() %>"}'
 						>
 						  <%= item %>
 						</button>
@@ -28,5 +29,15 @@
 		<%- require('../theme-switcher/template.ejs')({
 			extraClasses: 'header__theme-switcher'
 		}) %>
+		<%- require('../burger-button/template.ejs')({
+			extraClasses: [
+				'header__burger-button',
+				'visible-mobile'
+			]
+		}) %>
 	</div>
+	<%- require('../mobile-menu/template.ejs')({
+		extraClasses: 'visible-mobile',
+		items: menuItems
+	}) %>
 </header>

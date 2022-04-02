@@ -70,6 +70,8 @@ import Icons from './js/icons'
 import ScrollEffects from './js/scrollEffects'
 import Button from './components/button'
 import ThemeSwitcher from './components/theme-switcher'
+import MobileMenu from './components/mobile-menu'
+import BurgerButton from './components/burger-button'
 
 // Load components
 import './components/header'
@@ -77,9 +79,13 @@ import './components/footer'
 import './components/logo'
 import './components/button'
 import './components/theme-switcher'
+import './components/mobile-menu'
+import './components/burger-button'
+import './components/portfolio-card'
 
 // Load collections
 import { LiveTypingCollection } from './js/liveTyping'
+import { SlidersCollection } from './js/sliders'
 
 // Load styles
 import './styles'
@@ -90,11 +96,14 @@ const handleDOMReady = () => {
 
   // standalone components
   new Icons()
-  new ThemeSwitcher()
   new Button()
 
   // app components
+  App.ThemeSwitcher = new ThemeSwitcher()
+  App.MobileMenu = new MobileMenu()
+  App.BurgerButton = new BurgerButton()
   App.LiveTypingCollection = new LiveTypingCollection()
+  App.SlidersCollection = new SlidersCollection()
 
   // prevent transition flicker
   wait(100).then(() => {

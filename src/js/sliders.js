@@ -1,5 +1,5 @@
 import Collection from './generic/collection'
-import {Swiper, Navigation} from 'swiper'
+import {Swiper, Navigation, Autoplay} from 'swiper'
 import 'swiper/css/bundle'
 import {mq} from '../app'
 import {getCopyOfObj} from './utils/getCopyOfObj'
@@ -7,7 +7,7 @@ import {isMedia} from './utils/isMedia'
 import {bubble} from './utils/bubble'
 import {getMapFromObj} from './utils/getMapFromObj'
 
-Swiper.use([Navigation])
+Swiper.use([Navigation, Autoplay])
 
 export const instance = '[data-js-slider]'
 
@@ -161,45 +161,35 @@ export class Slider {
 
 export class SlidersCollection extends Collection {
   static slidersCfg = getMapFromObj({
-    '.slider .swiper': {
-      ...defaultParams, // use this to add default params and overwrite it
-      slidesPerView: 1,
-      spaceBetween: 10,
+    '.hero-slider .swiper': {
+      ...defaultParams,
+      speed: 250,
+      preventInteractionOnTransition: false,
+      waitForTransition: false,
+      loop: true,
       navigation: {
-        prevEl: '.slider .slider-buttons__button--prev',
-        nextEl: '.slider .slider-buttons__button--next'
+        prevEl: '.hero-slider .hero-slider__button--prev',
+        nextEl: '.hero-slider .hero-slider__button--next'
       },
-      pagination: {
-        ...paginationCfg,
-        el: '.slider .slider-pagination',
+      autoplay: {
+        delay: 2000,
       },
-      speed: 500,
       breakpoints: {
-        1025: {
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 8,
           allowTouchMove: false,
         },
-      },
-    },
-    '.product-preview__main-slider .swiper': {
-      ...defaultParams,
-      slidesPerView: 1,
-      effect: 'fade',
-      fadeEffect: {
-        crossFade: true
-      },
-      thumbs: {
-        swiper: {
-          ...defaultParams,
-          el: '.product-preview__secondary-slider .swiper',
+        641: {
           slidesPerView: 4,
-          spaceBetween: 10,
-          navigation: {
-            prevEl: '.product-preview__secondary-slider .slider-buttons__button--prev',
-            nextEl: '.product-preview__secondary-slider .slider-buttons__button--next'
-          },
+          spaceBetween: 8,
+          allowTouchMove: false,
+        },
+        0: {
+          slidesPerView: 3,
+          spaceBetween: 4,
         }
-      },
-      allowTouchMove: false,
+      }
     },
   })
 

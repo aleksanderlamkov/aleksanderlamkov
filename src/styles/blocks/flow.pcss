@@ -1,16 +1,16 @@
 @import "../mixins.pcss";
 
 .flow {
-  --columnGap: 32px;
-  --rowGap: 16px;
+  --gapX: 32px;
+  --gapY: 16px;
 
   display: flex;
   flex-wrap: wrap;
-  margin-top: calc(var(--rowGap) * -1);
-  margin-left: calc(var(--columnGap) * -1);
+  margin-top: calc(var(--gapY) * -1);
+  margin-left: calc(var(--gapX) * -1);
 
   & > * {
-    margin-top: var(--rowGap);
-    margin-left: var(--columnGap);
+    margin-top: var(--gapY);
+    margin-left: var(--gapX);
   }
 }

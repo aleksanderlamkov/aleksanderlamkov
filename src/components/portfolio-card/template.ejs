@@ -1,0 +1,71 @@
+<%
+const { classNames } = require("../../js/ejsUtils")
+const cfg = { ...require("./data.json"), ...arguments?.[0] }
+const {
+	extraClasses,
+	extraAttrs,
+	imgSrc,
+	time,
+	title,
+	href,
+	description,
+	stack
+} = cfg
+%>
+
+<%
+const classes = classNames(extraClasses, 'portfolio-card')
+const attrs = Array.isArray(extraAttrs) ? extraAttrs.join(' ') : extraAttrs
+%>
+
+<article
+	class="<%= classes %>"
+	<%- attrs %>
+>
+	<img
+		class="portfolio-card__image"
+		src="<%= imgSrc %>"
+		alt=""
+		width="400" height="320" loading="lazy"
+	/>
+	<div class="portfolio-card__body">
+		<time class="portfolio-card__date" datetime="<%- time.datetime %>">
+			<%= time.label %>
+		</time>
+		<h3 class="portfolio-card__title">
+			<% if (href) { %>
+				<a
+					class="portfolio-card__link"
+					href="/"
+					target="_blank"
+					title="Open a new tab"
+				>
+					<%= title %>
+				</a>
+			<% } else { %>
+				<%= title %>
+			<% } %>
+		</h3>
+		<% if (description) { %>
+			<div class="portfolio-card__description">
+				<%- description %>
+			</div>
+		<% } %>
+		<div class="portfolio-card__stack">
+			<ul class="portfolio-card__stack-list flow">
+				<% stack.forEach((item) => { %>
+					<li class="portfolio-card__stack-item">
+						<% const iconName = item.toLowerCase().trim() %>
+						<img
+						  class="portfolio-card__stack-image"
+						  src="./images/icons/<%= iconName %>.svg"
+						  alt="<%= item %>"
+							title="<%= item %>"
+						  width="36" height="36" loading="lazy"
+						/>
+					</li>
+				<% }) %>
+			</ul>
+		</div>
+	</div>
+</article>

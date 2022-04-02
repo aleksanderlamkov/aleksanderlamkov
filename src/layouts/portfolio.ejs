@@ -1,0 +1,36 @@
+<% const items = [
+	{
+		imgSrc: './images/projects/2022-03.jpg',
+		time: {
+			datetime: '2022-03',
+			label: 'March 2022'
+		},
+		title: 'Short landing for transport company',
+		href: '/',
+		stack: [
+			'EJS',
+			'PostCSS',
+			'JS',
+			'WebPack'
+		]
+	},
+] %>
+
+<section class="section">
+	<div class="section__inner container">
+		<header class="section__header">
+			<h2 class="section__title">
+				My <span class="accent-color">Portfolio</span>
+			</h2>
+		</header>
+		<div class="section__body">
+			<ul class="grid">
+				<% items.forEach((item) => { %>
+					<li class="grid__item">
+						<%- require('../components/portfolio-card/template.ejs')(item) %>
+					</li>
+				<% }) %>
+			</ul>
+		</div>
+	</div>
+</section>

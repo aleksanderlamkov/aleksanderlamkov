@@ -100,7 +100,7 @@ export class LiveTyping {
 
   init() {
     // this.formatText()
-    // this.startTyping()
+    this.startTyping()
   }
 
   bindEvents() {

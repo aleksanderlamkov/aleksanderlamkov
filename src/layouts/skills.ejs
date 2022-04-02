@@ -1,0 +1,63 @@
+<% const hardSkills = [
+  'HTML, (HTML5), EJS, JSX',
+	'CSS (CSS3), SASS (SCSS), PostCSS, Bootstrap, Tailwind, Animations',
+	'JavaScript (ES6+, OOP), jQuery',
+	'React, Redux, TypeScript',
+	'Webpack, Gulp',
+	'BEM',
+	'Git (GitHub, BitBucket, GitLab)',
+	'Figma, Adobe Photoshop, Avocode',
+	'CMS 1C-Bitrix, Drupal, OpenCart, MODX',
+	'Basic understanding PHP, Blade, Twig',
+	'Agile, Waterfall, SCRUM',
+	'Competent written and oral speech',
+	'English level - B1',
+] %>
+
+<% const softSkills = [
+	'I know how to work in a team, I have experience in communication with designers, managers and other developers',
+	'I am responsible about deadlines',
+	'I am attentive to the details of the terms of reference',
+	'I am demanding of the quality of my code, I follow the code-style',
+	'I have time management skills',
+	'I welcome constructive criticism and am always happy to find new points of professional and personal growth',
+	'I know how to solve conflict situations',
+	'I am correctly convey thoughts, formulate questions',
+	'I write detailed reports on the work done, if required',
+	'I have experience working with a geographically distributed team (remote work)',
+	'I have experience in mentoring, training of junior specialists',
+	'I am motivated to improve my skills, constantly studying new technologies in my field of activity',
+] %>
+
+<section class="section skills scroll-effect" id="skills" data-js-scroll-effect>
+	<div class="skills__inner grid grid--2 container">
+		<div class="skills__column">
+			<h2 class="skills__title">
+				<span class="accent-color">Hard</span> skills
+			</h2>
+			<div class="skills__body">
+				<ul class="skills__list grid">
+					<% hardSkills.forEach((skill) => { %>
+						<li class="skills__item grid__item">
+							<%- skill %>
+						</li>
+					<% }) %>
+				</ul>
+			</div>
+		</div>
+		<div class="skills__column">
+			<h2 class="skills__title">
+				<span class="accent-color">Soft</span> skills
+			</h2>
+			<div class="skills__body">
+				<ul class="skills__list grid">
+					<% softSkills.forEach((skill) => { %>
+						<li class="skills__item grid__item">
+							<%- skill %>
+						</li>
+					<% }) %>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>

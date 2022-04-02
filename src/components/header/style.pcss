@@ -2,11 +2,22 @@
 
 .header {
   padding-block: 24px;
+  
+  @media (--mobile) {
+    padding-block: 16px;
+  }
 
   &__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 30px;
+  }
+  
+  &__logo {
+    @media (--mobile) {
+      flex-grow: 1;
+    }
   }
 
   &__menu {
@@ -19,5 +30,10 @@
     &-button {
       padding-block: 20px;
     }
+  }
+  
+  &__burger-button {
+    position: relative;
+    z-index: var(--layerOverlayControls);
   }
 }

@@ -1,0 +1,16 @@
+{
+  "extraClasses": [],
+  "extraAttrs": [],
+  "imgSrc": "./images/example.jpg",
+  "time": {
+    "datetime": "2019-11",
+    "label": "November 2019"
+  },
+  "title": "My work - November 2021",
+  "href": false,
+  "description": "<p>Rekishi — это минимальная оболочка для History API, которая предоставляет дополнительные функции публикации/подписки</p>",
+  "stack": [
+    "HTML",
+    "CSS"
+  ]
+}

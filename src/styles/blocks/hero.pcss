@@ -5,13 +5,56 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
+    @media (--tablet-xxs) {
+      flex-direction: column;
+    }
   }
 
   &__body {
-    flex: 0 0 40%;
+    width: 100%;
+    
+    @media (--tablet-above) {
+      flex: 0 0 40%;
+    }
 
     &:not(:last-child) {
       margin-right: max(40px, 10%);
+      
+      @media (--tablet) {
+        margin-right: 40px;
+      }
+  
+      @media (--tablet-xxs) {
+        margin-right: 0;
+        margin-bottom: var(--sectionPaddingY);
+      }
+    }
+  }
+  
+  &__title {
+    br {
+      @media (--mobile) {
+        display: none;
+      }
+    }
+  }
+  
+  &__scene-wrapper {
+    .hero-scene {
+      @media (--tablet) {
+        --size: 500px;
+      }
+      
+      @media (--mobile-s) {
+        --size: calc(100vw - var(--gridPadding) * 2);
+      }
+    }
+  }
+  
+  &__button {
+    @media (--mobile-xs) {
+      width: 100%;
     }
   }
 }

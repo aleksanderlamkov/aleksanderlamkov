@@ -1,0 +1,38 @@
+<%
+const { classNames } = require("../../js/ejsUtils")
+const cfg = { ...require("./data.json"), ...arguments?.[0] }
+const {
+	extraClasses,
+	extraAttrs,
+	items,
+} = cfg
+%>
+
+<%
+const classes = classNames(extraClasses, 'mobile-menu')
+const attrs = Array.isArray(extraAttrs) ? extraAttrs.join(' ') : extraAttrs
+%>
+
+<div
+	class="<%= classes %>"
+	<%- attrs %>
+	data-js-mobile-menu
+>
+	<div class="mobile-menu__inner container">
+		<div class="mobile-menu__navigation">
+			<ul class="mobile-menu__navigation-list">
+				<% items.forEach((item) => { %>
+					<li class="mobile-menu__navigation-item">
+						<button
+							class="mobile-menu__navigation-button"
+							type="button"
+							data-js-scroll-to='{"anchor": "#<%= item.replaceAll(' ', '-').trim().toLowerCase() %>"}'
+						>
+							<%= item %>
+						</button>
+					</li>
+				<% }) %>
+			</ul>
+		</div>
+	</div>
+</div>

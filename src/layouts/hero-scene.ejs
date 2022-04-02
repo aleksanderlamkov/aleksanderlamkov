@@ -1,10 +1,4 @@
 <div class="hero-scene scroll-effect" data-js-scroll-effect>
-  <img
-    class="hero-scene__all-image"
-    src="./images/hero/all.svg"
-    alt=""
-    width="600" height="600" loading="lazy"
-  />
   <div class="laptop-bottom-panel">
     <div class="laptop-bottom-panel__shadow"></div>
     <div class="laptop-bottom-panel__base"></div>
@@ -18,30 +12,32 @@
 
       <% for (let i = 0; i < 70; i++) { %>
         <%
-          let laptopKeyboardKeyClass = 'laptop-bottom-panel__key '
+          let laptopKeyboardKeyClasses = 'laptop-bottom-panel__key '
 
           if (buttonsIndexesWithOneAndHalfSize.includes(i)) {
-            laptopKeyboardKeyClass += 'laptop-bottom-panel__key--3'
+            laptopKeyboardKeyClasses += 'laptop-bottom-panel__key--3'
           }
           if (buttonsIndexesWithTwiceSize.includes(i)) {
-            laptopKeyboardKeyClass += 'laptop-bottom-panel__key--4'
+            laptopKeyboardKeyClasses += 'laptop-bottom-panel__key--4'
           }
           if (buttonsIndexesWithTwiceAndHalfSize.includes(i)) {
-            laptopKeyboardKeyClass += 'laptop-bottom-panel__key--5'
+            laptopKeyboardKeyClasses += 'laptop-bottom-panel__key--5'
           }
           if (buttonsIndexesWithFourteenSize.includes(i)) {
-            laptopKeyboardKeyClass += 'laptop-bottom-panel__key--14'
+            laptopKeyboardKeyClasses += 'laptop-bottom-panel__key--14'
           }
 
-          laptopKeyboardKeyClass = laptopKeyboardKeyClass.trim()
+          laptopKeyboardKeyClasses = laptopKeyboardKeyClasses.trim()
         %>
-        <button class="<%= laptopKeyboardKeyClass.trim() %>" type="button"></button>
+        <button class="<%= laptopKeyboardKeyClasses.trim() %>" type="button"></button>
       <% } %>
     </div>
+    <div class="laptop-bottom-panel__shine"></div>
   </div>
   <div class="laptop-top-panel">
     <div class="laptop-top-panel__base"></div>
     <div class="laptop-top-panel__screen"></div>
+    <div class="laptop-top-panel__shine"></div>
   </div>
   <div class="uml-diagram">
     <div class="uml-diagram__ellipse uml-diagram__ellipse--top"></div>
@@ -50,10 +46,137 @@
       <\>
     </div>
     <div class="uml-diagram__direction-arrow uml-diagram__direction-arrow--left"></div>
+    <div class="uml-diagram__direction-line uml-diagram__direction-line--top-left"></div>
+    <div class="uml-diagram__direction-line uml-diagram__direction-line--top-right"></div>
     <div class="uml-diagram__direction-arrow uml-diagram__direction-arrow--right"></div>
     <div class="uml-diagram__rectangle uml-diagram__rectangle--left"></div>
     <div class="uml-diagram__rectangle uml-diagram__rectangle--right"></div>
+    <div class="uml-diagram__direction-line uml-diagram__direction-line--bottom"></div>
+    <div class="uml-diagram__direction-line uml-diagram__direction-line--bottom-left"></div>
+    <div class="uml-diagram__direction-line uml-diagram__direction-line--bottom-right"></div>
     <div class="uml-diagram__direction-arrow uml-diagram__direction-arrow--bottom"></div>
     <div class="uml-diagram__ellipse uml-diagram__ellipse--bottom"></div>
+  </div>
+  <div class="code-signs">
+    <div class="code-signs__sign code-signs__sign--left code-signs__sign--tag"><\></div>
+    <div class="code-signs__sign code-signs__sign--left code-signs__sign--ejs">EJS</div>
+    <div class="code-signs__sign code-signs__sign--right code-signs__sign--react">React</div>
+    <div class="code-signs__sign code-signs__sign--right code-signs__sign--css">CSS</div>
+    <div class="code-signs__sign code-signs__sign--left code-signs__sign--js">JS</div>
+    <div class="code-signs__sign code-signs__sign--left code-signs__sign--stars">******</div>
+    <div class="code-signs__sign code-signs__sign--left code-signs__sign--triangles">▶▶▶▶▶</div>
+    <div class="code-signs__sign code-signs__sign--left code-signs__sign--gear">
+      <svg class="i-icon">
+        <use href="#icon-gear"></use>
+      </svg>
+    </div>
+    <div class="code-signs__sign code-signs__sign--left code-signs__sign--search">
+      <svg class="i-icon">
+        <use href="#icon-search"></use>
+      </svg>
+    </div>
+    <div class="code-signs__sign code-signs__sign--right code-signs__sign--idea">
+      <svg class="i-icon">
+        <use href="#icon-idea"></use>
+      </svg>
+    </div>
+    <div class="code-signs__sign code-signs__sign--right code-signs__sign--shield">
+      <svg class="i-icon">
+        <use href="#icon-shield"></use>
+      </svg>
+    </div>
+  </div>
+  <div class="code-panel">
+    <%
+    const codePanelWordIndexesWithTwoSize = [1, 5, 7, 9, 10, 11, 12, 14, 16, 19, 20, 25, 26, 27, 29, 31, 33, 36, 38, 40, 42, 45, 47, 52, 55, 57]
+    const codePanelWordIndexesWithThreeSize = [13, 21, 35, 39, 47, 51, 58]
+    const codePanelWordIndexesWithFourSize = [0, 8, 34]
+    const codePanelWordIndexesWithYellowColor = [0, 8, 21, 34, 35, 47]
+    const codePanelWordIndexesWithBrightColor = [1, 9, 13, 15, 16, 30, 41, 46, 55, 56]
+    const codePanelWordIndexesWithTransparentColor = [6, 7, 12, 18, 19, 26, 32, 33, 37, 38, 44, 45, 52, 58]
+    %>
+
+    <% for (let i = 0; i < 116; i++) { %>
+      <%
+        let codePanelWordClasses = 'code-panel__word'
+
+        if (codePanelWordIndexesWithTwoSize.includes(i) || (i > 58 && codePanelWordIndexesWithTwoSize.includes(i - 59))) {
+          codePanelWordClasses += ' code-panel__word--2'
+        }
+
+        if (codePanelWordIndexesWithThreeSize.includes(i) || (i > 58 && codePanelWordIndexesWithThreeSize.includes(i - 59))) {
+          codePanelWordClasses += ' code-panel__word--3'
+        }
+
+        if (codePanelWordIndexesWithFourSize.includes(i) || (i > 58 && codePanelWordIndexesWithFourSize.includes(i - 59))) {
+          codePanelWordClasses += ' code-panel__word--4'
+        }
+
+        if (codePanelWordIndexesWithYellowColor.includes(i) || (i > 58 && codePanelWordIndexesWithYellowColor.includes(i - 59))) {
+          codePanelWordClasses += ' code-panel__word--yellow-color'
+        }
+
+        if (codePanelWordIndexesWithBrightColor.includes(i) || (i > 58 && codePanelWordIndexesWithBrightColor.includes(i - 59))) {
+          codePanelWordClasses += ' code-panel__word--bright-color'
+        }
+
+        if (codePanelWordIndexesWithTransparentColor.includes(i) || (i > 58 && codePanelWordIndexesWithTransparentColor.includes(i - 59))) {
+          codePanelWordClasses += ' code-panel__word--transparent-color'
+        }
+      %>
+      <div class="<%= codePanelWordClasses.trim() %>"></div>
+    <% } %>
+  </div>
+  <div class="byte-code">
+    <% const byteCode = '11010001100101110110011011001101111' %>
+    <% byteCode.split('').map((char) => { %>
+      <span class="byte-code__char"><%= char %></span>
+    <% }) %>
+  </div>
+  <div class="hero-slider" data-js-slider>
+    <button
+      class="hero-slider__button hero-slider__button--prev"
+      type="button"
+      title="To prev slide"
+      aria-label="To prev slide"
+    >
+      <svg class="i-icon">
+        <use href="#icon-arrow-left"></use>
+      </svg>
+    </button>
+    <div class="hero-slider__inner swiper">
+      <% const heroSliderIcons = [
+        'html',
+        'css',
+        'js',
+        'react',
+        'redux',
+        'ts',
+        'webpack',
+        'postcss',
+        'ejs'
+      ] %>
+      <ul class="hero-slider__list swiper-wrapper">
+        <% heroSliderIcons.forEach((icon) => { %>
+          <li class="hero-slider__item swiper-slide">
+            <div class="hero-slider__icon-wrapper">
+              <svg class="i-icon">
+                <use href="#icon-<%= icon %>"></use>
+              </svg>
+            </div>
+          </li>
+        <% }) %>
+      </ul>
+    </div>
+    <button
+      class="hero-slider__button hero-slider__button--next"
+      type="button"
+      title="To next slide"
+      aria-label="To next slide"
+    >
+      <svg class="i-icon">
+        <use href="#icon-arrow-right"></use>
+      </svg>
+    </button>
   </div>
 </div>

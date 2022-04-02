@@ -1,4 +1,4 @@
-<div class="hero">
+<div class="hero" id="about">
 	<div class="hero__inner container">
 		<div class="hero__body">
 			<% const liveTypingStages = [
@@ -24,8 +24,9 @@
 				<% }) %>
 			</h1>
 			<%- require('../components/button/template.ejs')({
+				extraClasses: 'hero__button',
 				label: {
-          text: 'Let’s check!'
+					text: 'Let’s check!'
 				}
 			}) %>
 		</div>
