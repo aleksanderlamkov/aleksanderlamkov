@@ -1,0 +1,55 @@
+<%
+const { classNames } = require("../../js/ejsUtils")
+const cfg = { ...require("./data.json"), ...arguments?.[0] }
+const {
+	extraClasses,
+	extraAttrs,
+	time,
+	title,
+	href,
+	position,
+	description,
+	stack
+} = cfg
+%>
+
+<%
+const classes = classNames(extraClasses, 'work-experience-card card card--hoverable')
+const attrs = Array.isArray(extraAttrs) ? extraAttrs.join(' ') : extraAttrs
+%>
+
+<article
+	class="<%= classes %>"
+	<%- attrs %>
+>
+	<time class="work-experience-card__date" datetime="<%- time.datetime %>">
+		<%= time.label %>
+	</time>
+	<h3 class="work-experience-card__title">
+		<% if (href) { %>
+			<a
+				class="work-experience-card__link"
+				href="<%= href %>"
+				target="_blank"
+				title="Open a new tab"
+			>
+				<%= title %>
+			</a>
+		<% } else { %>
+			<%= title %>
+		<% } %>
+	</h3>
+	<div class="work-experience-card__position">
+		<%= position %>
+	</div>
+	<% if (description) { %>
+		<div class="work-experience-card__description">
+			<%- description %>
+		</div>
+	<% } %>
+	<% if (stack && stack.length) { %>
+		<%- require('../stack/template.ejs')({
+			items: stack
+		}) %>
+	<% } %>
+</article>

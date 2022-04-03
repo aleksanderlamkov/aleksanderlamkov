@@ -1,0 +1,19 @@
+{
+  "extraClasses": [],
+  "extraAttrs": [],
+  "time": {
+    "datetime": "2022-04",
+    "label": "April 2022 - present"
+  },
+  "title": "Good Factory",
+  "href": false,
+  "position": "Middle Frontend Developer",
+  "description": "<p>Development of complex web applications on a modern technology stack.</p>",
+  "stack": [
+    "React",
+    "Redux",
+    "TypeScript",
+    "SCSS",
+    "WebPack"
+  ]
+}

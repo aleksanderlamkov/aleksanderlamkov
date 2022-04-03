@@ -1,0 +1,76 @@
+@import "../mixins.pcss";
+
+.work-experience {
+  --circleSize: 40px;
+  
+  padding-left: calc(var(--circleSize) * 2);
+  
+  @media (--mobile) {
+    --circleSize: 24px;
+  }
+  
+  &__list {
+    position: relative;
+    
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: calc(100% + var(--circleSize) * 1.5);
+      width: 1px;
+      height: 100%;
+      background-color: var(--c-accent);
+      transform: translateY(-50%);
+    }
+  }
+  
+  &__item {
+    position: relative;
+    
+    &::before {
+      --size: calc(var(--circleSize) * 0.3);
+      --borderWidth: calc((var(--circleSize) - var(--size)) / 2);
+  
+      content: "";
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      right: calc(100% + var(--circleSize));
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: var(--size);
+      height: var(--size);
+      background-color: var(--c-accent);
+      border: var(--borderWidth) solid var(--c-dark);
+      border-radius: 50%;
+      box-shadow: var(--box-shadow-3);
+      transform: translateY(-50%);
+      box-sizing: content-box;
+    }
+    
+    &:first-child,
+    &:last-child {
+      &::after {
+        content: "";
+        position: absolute;
+        right: calc(100% + var(--circleSize) * 1.5);
+        width: 1px;
+        height: 50%;
+        background-color: var(--c-dark);
+      }
+    }
+    
+    &:first-child {
+      &::after {
+        top: 0;
+      }
+    }
+    
+    &:last-child {
+      &::after {
+        bottom: 0;
+      }
+    }
+  }
+}

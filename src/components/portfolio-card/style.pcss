@@ -4,10 +4,14 @@
   display: grid;
   grid-template-columns: 35% auto;
   gap: 30px max(40px, 10%);
-  padding: 40px;
-  background-color: var(--c-dark);
-  border-radius: var(--border-radius-2);
-  box-shadow: var(--box-shadow-inset);
+  
+  @media (--tablet-s) {
+    column-gap: 40px;
+  }
+  
+  @media (--mobile) {
+    grid-template-columns: 1fr;
+  }
   
   &__image {
     width: 100%;
@@ -16,6 +20,10 @@
     box-shadow: var(--box-shadow-3);
     object-fit: cover;
     object-position: 50% 0;
+  
+    @media (--mobile) {
+      height: 200px;
+    }
   }
   
   &__date {
@@ -40,33 +48,6 @@
   &__description {
     &:not(:last-child) {
       margin-bottom: 20px;
-    }
-  }
-  
-  &__stack {
-    &-list {
-      &.flow {
-        --gapX: 16px;
-        --gapY: 8px;
-      }
-    }
-  
-    &-item {
-      --size: 64px;
-    
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: var(--size);
-      height: var(--size);
-      border-radius: 50%;
-      box-shadow: var(--box-shadow-inset-2);
-    }
-    
-    &-image {
-      --size: 36px;
-      
-      @mixin img-contain var(--size);
     }
   }
 }

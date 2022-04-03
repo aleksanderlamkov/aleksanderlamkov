@@ -1,0 +1,37 @@
+<%
+const { classNames } = require("../../js/ejsUtils")
+const cfg = { ...require("./data.json"), ...arguments?.[0] }
+const {
+	extraClasses,
+	extraAttrs,
+	items
+} = cfg
+%>
+
+<%
+const classes = classNames(extraClasses, 'socials')
+const attrs = Array.isArray(extraAttrs) ? extraAttrs.join(' ') : extraAttrs
+%>
+
+<div
+	class="<%= classes %>"
+	<%- attrs %>
+>
+	<ul class="socials__list flow">
+		<% items.forEach(({ label, href, icon }) => { %>
+			<li class="socials__item">
+				<a
+					class="socials__link"
+					href="<%= href %>"
+					target="_blank"
+					title="<%= label %>"
+					aria-label="<%= label %>"
+				>
+					<svg class="i-icon">
+						<use href="#icon-<%= icon %>"></use>
+					</svg>
+				</a>
+			</li>
+		<% }) %>
+	</ul>
+</div>

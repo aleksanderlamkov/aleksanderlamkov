@@ -82,6 +82,10 @@ import './components/theme-switcher'
 import './components/mobile-menu'
 import './components/burger-button'
 import './components/portfolio-card'
+import './components/skill-card'
+import './components/stack'
+import './components/work-experience-card'
+import './components/socials'
 
 // Load collections
 import { LiveTypingCollection } from './js/liveTyping'

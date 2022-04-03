@@ -10,29 +10,6 @@
   }
   
   &__item {
-    --padding: 20px;
-    
-    @mixin fade-right;
-    
-    position: relative;
-    padding: var(--padding);
-    padding-left: 60px;
-    font-size: 20px;
-    background-color: var(--c-dark);
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow-3);
-    
-    &::before {
-      --size: 12px;
-      
-      content: "";
-      position: absolute;
-      top: calc(var(--padding) + 0.35em);
-      left: var(--padding);
-      width: var(--size);
-      height: var(--size);
-      background-color: var(--c-accent);
-      border-radius: 50%;
-    }
+    @mixin fade-right 1.2s, 0.6s;
   }
 }

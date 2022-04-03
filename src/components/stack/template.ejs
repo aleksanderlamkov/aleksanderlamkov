@@ -1,0 +1,34 @@
+<%
+const { classNames } = require("../../js/ejsUtils")
+const cfg = { ...require("./data.json"), ...arguments?.[0] }
+const {
+	extraClasses,
+	extraAttrs,
+	items
+} = cfg
+%>
+
+<%
+const classes = classNames(extraClasses, 'stack')
+const attrs = Array.isArray(extraAttrs) ? extraAttrs.join(' ') : extraAttrs
+%>
+
+<div
+	class="<%= classes %>"
+	<%- attrs %>
+>
+	<ul class="stack__list flow">
+		<% items.forEach((item) => { %>
+			<li class="stack__item">
+				<% const iconName = item.replaceAll(' ', '-').toLowerCase().trim() %>
+				<img
+					class="stack__image"
+					src="./images/icons/<%= iconName %>.svg"
+					alt="<%= item %>"
+					title="<%= item %>"
+					width="36" height="36" loading="lazy"
+				/>
+			</li>
+		<% }) %>
+	</ul>
+</div>

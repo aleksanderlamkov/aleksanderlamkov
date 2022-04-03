@@ -1,5 +1,39 @@
-<footer class="footer">
-	<div class="footer__inner container">
-		<%- require('../logo/template.ejs')() %>
+<footer class="footer container" id="contacts">
+	<div class="footer__inner card">
+		<div class="footer__body">
+			<div class="footer__title h2">Shall we discuss <span class="accent-color">your project?</span></div>
+			<div class="footer__description">
+				<p>
+					Contact me. I am in touch mon-fri from 2 pm to 4 am (gmt).
+				</p>
+			</div>
+		</div>
+		<div class="footer__contacts">
+			<%- require('../socials/template.ejs')({
+				extraClasses: [
+          'footer__socials'
+				],
+				items: [
+					{
+						label: 'LinkedIn',
+						href: 'https://www.linkedin.com/in/aleksander-lamkov-569b87231/?locale=en_US',
+						icon: 'linkedin'
+					},
+					{
+						label: 'Telegram',
+						href: 'https://t.me/a1rth',
+						icon: 'telegram'
+					},
+					{
+						label: 'Email',
+						href: 'mailto:aleksanderlamkov@gmail.com',
+						icon: 'email'
+					},
+				]
+			}) %>
+			<div class="footer__copyright">
+				© Alexander Lamkov, 2022
+			</div>
+		</div>
 	</div>
 </footer>

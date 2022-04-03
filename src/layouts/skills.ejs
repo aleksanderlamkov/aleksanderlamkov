@@ -29,17 +29,19 @@
 	'I am motivated to improve my skills, constantly studying new technologies in my field of activity',
 ] %>
 
-<section class="section skills scroll-effect" id="skills" data-js-scroll-effect>
+<section class="section skills" id="skills">
 	<div class="skills__inner grid grid--2 container">
 		<div class="skills__column">
 			<h2 class="skills__title">
 				<span class="accent-color">Hard</span> skills
 			</h2>
 			<div class="skills__body">
-				<ul class="skills__list grid">
+				<ul class="skills__list grid scroll-effect" data-js-scroll-effect>
 					<% hardSkills.forEach((skill) => { %>
 						<li class="skills__item grid__item">
-							<%- skill %>
+							<%- require('../components/skill-card/template.ejs')({
+								label: skill
+							}) %>
 						</li>
 					<% }) %>
 				</ul>
@@ -50,10 +52,12 @@
 				<span class="accent-color">Soft</span> skills
 			</h2>
 			<div class="skills__body">
-				<ul class="skills__list grid">
+				<ul class="skills__list grid scroll-effect" data-js-scroll-effect>
 					<% softSkills.forEach((skill) => { %>
 						<li class="skills__item grid__item">
-							<%- skill %>
+							<%- require('../components/skill-card/template.ejs')({
+								label: skill
+							}) %>
 						</li>
 					<% }) %>
 				</ul>

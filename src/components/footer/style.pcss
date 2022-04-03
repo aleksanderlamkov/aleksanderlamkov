@@ -1,15 +1,37 @@
 @import "../../styles/mixins.pcss";
 
 .footer {
-  --paddingY: 16px;
-
-  padding-top: var(--paddingY);
-  padding-bottom: var(--paddingY);
-  background-color: var(--c-gray-3);
-
+  margin-top: var(--sectionPaddingY);
+  margin-bottom: calc(var(--sectionPaddingY) * 1.5);
+  
+  @media (--mobile) {
+    margin-bottom: var(--sectionPaddingY);
+  }
+  
   &__inner {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    gap: 30px;
+    
+    @media (--tablet-xs) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  
+  &__title {
+    --marginBottom: 24px;
+  }
+  
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 30px;
+  
+    @media (--tablet-xs) {
+      align-items: flex-start;
+    }
   }
 }

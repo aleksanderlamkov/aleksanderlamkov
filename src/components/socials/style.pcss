@@ -1,0 +1,45 @@
+@import "../../styles/mixins.pcss";
+
+.socials {
+  &__list {
+    &.flow {
+      --gapX: 16px;
+      --gapY: 8px;
+      
+      @media (--mobile) {
+        --gapX: 8px;
+      }
+    }
+  }
+  
+  &__link {
+    --size: 64px;
+    
+    @mixin transition 0.05s;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    box-shadow: var(--box-shadow-inset-2);
+    
+    @media (--mobile) {
+      --size: 54px;
+    }
+    
+    &:hover {
+      @media (--hoverable) {
+        .i-icon {
+          --color: var(--c-accent);
+        }
+      }
+    }
+    
+    .i-icon {
+      --size: 62.5%;
+      --color: var(--c-light);
+    }
+  }
+}

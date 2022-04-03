@@ -860,3 +860,13 @@ $timing-function: ease {
     }
   }
 }
+
+@define-mixin shadow-on-hover {
+  box-shadow: var(--box-shadow-3), var(--box-shadow-inset-transparent);
+  
+  &:hover {
+    @media (--hoverable) {
+      box-shadow: var(--box-shadow-3-transparent), var(--box-shadow-inset);
+    }
+  }
+}

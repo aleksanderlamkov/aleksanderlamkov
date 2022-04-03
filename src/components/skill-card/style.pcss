@@ -1,0 +1,34 @@
+@import "../../styles/mixins.pcss";
+
+.skill-card {
+  --padding: 20px;
+  
+  @mixin transition;
+  @mixin shadow-on-hover;
+  
+  position: relative;
+  padding: var(--padding);
+  padding-left: 60px;
+  font-size: 20px;
+  border-radius: var(--border-radius);
+  
+  @media (--mobile) {
+    --padding: 15px;
+  
+    padding-left: 48px;
+    font-size: 16px;
+  }
+  
+  &::before {
+    --size: 12px;
+    
+    content: "";
+    position: absolute;
+    top: calc(var(--padding) + 0.35em);
+    left: var(--padding);
+    width: var(--size);
+    height: var(--size);
+    background-color: var(--c-accent);
+    border-radius: 50%;
+  }
+}

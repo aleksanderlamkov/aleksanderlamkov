@@ -14,7 +14,7 @@ const {
 %>
 
 <%
-const classes = classNames(extraClasses, 'portfolio-card')
+const classes = classNames(extraClasses, 'portfolio-card card card--hoverable')
 const attrs = Array.isArray(extraAttrs) ? extraAttrs.join(' ') : extraAttrs
 %>
 
@@ -36,7 +36,7 @@ const attrs = Array.isArray(extraAttrs) ? extraAttrs.join(' ') : extraAttrs
 			<% if (href) { %>
 				<a
 					class="portfolio-card__link"
-					href="/"
+					href="<%= href %>"
 					target="_blank"
 					title="Open a new tab"
 				>
@@ -51,21 +51,10 @@ const attrs = Array.isArray(extraAttrs) ? extraAttrs.join(' ') : extraAttrs
 				<%- description %>
 			</div>
 		<% } %>
-		<div class="portfolio-card__stack">
-			<ul class="portfolio-card__stack-list flow">
-				<% stack.forEach((item) => { %>
-					<li class="portfolio-card__stack-item">
-						<% const iconName = item.toLowerCase().trim() %>
-						<img
-						  class="portfolio-card__stack-image"
-						  src="./images/icons/<%= iconName %>.svg"
-						  alt="<%= item %>"
-							title="<%= item %>"
-						  width="36" height="36" loading="lazy"
-						/>
-					</li>
-				<% }) %>
-			</ul>
-		</div>
+		<% if (stack && stack.length) { %>
+			<%- require('../stack/template.ejs')({
+				items: stack
+			}) %>
+		<% } %>
 	</div>
 </article>

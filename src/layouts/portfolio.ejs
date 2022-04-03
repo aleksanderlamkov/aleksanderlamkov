@@ -1,4 +1,5 @@
-<% const items = [
+<%
+const items = [
 	{
 		imgSrc: './images/projects/2022-03.jpg',
 		time: {
@@ -6,7 +7,7 @@
 			label: 'March 2022'
 		},
 		title: 'Short landing for transport company',
-		href: '/',
+		description: false,
 		stack: [
 			'EJS',
 			'PostCSS',
@@ -14,9 +15,10 @@
 			'WebPack'
 		]
 	},
-] %>
+]
+%>
 
-<section class="section">
+<section class="section scroll-effect" id="portfolio" data-js-scroll-effect>
 	<div class="section__inner container">
 		<header class="section__header">
 			<h2 class="section__title">
@@ -24,13 +26,15 @@
 			</h2>
 		</header>
 		<div class="section__body">
-			<ul class="grid">
-				<% items.forEach((item) => { %>
-					<li class="grid__item">
-						<%- require('../components/portfolio-card/template.ejs')(item) %>
-					</li>
-				<% }) %>
-			</ul>
+			<div class="portfolio">
+				<ul class="portfolio__list grid">
+					<% items.forEach((item, index) => { %>
+						<li class="portfolio__item grid__item">
+							<%- require('../components/portfolio-card/template.ejs')(item) %>
+						</li>
+					<% }) %>
+				</ul>
+			</div>
 		</div>
 	</div>
 </section>

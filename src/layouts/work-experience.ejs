@@ -1,0 +1,99 @@
+<%
+const items = [
+	{
+		time: {
+			datetime: '2022-04',
+			label: 'April 2022 - present'
+		},
+		title: 'Good Factory',
+		href: 'https://good-factory.ru/',
+		position: 'Middle Frontend Developer',
+		description: '<p>Development of complex web applications on a modern technology stack.</p>',
+		stack: [
+			'React',
+			'Redux',
+			'TypeScript',
+			'SCSS',
+			'WebPack'
+		]
+	},
+	{
+		time: {
+			datetime: '2021-06/2022-03',
+			label: 'June 2021 - March 2022'
+		},
+		title: 'Digital Element',
+		href: 'https://d-element.ru/',
+		position: 'Frontend Developer',
+		description: '<p>Development of the frontend part of projects in the field of e-commerce and fintech. Development in pure JavaScript in the OOP style.</p>',
+		stack: [
+      'EJS',
+			'PostCSS',
+			'JavaScript',
+			'React',
+			'WebPack',
+			'Jest',
+			'Figma',
+			'Bitrix'
+		]
+	},
+	{
+		time: {
+			datetime: '2020-09/2021-05',
+			label: 'September 2020 - May 2021'
+		},
+		title: 'Ribbla',
+		href: 'https://ribbla.com/',
+		position: 'Frontend Developer',
+		description: '<p>Development of the frontend part of landing pages and e-commerce projects.</p>',
+		stack: [
+			'HTML',
+			'CSS',
+			'SCSS',
+			'JavaScript',
+			'jQuery',
+			'Gulp',
+			'Figma',
+			'Drupal'
+		]
+	},
+	{
+		time: {
+			datetime: '2019-07/2020-08',
+			label: 'July 2019 - August 2020'
+		},
+		title: 'Freelance',
+		position: 'Frontend Developer',
+		description: '<p>Work on various freelance sites, developed simple layouts, wrote simple scripts.</p>',
+		stack: [
+			'HTML',
+			'CSS',
+			'JavaScript',
+			'jQuery',
+			'Gulp',
+			'Adobe Photoshop'
+		]
+	},
+]
+%>
+
+<section class="section scroll-effect" id="work-experience" data-js-scroll-effect>
+	<div class="section__inner container">
+		<header class="section__header">
+			<h2 class="section__title">
+				Work <span class="accent-color">Experience</span>
+			</h2>
+		</header>
+		<div class="section__body">
+			<div class="work-experience">
+				<ul class="work-experience__list grid">
+					<% items.forEach((item, index) => { %>
+						<li class="work-experience__item grid__item">
+							<%- require('../components/work-experience-card/template.ejs')(item) %>
+						</li>
+					<% }) %>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
