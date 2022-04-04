@@ -35,22 +35,31 @@ export class LiveTyping {
     this.cfg = getCfg(this.instance, this.els.instance, this.defaultCfg)
     this.state = {
       currentStage: 0,
-      totalStages: this.stages.length
+      totalStages: this.stages.length,
+      stagesInfo: [...this.stages].map((stage) => {
+        const letterNodes = stage.querySelectorAll(this.els.letter)
+        return {
+          charsNodes: [...letterNodes],
+          totalChars: letterNodes.length,
+          isHideAfterTyping: getCfg(stage, this.els.stage).isHideAfterTyping
+        }
+      })
     }
+    console.debug(this.state)
     this.init()
     this.bindEvents()
   }
 
-  // formatText() {
-  //   this.stages.forEach((stage) => {
-  //     const clearText = stage.innerHTML.trim().replace(this.regExp.excludeTabulationAndLineFeedChar, ' ')
-  //     const textFormatted = clearText.replace(this.regExp.excludeTags, (char) => {
-  //       return `<span class="live-typing__char" data-js-live-typing-char>${char}</span>`
-  //     })
-  //
-  //     stage.innerHTML = textFormatted
-  //   })
-  // }
+  formatText() {
+    this.stages.forEach((stage) => {
+      const clearText = stage.innerHTML.trim().replace(this.regExp.excludeTabulationAndLineFeedChar, ' ')
+      const textFormatted = clearText.replace(this.regExp.excludeTags, (char) => {
+        return `<span class="live-typing__char" data-js-live-typing-char>${char}</span>`
+      })
+
+      stage.innerHTML = textFormatted
+    })
+  }
 
   removeChars(stage, chars) {
     const reverseChars = [...chars].reverse()
@@ -79,20 +88,18 @@ export class LiveTyping {
     }
 
     const currentStage = this.stages[this.state.currentStage]
-    const chars = currentStage.querySelectorAll(this.els.letter)
-    const totalChars = chars.length
+    const {charsNodes, totalChars, isHideAfterTyping} = this.state.stagesInfo[this.state.currentStage]
     let visibleChars = 0
 
     currentStage.classList.add(this.stateClasses.isVisible)
-    chars.forEach((char, index) => {
+    charsNodes.forEach((char, index) => {
       wait(index * this.cfg.delayBetweenCharsTyping).then(() => {
         char.classList.add(this.stateClasses.isVisible)
         visibleChars++
         if (visibleChars === totalChars) {
           wait(this.cfg.delayBetweenStages).then(() => {
-            const isHideAfterTyping = getCfg(currentStage, this.els.stage).isHideAfterTyping
             if (isHideAfterTyping) {
-              this.removeChars(currentStage, chars)
+              this.removeChars(currentStage, charsNodes)
             } else {
               this.state.currentStage++
               this.startTyping()

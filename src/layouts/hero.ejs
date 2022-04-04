@@ -13,7 +13,7 @@
 					label: 'I can do some great<br/>things for you.'
 				}
 			] %>
-			<h1 class="hero__title live-typing scroll-effect" data-js-live-typing data-js-scroll-effect>
+			<h1 class="hero__title live-typing" data-js-live-typing>
 				<% liveTypingStages.forEach(({ label, isHideAfterTyping }) => { %>
 					<% const clearText = label.trim().replace(/\n\t/g, ' ').replace(/<[^<>]+>|./g, (char) => {
 						return char[0] === '<' ? char : `<span class="live-typing__char" data-js-live-typing-char>${char}</span>`;

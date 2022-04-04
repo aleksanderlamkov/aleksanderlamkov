@@ -48,7 +48,6 @@ export default class Preloader {
     this.instance.classList.remove(this.stateClasses.isShown)
     this.state.isFadeAway = true
     bubble(document, bubbles.fadeAway)
-    console.debug('Bubble!')
   }
 
   destroy() {
@@ -74,7 +73,6 @@ export default class Preloader {
   handleLastPartElementTransitionEnd(event) {
     if (event.propertyName === 'transform') {
       this.state.animationCounter++
-      console.debug('handleLastPartElementTransitionEnd')
       this.manageAnimationEnd()
     }
   }
