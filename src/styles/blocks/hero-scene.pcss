@@ -530,13 +530,14 @@
     background: linear-gradient(90deg, #3D065F 34880%, #5F27BD 35227%);
     background-blend-mode: color-dodge;
     mix-blend-mode: color-dodge;
+    transform-origin: 0 50%;
   
-    @mixin transform-on-scroll translate3d(100px, 0, 0), initial, 0s, 0.5s;
+    @mixin transform-on-scroll scale(0) translateZ(0), initial, 0s, 0.25s;
   
     .scroll-effect--visible & {
       @for $i from 1 to 116 {
         &:nth-child($i) {
-          --delay: calc($i * 0.025s + 1.5s);
+          --delay: calc($i * 0.15s + 1.5s);
         }
       }
     }

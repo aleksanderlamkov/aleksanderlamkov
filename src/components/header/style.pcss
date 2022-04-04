@@ -1,10 +1,28 @@
 @import "../../styles/mixins.pcss";
 
 .header {
+  @mixin transition;
+  
+  position: fixed;
+  z-index: var(--layoutHeader);
+  top: 0;
+  left: 0;
+  width: 100%;
   padding-block: 24px;
   
   @media (--mobile) {
-    padding-block: 16px;
+    padding-block: 12px;
+  }
+  
+  &.is-scrolled {
+    padding-block: 12px;
+    background-color: var(--c-dark);
+    box-shadow: var(--box-shadow-3);
+  
+    .is-light-theme-enabled & {
+      background-color: var(--c-light);
+      box-shadow: var(--box-shadow-4);
+    }
   }
 
   &__inner {

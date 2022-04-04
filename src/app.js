@@ -1,13 +1,13 @@
 // import utils
-import {isTouchEnabled} from './js/utils/isTouchEnabled'
-import {isMobileDevice} from './js/utils/isMobileDevice'
-import {parseJSON} from './js/utils/parseJSON'
-import {wait} from './js/utils/wait'
-import {debounce} from './js/utils/debounce'
-import {setCSSVar} from './js/utils/setCSSVar'
-import {onDOMContentLoaded} from './js/utils/onDOMContentLoaded'
-import {requireAll} from './js/utils/webpack/requireAll'
-import {getScrollBarWidth} from './js/utils/getScrollBarWidth'
+import { isTouchEnabled } from './js/utils/isTouchEnabled'
+import { isMobileDevice } from './js/utils/isMobileDevice'
+import { parseJSON } from './js/utils/parseJSON'
+import { wait } from './js/utils/wait'
+import { debounce } from './js/utils/debounce'
+import { setCSSVar } from './js/utils/setCSSVar'
+import { onDOMContentLoaded } from './js/utils/onDOMContentLoaded'
+import { requireAll } from './js/utils/webpack/requireAll'
+import { getScrollBarWidth } from './js/utils/getScrollBarWidth'
 
 // media queries (if used in js)
 export const mq = {
@@ -64,16 +64,20 @@ if (!window.App.isTest) {
 }
 
 // load modules
+import Preloader from './components/preloader'
 import Dispatcher from './js/generic/dispatcher'
 import Observer from './js/generic/observer'
 import Icons from './js/icons'
+import ScrollTo from './js/scrollTo'
 import ScrollEffects from './js/scrollEffects'
 import Button from './components/button'
 import ThemeSwitcher from './components/theme-switcher'
 import MobileMenu from './components/mobile-menu'
 import BurgerButton from './components/burger-button'
+import Header from './components/header'
 
 // Load components
+import './components/preloader'
 import './components/header'
 import './components/footer'
 import './components/logo'
@@ -99,6 +103,7 @@ const handleDOMReady = () => {
   Object.values(App.utils).forEach(fn => typeof fn === 'function' && fn())
 
   // standalone components
+  new Preloader()
   new Icons()
   new Button()
 
@@ -106,12 +111,18 @@ const handleDOMReady = () => {
   App.ThemeSwitcher = new ThemeSwitcher()
   App.MobileMenu = new MobileMenu()
   App.BurgerButton = new BurgerButton()
+  App.Header = new Header()
   App.LiveTypingCollection = new LiveTypingCollection()
   App.SlidersCollection = new SlidersCollection()
+
+  new ScrollTo()
 
   // prevent transition flicker
   wait(100).then(() => {
     document.documentElement.classList.add(App.stateClasses.domReady)
+  })
+
+  wait(1200).then(() => {
     App.ScrollEffects = new ScrollEffects()
   })
 }

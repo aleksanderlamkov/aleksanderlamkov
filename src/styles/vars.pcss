@@ -18,9 +18,6 @@
 
   --c-overlay: rgba(0, 0, 0, 0.6);
 
-  --c-text: var(--c-light);
-  --c-background: var(--c-dark);
-
   --border-radius: 16px;
   --border-radius-2: 32px;
   --border-radius-3: 60px;
@@ -30,11 +27,13 @@
   --box-shadow-2: -4px -4px 12px rgba(255, 255, 255, 0.8), 4px 4px 12px #000000;
   --box-shadow-3: -4px -4px 12px rgba(255, 255, 255, 0.05), 4px 4px 12px #000000;
   --box-shadow-3-transparent: -4px -4px 12px rgba(255, 255, 255, 0), 4px 4px 12px rgba(0, 0, 0, 0);
-  --box-shadow-4: -8px -8px 12px rgb(255 255 255 / 80%), 8px 8px 12px rgb(0 0 0 / 15%);
+  --box-shadow-4: -8px -8px 12px rgb(255 255 255 / 80%), 8px 8px 12px rgb(0 0 0 / 5%);
+  --box-shadow-4-transparent: -8px -8px 12px rgb(255 255 255 / 0), 8px 8px 12px rgb(0 0 0 / 0);
   --box-shadow-5: -4px -4px 12px rgba(255, 255, 255, 0.05), 4px 4px 12px var(--c-accent);
   --box-shadow-inset: inset -22px -14px 14px 2px rgba(255, 255, 255, 0.015), inset 8px 4px 20px 12px rgba(0, 0, 0, 0.8);
   --box-shadow-inset-transparent: inset -22px -14px 14px 2px rgba(255, 255, 255, 0), inset 8px 4px 20px 12px rgba(0, 0, 0, 0);
-  --box-shadow-inset-2: inset -2px -2px 4px rgba(255, 255, 255, 0.1), inset 2px 2px 4px rgba(0, 0, 0, 0.8);
+  --box-shadow-inset-2: inset -2px -2px 4px rgba(255, 255, 255, 0.1), inset 2px 2px 4px rgba(0, 0, 0, 0.5);
+  --box-shadow-inset-2-transparent: inset -2px -2px 4px rgba(255, 255, 255, 0), inset 2px 2px 4px rgba(0, 0, 0, 0);
   
   
   --fancybox-opacity: 1;
@@ -69,17 +68,20 @@
 
   --roundButtonSize: 64px;
 
-  --focusOutline: 2px dashed var(--c-dark);
+  --focus-outline: 2px dashed var(--focus-outline-color);
+  --focus-outline-color: var(--c-light);
 
   --layerDefault: 0;
   --layerControls: 50;
   --layerTooltip: 75;
+  --layoutHeader: 80;
   --layerOverlay: 100;
   --layerOverlayControls: 150;
   --layerModal: 200;
   --layerModalControls: 250;
   --layerAdmin: 300;
   --layerAdminControls: 350;
+  --layerPreloader: 10000;
   
   @media (--tablet-s) {
     --sectionPaddingY: 40px;

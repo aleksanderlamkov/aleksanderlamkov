@@ -1,0 +1,37 @@
+@import "../../styles/mixins.pcss";
+
+.preloader {
+  position: fixed;
+  z-index: var(--layerPreloader, 10000);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  background-color: var(--c-dark);
+  grid-template-columns: repeat(3, 1fr);
+  
+  &:not(.is-shown) {
+    @mixin hide;
+    
+    transition: 1s;
+  }
+  
+  &__part {
+    height: 100%;
+    background-color: var(--c-accent);
+    transition-duration: 0.9s;
+    transition-delay: var(--delay);
+    transform: translateY(100%);
+    
+    .is-animation-started & {
+      transform: translateY(-100%);
+    }
+  
+    @for $i from 1 to 3 {
+      &:nth-child($i) {
+        --delay: calc($i * 0.15s);
+      }
+    }
+  }
+}

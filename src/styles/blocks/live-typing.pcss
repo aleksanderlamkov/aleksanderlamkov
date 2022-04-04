@@ -25,6 +25,10 @@
         content: "|";
         animation: blink 0.7s linear infinite;
         color: var(--c-light);
+        
+        .is-light-theme-enabled & {
+          color: var(--c-dark);
+        }
       }
     }
   }

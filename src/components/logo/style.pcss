@@ -2,6 +2,10 @@
 
 .logo {
   --size: 64px;
+  
+  @media (--mobile) {
+    --size: 48px;
+  }
 
   &__svg {
     width: var(--size);
@@ -13,6 +17,10 @@
       .is-light-theme-enabled & {
         fill: var(--c-dark);
       }
+    }
+  
+    &:hover * {
+      fill: var(--c-accent);
     }
   }
 }

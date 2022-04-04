@@ -33,6 +33,12 @@
   }
   
   &__title {
+    min-height: 244px;
+    
+    &.is-typing-finished ~ .hero__button {
+      @mixin show;
+    }
+    
     br {
       @media (--mobile) {
         display: none;
@@ -53,6 +59,8 @@
   }
   
   &__button {
+    @mixin hide;
+    
     @media (--mobile-xs) {
       width: 100%;
     }

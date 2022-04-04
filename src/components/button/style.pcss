@@ -38,6 +38,13 @@
   border: var(--border);
   border-radius: var(--borderRadius);
   box-shadow: var(--boxShadow);
+  
+  .is-light-theme-enabled & {
+    --textColor: var(--c-dark);
+    --boxShadow: var(--box-shadow-4);
+    --hoverTextColor: var(--c-dark);
+    --hoverShadow: var(--box-shadow-4);
+  }
 
   &::after {
     --size: 0.5px;

@@ -11,6 +11,10 @@
   height: 100%;
   padding-block: 80px;
   background-color: var(--c-dark);
+
+  .is-light-theme-enabled & {
+    background-color: var(--c-light);
+  }
   
   &:not(.is-open) {
     @mixin hide;

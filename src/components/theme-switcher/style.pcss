@@ -7,9 +7,14 @@
   --iconSize: 20px;
 
   background-color: var(--c-dark);
+  border: 1px solid transparent;
   border-radius: var(--border-radius-3);
   box-shadow: var(--box-shadow-3);
   cursor: pointer;
+  
+  &:hover {
+    border-color: var(--c-accent);
+  }
 
   .is-light-theme-enabled & {
     background-color: var(--c-light);

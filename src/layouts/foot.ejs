@@ -1,12 +1,9 @@
 			</main>
-			<!-- footer -->
 			<%- require('../components/footer/template.ejs')() %>
-			<!-- /footer -->
-			<!-- overlay -->
 			<div class="overlay"></div>
-			<!-- /overlay -->
 		</div>
-		<%- require('../layouts/modals.ejs')() %>
+		<%# require('../layouts/modals.ejs')() %>
+		<%- require('../components/preloader/template.ejs')() %>
 		<noscript></noscript>
 	</body>
 </html>

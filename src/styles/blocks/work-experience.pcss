@@ -25,6 +25,8 @@
   }
   
   &__item {
+    @mixin fade-up;
+    
     position: relative;
     
     &::before {
@@ -47,6 +49,11 @@
       box-shadow: var(--box-shadow-3);
       transform: translateY(-50%);
       box-sizing: content-box;
+  
+      .is-light-theme-enabled & {
+        border-color: var(--c-light);
+        box-shadow: var(--box-shadow-4);
+      }
     }
     
     &:first-child,
@@ -58,6 +65,10 @@
         width: 1px;
         height: 50%;
         background-color: var(--c-dark);
+  
+        .is-light-theme-enabled & {
+          background-color: var(--c-light);
+        }
       }
     }
     

@@ -1,5 +1,6 @@
 import Collection from './generic/collection'
 import {stateClasses as scrollEffectsStateClasses} from './scrollEffects'
+import {bubbles as preloaderBubbles} from '../components/preloader'
 import { getCfg } from './utils/getCfg'
 import { wait } from './utils/wait'
 
@@ -14,6 +15,7 @@ export class LiveTyping {
 
   stateClasses = {
     isVisible: 'is-visible',
+    isTypingFinished: 'is-typing-finished'
   }
 
   regExp = {
@@ -39,16 +41,16 @@ export class LiveTyping {
     this.bindEvents()
   }
 
-  formatText() {
-    this.stages.forEach((stage) => {
-      const clearText = stage.innerHTML.trim().replace(this.regExp.excludeTabulationAndLineFeedChar, ' ')
-      const textFormatted = clearText.replace(this.regExp.excludeTags, (char) => {
-        return `<span class="live-typing__char" data-js-live-typing-char>${char}</span>`
-      })
-
-      stage.innerHTML = textFormatted
-    })
-  }
+  // formatText() {
+  //   this.stages.forEach((stage) => {
+  //     const clearText = stage.innerHTML.trim().replace(this.regExp.excludeTabulationAndLineFeedChar, ' ')
+  //     const textFormatted = clearText.replace(this.regExp.excludeTags, (char) => {
+  //       return `<span class="live-typing__char" data-js-live-typing-char>${char}</span>`
+  //     })
+  //
+  //     stage.innerHTML = textFormatted
+  //   })
+  // }
 
   removeChars(stage, chars) {
     const reverseChars = [...chars].reverse()
@@ -71,7 +73,10 @@ export class LiveTyping {
   }
 
   startTyping() {
-    if (this.state.currentStage === this.state.totalStages) return
+    if (this.state.currentStage === this.state.totalStages) {
+      this.instance.classList.add(this.stateClasses.isTypingFinished)
+      return
+    }
 
     const currentStage = this.stages[this.state.currentStage]
     const chars = currentStage.querySelectorAll(this.els.letter)
@@ -98,13 +103,20 @@ export class LiveTyping {
     })
   }
 
+  handlePreloaderFadeAway() {
+    // this.startTyping()
+    wait(300).then(() => {
+      this.startTyping()
+    })
+  }
+
   init() {
     // this.formatText()
-    this.startTyping()
+    // this.startTyping()
   }
 
   bindEvents() {
-
+    document.addEventListener(preloaderBubbles.fadeAway, () => this.handlePreloaderFadeAway())
   }
 }
 

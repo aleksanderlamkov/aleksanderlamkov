@@ -1,0 +1,23 @@
+<%
+const { classNames } = require("../../js/ejsUtils")
+const cfg = { ...require("./data.json"), ...arguments?.[0] }
+const {
+	extraClasses,
+	extraAttrs
+} = cfg
+%>
+
+<%
+const classes = classNames(extraClasses, 'preloader is-shown')
+const attrs = Array.isArray(extraAttrs) ? extraAttrs.join(' ') : extraAttrs
+%>
+
+<div
+	class="<%= classes %>"
+	<%- attrs %>
+	data-js-preloader
+>
+	<div class="preloader__part"></div>
+	<div class="preloader__part"></div>
+	<div class="preloader__part" data-js-preloader-last-part></div>
+</div>

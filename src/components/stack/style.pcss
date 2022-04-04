@@ -15,7 +15,7 @@
   &__item {
     --size: 64px;
     
-    @mixin transition 0.05s;
+    @mixin transition;
     
     display: flex;
     justify-content: center;
@@ -25,9 +25,13 @@
     border: 1px solid transparent;
     border-radius: 50%;
     box-shadow: var(--box-shadow-inset-2);
-    
+  
     @media (--mobile) {
       --size: 54px;
+    }
+  
+    @media (--mobile-s) {
+      --size: 48px;
     }
     
     &:hover {

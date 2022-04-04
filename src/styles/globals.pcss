@@ -20,29 +20,39 @@ html {
   height: 100% !important;
   font: var(--baseFontWeight) var(--baseFontSize)/var(--baseLineHeight) var(--baseFontFamily);
   text-size-adjust: none;
+  scroll-padding-top: var(--headerHeight);
 
   &.is-light-theme-enabled {
-    --c-text: var(--c-dark);
-    --c-background: var(--c-light);
-    --c-light: var(--c-gray);
+    --focus-outline-color: var(--c-light);
   }
 }
 
 body {
-  @mixin custom-scrollbar;
+  --scrollbarBgColor: var(--c-dark);
+  --scrollbarThumbColor: var(--c-accent);
+  
+  @mixin custom-scrollbar var(--scrollbarBgColor), var(--scrollbarThumbColor);
   
   min-width: var(--siteMinWidth);
   min-height: inherit;
   overflow-y: scroll;
   overflow-x: hidden;
+  padding-top: var(--headerHeight);
   font: inherit;
-  color: var(--c-text);
-  background-color: var(--c-background);
+  color: var(--c-light);
+  background-color: var(--c-dark);
 
   &.compensate-for-scrollbar,
   .with-fancybox & {
     overflow: hidden !important;
     touch-action: none;
+  }
+  
+  .is-light-theme-enabled & {
+    --box-shadow-inset-2: inset -2px -2px 4px rgba(255, 255, 255, 0.1), inset 2px 2px 4px rgba(0, 0, 0, 0.35);
+    
+    color: var(--c-dark);
+    background-color: var(--c-light);
   }
 }
 

@@ -28,6 +28,15 @@
     @media (--mobile) {
       --size: 54px;
     }
+  
+    .i-icon {
+      --size: 62.5%;
+      --color: var(--c-light);
+    
+      .is-light-theme-enabled & {
+        --color: var(--c-dark);
+      }
+    }
     
     &:hover {
       @media (--hoverable) {
@@ -35,11 +44,6 @@
           --color: var(--c-accent);
         }
       }
-    }
-    
-    .i-icon {
-      --size: 62.5%;
-      --color: var(--c-light);
     }
   }
 }

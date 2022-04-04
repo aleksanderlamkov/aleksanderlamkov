@@ -21,6 +21,10 @@
     object-fit: cover;
     object-position: 50% 0;
   
+    .is-light-theme-enabled & {
+      box-shadow: var(--box-shadow-4);
+    }
+  
     @media (--mobile) {
       height: 200px;
     }

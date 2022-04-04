@@ -862,11 +862,19 @@ $timing-function: ease {
 }
 
 @define-mixin shadow-on-hover {
-  box-shadow: var(--box-shadow-3), var(--box-shadow-inset-transparent);
+  --shadowBefore: var(--box-shadow-3), var(--box-shadow-inset-transparent);
+  --shadowAfter: var(--box-shadow-3-transparent), var(--box-shadow-inset);
+  
+  box-shadow: var(--shadowBefore);
+  
+  .is-light-theme-enabled & {
+    --shadowBefore: var(--box-shadow-4), var(--box-shadow-inset-2-transparent);
+    --shadowAfter: var(--box-shadow-4-transparent), var(--box-shadow-inset-2);
+  }
   
   &:hover {
     @media (--hoverable) {
-      box-shadow: var(--box-shadow-3-transparent), var(--box-shadow-inset);
+      box-shadow: var(--shadowAfter);
     }
   }
 }

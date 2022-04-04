@@ -1,4 +1,4 @@
-<div class="hero" id="about">
+<div class="hero section" id="about">
 	<div class="hero__inner container">
 		<div class="hero__body">
 			<% const liveTypingStages = [
@@ -25,6 +25,7 @@
 			</h1>
 			<%- require('../components/button/template.ejs')({
 				extraClasses: 'hero__button',
+				extraAttrs: `data-js-scroll-to='{"anchor": "#contacts"}'`,
 				label: {
 					text: 'Let’s check!'
 				}
