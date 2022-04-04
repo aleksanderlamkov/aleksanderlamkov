@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Типографика</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="address=no" />
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/ico" />
+    <link rel="apple-touch-icon-precomposed" href="./images/apple-touch-icon.png">
+    <link rel="preload" href="./bundle.js" as="script" />
+    <link href="styles/main.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="flow-container ">
+      <header class="header" data-js-header>
+        <div class="header__inner container">
+          <a class="header__logo logo" href="/">
+            <svg class="logo__svg" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M45.6001 34.7586C45.6001 33.6157 44.5258 32.6896 43.2001 32.6896H20.8C19.4743 32.6896 18.4 33.6157 18.4 34.7586V51.3103C18.4 51.6909 18.7586 52 19.2 52H44.8001C45.2415 52 45.6001 51.6909 45.6001 51.3103V34.7586ZM32.8412 37.9889L29.6412 46.2647C29.5019 46.6256 29.7283 47.0166 30.1476 47.1372C30.5662 47.2573 31.0198 47.0621 31.1597 46.7007L34.3597 38.4248C34.499 38.064 34.2726 37.6729 33.8533 37.5523C33.4347 37.4322 32.9812 37.6274 32.8412 37.9889ZM27.8658 46.1L24.9619 42.3447L27.8658 38.5895C28.1105 38.2723 28.0115 37.8441 27.6444 37.6328C27.2765 37.4219 26.7797 37.5072 26.5347 37.8237L23.3347 41.9617C23.1554 42.1935 23.1554 42.4955 23.3347 42.7271L26.5347 46.865C26.7794 47.1815 27.2761 47.2671 27.6444 47.0559C28.0115 46.845 28.1108 46.4167 27.8658 46.0993V46.1ZM37.4658 46.8654L40.6658 42.7275C40.8451 42.4956 40.8451 42.1936 40.6658 41.9621L37.4658 37.8241C37.2212 37.5076 36.7244 37.422 36.3562 37.6333C35.989 37.8442 35.8897 38.2724 36.1347 38.5899L39.0387 42.3451L36.1347 46.1004C35.8901 46.4175 35.989 46.8458 36.3562 47.057C36.724 47.2679 37.2208 47.1826 37.4658 46.8661V46.8654Z" fill="white" />
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M43.2 21.6552C43.2 26.9877 38.1857 31.3103 32 31.3103C25.8143 31.3103 20.8 26.9877 20.8 21.6552C20.8 16.3227 25.8143 12 32 12C38.1857 12 43.2 16.3227 43.2 21.6552Z" fill="white" />
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M16.8 39.2126C13.8104 42.4657 12 46.692 12 51.3103C12 51.6909 12.3586 52 12.8 52H16.9368C16.8478 51.7842 16.8 51.5523 16.8 51.3103L16.8 39.2126Z" fill="white" />
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M47.2 39.2126V51.3103C47.2 51.5523 47.1522 51.7842 47.0632 52H51.2C51.6414 52 52 51.6909 52 51.3103C52 46.6918 50.1896 42.4654 47.2 39.2126H47.2Z" fill="white" />
+            </svg>
+          </a>
+          <nav class="header__menu hidden-mobile">
+            <ul class="header__menu-list">
+              <li class="header__menu-item">
+                <button class="header__menu-button" type="button" data-js-scroll-to='{"anchor": "#about"}'> About </button>
+              </li>
+              <li class="header__menu-item">
+                <button class="header__menu-button" type="button" data-js-scroll-to='{"anchor": "#skills"}'> Skills </button>
+              </li>
+              <li class="header__menu-item">
+                <button class="header__menu-button" type="button" data-js-scroll-to='{"anchor": "#portfolio"}'> Portfolio </button>
+              </li>
+              <li class="header__menu-item">
+                <button class="header__menu-button" type="button" data-js-scroll-to='{"anchor": "#work-experience"}'> Work Experience </button>
+              </li>
+              <li class="header__menu-item">
+                <button class="header__menu-button" type="button" data-js-scroll-to='{"anchor": "#contacts"}'> Contacts </button>
+              </li>
+            </ul>
+          </nav>
+          <label class="header__theme-switcher theme-switcher" data-js-theme-switcher>
+            <input class="theme-switcher__checkbox visually-hidden" type="checkbox" data-js-theme-switcher-checkbox />
+            <span class="theme-switcher__body">
+              <span class="theme-switcher__icon-wrapper theme-switcher__icon-wrapper--dark-theme">
+                <svg class="i-icon">
+                  <use href="#icon-moon"></use>
+                </svg>
+              </span>
+              <span class="theme-switcher__icon-wrapper theme-switcher__icon-wrapper--light-theme">
+                <svg class="i-icon">
+                  <use href="#icon-sun"></use>
+                </svg>
+              </span>
+            </span>
+          </label>
+          <button class="header__burger-button visible-mobile burger-button" type="button" title="Open menu" aria-label="Open menu" data-js-burger-button>
+            <svg class="burger-button__svg" width="30" height="30" viewBox="0 0 100 100">
+              <path class="burger-button__line burger-button__line--1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+              <path class="burger-button__line burger-button__line--2" d="M 20,50 H 80" />
+              <path class="burger-button__line burger-button__line--3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+            </svg>
+          </button>
+        </div>
+        <div class="visible-mobile mobile-menu" data-js-mobile-menu>
+          <div class="mobile-menu__inner container">
+            <div class="mobile-menu__navigation">
+              <ul class="mobile-menu__navigation-list">
+                <li class="mobile-menu__navigation-item">
+                  <button class="mobile-menu__navigation-button" type="button" data-js-scroll-to='{"anchor": "#about"}'> About </button>
+                </li>
+                <li class="mobile-menu__navigation-item">
+                  <button class="mobile-menu__navigation-button" type="button" data-js-scroll-to='{"anchor": "#skills"}'> Skills </button>
+                </li>
+                <li class="mobile-menu__navigation-item">
+                  <button class="mobile-menu__navigation-button" type="button" data-js-scroll-to='{"anchor": "#portfolio"}'> Portfolio </button>
+                </li>
+                <li class="mobile-menu__navigation-item">
+                  <button class="mobile-menu__navigation-button" type="button" data-js-scroll-to='{"anchor": "#work-experience"}'> Work Experience </button>
+                </li>
+                <li class="mobile-menu__navigation-item">
+                  <button class="mobile-menu__navigation-button" type="button" data-js-scroll-to='{"anchor": "#contacts"}'> Contacts </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="content">
+        <div class="content__sections">
+          <div class="page-header container">
+            <div class="page-header__breadcrumbs">
+              <nav class="breadcrumbs" aria-label="breadcrumb">
+                <ol class="breadcrumbs__list flow" itemscope itemtype="https://schema.org/BreadcrumbList">
+                  <li class="breadcrumbs__item" title="Главная" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a class="breadcrumbs__link" href="" itemprop="item">
+                      <span itemprop="name">Главная</span>
+                    </a>
+                    <meta itemprop="position" content="1" />
+                  </li>
+                  <li class="breadcrumbs__item" title="Типографика" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a class="breadcrumbs__link" href="" itemprop="item" aria-current="page">
+                      <span itemprop="name">Типографика</span>
+                    </a>
+                    <meta itemprop="position" content="2" />
+                  </li>
+                </ol>
+              </nav>
+            </div>
+            <h1 class="page-header__title"> Типографика </h1>
+          </div>
+          <section class="section container">
+            <header class="section__header">
+              <h2 class="section__title"> Headings </h2>
+            </header>
+            <div class="section__body">
+              <h2 class="h1">H1 - Arial, bold, 42 px</h2>
+              <h2>H2 - Arial, bold, 36 px</h2>
+              <h3>H3 - Arial, bold, 28 px</h3>
+              <h4>H4 - Arial, bold, 24 px</h4>
+              <h5>H5 - Arial, bold, 20 px</h5>
+              <h6>H6 - Arial, bold, 18 px</h6>
+            </div>
+          </section>
+          <section class="section container">
+            <header class="section__header">
+              <h2 class="section__title"> Text </h2>
+            </header>
+            <div class="section__body">
+              <p>Lorem <mark>marked text</mark> dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur dignissimos illo neque nihil nulla obcaecati quae tempore? Alias architecto debitis enim eveniet iure maiores molestias, mollitia sit velit vitae. </p>
+              <p>Lorem ipsum dolor <mark>marked text</mark> amet, consectetur adipisicing elit. Assumenda consequuntur dignissimos illo neque nihil nulla obcaecati quae tempore? Alias architecto debitis enim eveniet iure maiores molestias, mollitia sit velit vitae. </p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur dignissimos illo neque nihil nulla obcaecati quae tempore? Alias architecto debitis enim eveniet iure maiores molestias, mollitia sit velit vitae.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur dignissimos illo neque nihil nulla obcaecati quae tempore? Alias architecto debitis enim eveniet iure maiores molestias, mollitia sit velit vitae.</p>
+            </div>
+          </section>
+          <section class="section container">
+            <header class="section__header">
+              <h2 class="section__title"> Lists </h2>
+            </header>
+            <div class="section__body">
+              <h3 class="h4">Default list</h3>
+              <ul>
+                <li> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur dignissimos illo neque nihil nulla obcaecati quae tempore? <ul>
+                    <li> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur dignissimos illo neque nihil nulla obcaecati quae tempore? <ul>
+                        <li> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur dignissimos illo neque nihil nulla obcaecati quae tempore? <ul>
+                            <li> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur dignissimos illo neque nihil nulla obcaecati quae tempore? <ul>
+                                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur dignissimos illo neque nihil nulla obcaecati quae tempore?
+                                <li>ПLorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur dignissimos illo neque nihil nulla obcaecati quae tempore? </li>
+                              </ul>
+                            </li>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur dignissimos illo neque nihil nulla obcaecati quae tempore? </li>
+                          </ul>
+                        </li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur dignissimos illo neque nihil nulla obcaecati quae tempore? </li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur dignissimos illo neque nihil nulla obcaecati quae tempore? </li>
+                      </ul>
+                    </li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur dignissimos illo neque nihil nulla obcaecati quae tempore? </li>
+                  </ul>
+                </li>
+                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur dignissimos illo neque nihil nulla obcaecati quae tempore? </li>
+                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur dignissimos illo neque nihil nulla obcaecati quae tempore? </li>
+                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur dignissimos illo neque nihil nulla obcaecati quae tempore? </li>
+              </ul>
+              <h3 class="h4">Numbered list</h3>
+              <ol>
+                <li> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur dignissimos illo neque nihil nulla obcaecati quae tempore? <ol>
+                    <li> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur dignissimos illo neque nihil nulla obcaecati quae tempore? <ol>
+                        <li> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur dignissimos illo neque nihil nulla obcaecati quae tempore? <ol>
+                            <li> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur dignissimos illo neque nihil nulla obcaecati quae tempore? <ol>
+                                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur dignissimos illo neque nihil nulla obcaecati quae tempore? </li>
+                                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur dignissimos illo neque nihil nulla obcaecati quae tempore? </li>
+                              </ol>
+                            </li>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur dignissimos illo neque nihil nulla obcaecati quae tempore? </li>
+                          </ol>
+                        </li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur dignissimos illo neque nihil nulla obcaecati quae tempore? </li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur dignissimos illo neque nihil nulla obcaecati quae tempore? </li>
+                      </ol>
+                    </li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur dignissimos illo neque nihil nulla obcaecati quae tempore? </li>
+                  </ol>
+                </li>
+                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur dignissimos illo neque nihil nulla obcaecati quae tempore? </li>
+                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur dignissimos illo neque nihil nulla obcaecati quae tempore? </li>
+                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur dignissimos illo neque nihil nulla obcaecati quae tempore? </li>
+              </ol>
+            </div>
+          </section>
+          <section class="section container">
+            <header class="section__header">
+              <h2 class="section__title"> Colors </h2>
+            </header>
+            <div class="section__body">
+              <h3 class="h4">Main</h3>
+              <div class="flow">
+                <div class="color-example">
+                  <div class="color-example__square" style="--bgColor: var(--c-dark);"></div>
+                  <div class="color-example__hex-code">#000000</div>
+                </div>
+                <div class="color-example">
+                  <div class="color-example__square" style="--bgColor: var(--c-light);"></div>
+                  <div class="color-example__hex-code">#FFFFFF</div>
+                </div>
+              </div>
+              <h3 class="h4">Brand</h3>
+              <div class="flow">
+                <div class="color-example">
+                  <div class="color-example__square" style="--bgColor: var(--c-brand);"></div>
+                  <div class="color-example__hex-code">#002e5e</div>
+                </div>
+                <div class="color-example">
+                  <div class="color-example__square" style="--bgColor: var(--c-accent);"></div>
+                  <div class="color-example__hex-code">#c0c7d4</div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="section container">
+            <header class="section__header">
+              <h2 class="section__title"> Buttons </h2>
+            </header>
+            <div class="section__body">
+              <div class="flow mb50">
+                <button class="button" type="button" data-js-button>
+                  <span class="button__label">Button</span>
+                </button>
+                <button class="button" type="button" data-js-button>
+                  <span class="button__label">Button</span>
+                </button>
+                <a class="button" href="/" data-js-button>
+                  <span class="button__label">Button</span>
+                </a>
+                <button class="button" type="button" data-js-button>
+                  <span class="button__label">Button</span>
+                  <svg class="button__icon i-icon">
+                    <use href="#icon-arrow-right"></use>
+                  </svg>
+                </button>
+                <button class="button" type="button" data-js-button>
+                  <svg class="button__icon i-icon">
+                    <use href="#icon-arrow-left"></use>
+                  </svg>
+                  <span class="button__label">Button</span>
+                </button>
+              </div>
+              <div class="flow">
+                <div>
+                  <span>With icon only:&nbsp;&nbsp;</span>
+                  <button class="button" type="button" data-js-button>
+                    <svg class="button__icon i-icon">
+                      <use href="#icon-search"></use>
+                    </svg>
+                    <span class="button__label">Button</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="section container">
+            <header class="section__header">
+              <h2 class="section__title"> Inputs </h2>
+            </header>
+            <div class="section__body">
+              <ul class="grid grid--4 mb50">
+                <li class="grid__item">
+                  <label class="form-item">
+                    <span class="form-input-wrapper" data-js-input-wrapper>
+                      <input class="form-input" id="test-input-1" name="test-input-1" type="text" autocomplete="off">
+                    </span>
+                    <span class="form-label"> Simple </span>
+                    <span class="form-error" data-js-form-error-msg="true"> true </span>
+                  </label>
+                </li>
+                <li class="grid__item">
+                  <label class="form-item">
+                    <span class="form-input-wrapper" data-js-input-wrapper>
+                      <input class="form-input" id="test-input-2" name="test-input-2" type="text" placeholder="Enter value" autocomplete="off">
+                    </span>
+                    <span class="form-label"> With placeholder </span>
+                    <span class="form-error" data-js-form-error-msg="true"> true </span>
+                  </label>
+                </li>
+                <li class="grid__item">
+                  <label class="form-item">
+                    <span class="form-input-wrapper" data-js-input-wrapper>
+                      <input class="form-input" id="test-input-3" name="test-input-3" type="text" value="Lorem ipsum" autocomplete="off">
+                    </span>
+                    <span class="form-label"> With value </span>
+                    <span class="form-error" data-js-form-error-msg="true"> true </span>
+                  </label>
+                </li>
+                <li class="grid__item">
+                  <label class="form-item">
+                    <span class="form-input-wrapper" data-js-input-wrapper>
+                      <input class="form-input" id="test-input-4" name="test-input-4" type="text" disabled autocomplete="off">
+                    </span>
+                    <span class="form-label"> Disabled </span>
+                    <span class="form-error" data-js-form-error-msg="true"> true </span>
+                  </label>
+                </li>
+                <li class="grid__item">
+                  <label class="form-item">
+                    <span class="form-input-wrapper" data-js-input-wrapper>
+                      <input class="form-input" id="test-input-5" name="test-input-5" type="text" value="Just look at me" readonly autocomplete="off">
+                    </span>
+                    <span class="form-label"> Readonly </span>
+                    <span class="form-error" data-js-form-error-msg="true"> true </span>
+                  </label>
+                </li>
+                <li class="grid__item">
+                  <label class="form-item">
+                    <span class="form-input-wrapper is-invalid" data-js-input-wrapper>
+                      <input class="form-input is-invalid" id="test-input-6" name="test-input-6" type="text" value="123123123" autocomplete="off">
+                    </span>
+                    <span class="form-label"> Has error </span>
+                    <span class="form-error" data-js-form-error-msg="Некорректные данные"> Некорректные данные </span>
+                  </label>
+                </li>
+              </ul>
+              <ul class="grid grid--4 mb50">
+                <li class="grid__item">
+                  <label class="form-item">
+                    <span class="form-input-wrapper" data-js-input-wrapper>
+                      <input class="form-input" id="test-input-7" name="test-input-7" type="text" placeholder="Hidden label" autocomplete="off">
+                    </span>
+                    <span class="form-label visually-hidden"> Hidden label </span>
+                    <span class="form-error" data-js-form-error-msg="true"> true </span>
+                  </label>
+                </li>
+              </ul>
+              <ul class="grid grid--4 mb50">
+                <li class="grid__item">
+                  <label class="form-item">
+                    <span class="form-input-wrapper" data-js-input-wrapper>
+                      <textarea class="form-input" id="test-input-8" name="test-input-8"></textarea>
+                    </span>
+                    <span class="form-label"> Textarea </span>
+                    <span class="form-error" data-js-form-error-msg="true"> true </span>
+                  </label>
+                </li>
+                <li class="grid__item">
+                  <label class="form-item">
+                    <span class="form-input-wrapper" data-js-input-wrapper>
+                      <input class="form-input" id="test-input-9" name="test-input-9" type="password" autocomplete="off">
+                    </span>
+                    <span class="form-label"> Password </span>
+                    <span class="form-error" data-js-form-error-msg="true"> true </span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section class="section container">
+            <header class="section__header">
+              <h2 class="section__title"> Checkboxes and radios </h2>
+            </header>
+            <div class="section__body">
+              <ul class="grid grid--4 mb50">
+                <li class="grid__item">
+                  <label class="checkbox checkbox--checkbox">
+                    <input class="checkbox__input visually-hidden" id="test-checkbox-1" name="test-checkbox-1" type="checkbox" value="Y" autocomplete="off">
+                    <span class="checkbox__emulator">
+                      <svg class="i-icon">
+                        <use href="#icon-check"></use>
+                      </svg>
+                    </span>
+                    <span class="checkbox__label">Checkbox</span>
+                    <span class="form-error" data-js-form-error-msg="true"> true </span>
+                  </label>
+                </li>
+                <li class="grid__item">
+                  <label class="checkbox checkbox--checkbox">
+                    <input class="checkbox__input visually-hidden" id="test-checkbox-2" name="test-checkbox-2" type="checkbox" value="Y" autocomplete="off" checked>
+                    <span class="checkbox__emulator">
+                      <svg class="i-icon">
+                        <use href="#icon-check"></use>
+                      </svg>
+                    </span>
+                    <span class="checkbox__label">Checkbox checked</span>
+                    <span class="form-error" data-js-form-error-msg="true"> true </span>
+                  </label>
+                </li>
+                <li class="grid__item">
+                  <label class="checkbox checkbox--checkbox">
+                    <input class="checkbox__input visually-hidden" id="test-checkbox-3" name="test-checkbox-3" type="checkbox" value="Y" autocomplete="off" disabled checked>
+                    <span class="checkbox__emulator">
+                      <svg class="i-icon">
+                        <use href="#icon-check"></use>
+                      </svg>
+                    </span>
+                    <span class="checkbox__label">Checkbox checked disabled</span>
+                    <span class="form-error" data-js-form-error-msg="true"> true </span>
+                  </label>
+                </li>
+                <li class="grid__item">
+                  <label class="checkbox checkbox--checkbox">
+                    <input class="checkbox__input visually-hidden is-invalid" id="test-checkbox-11" name="test-checkbox-11" type="checkbox" value="Y" autocomplete="off">
+                    <span class="checkbox__emulator">
+                      <svg class="i-icon">
+                        <use href="#icon-check"></use>
+                      </svg>
+                    </span>
+                    <span class="checkbox__label">Checkbox</span>
+                    <span class="form-error" data-js-form-error-msg="Необходимо поставить галочку"> Необходимо поставить галочку </span>
+                  </label>
+                </li>
+              </ul>
+              <ul class="grid grid--4 mb50">
+                <li class="grid__item">
+                  <label class="checkbox checkbox--radio">
+                    <input class="checkbox__input visually-hidden" id="test-radio-1" name="test-radio" type="radio" value="Y" autocomplete="off">
+                    <span class="checkbox__emulator">
+                    </span>
+                    <span class="checkbox__label">Radio</span>
+                    <span class="form-error" data-js-form-error-msg="true"> true </span>
+                  </label>
+                </li>
+                <li class="grid__item">
+                  <label class="checkbox checkbox--radio">
+                    <input class="checkbox__input visually-hidden" id="test-radio-2" name="test-radio" type="radio" value="Y" autocomplete="off" checked>
+                    <span class="checkbox__emulator">
+                    </span>
+                    <span class="checkbox__label">Radio checked</span>
+                    <span class="form-error" data-js-form-error-msg="true"> true </span>
+                  </label>
+                </li>
+                <li class="grid__item">
+                  <label class="checkbox checkbox--radio">
+                    <input class="checkbox__input visually-hidden" id="test-radio-3" name="test-radio" type="radio" value="Y" autocomplete="off" disabled>
+                    <span class="checkbox__emulator">
+                    </span>
+                    <span class="checkbox__label">Radio disabled</span>
+                    <span class="form-error" data-js-form-error-msg="true"> true </span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section class="section container">
+            <header class="section__header">
+              <h2 class="section__title"> File attach </h2>
+            </header>
+            <div class="section__body">
+              <ul class="grid grid--4">
+                <li class="grid__item">
+                  <div class="file-attach" data-js-file-attach>
+                    <input class="file-attach__input" id="attachment-1" name="attachment-1" autocomplete="off" type="file" data-js-file-attach-filter="doc, docx, xls, xlsx, txt, rtf, zip, rar, 7z, jpg, png, pdf, jpeg" data-js-file-attach-input>
+                    <label class="file-attach__button" data-js-file-attach-add-button for="attachment-1">
+                      <svg class="file-attach__icon i-icon">
+                        <use href="#icon-attachment"></use>
+                      </svg>
+                      <span class="file-attach__label"> Attach file </span>
+                    </label>
+                    <div class="file-attach__list" data-js-file-attach-file-list></div>
+                  </div>
+                </li>
+                <li class="grid__item">
+                  <div class="file-attach" data-js-file-attach>
+                    <input class="file-attach__input" id="attachment-2" name="attachment-2" multiple autocomplete="off" type="file" data-js-file-attach-filter="doc, docx, xls, xlsx, txt, rtf, zip, rar, 7z, jpg, png, pdf, jpeg" data-js-file-attach-input>
+                    <label class="file-attach__button" data-js-file-attach-add-button for="attachment-2">
+                      <svg class="file-attach__icon i-icon">
+                        <use href="#icon-attachment"></use>
+                      </svg>
+                      <span class="file-attach__label"> Attach files </span>
+                    </label>
+                    <div class="file-attach__list" data-js-file-attach-file-list></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section class="section container">
+            <header class="section__header">
+              <h2 class="section__title"> Form (success with static modal) </h2>
+            </header>
+            <div class="section__body">
+              <form class="form" novalidate data-js-form="{&#34;url&#34;:&#34;./json/form/successWithStaticModalExample.json&#34;,&#34;method&#34;:&#34;post&#34;}">
+                <div class="form__body grid grid--4">
+                  <div class="grid__item">
+                    <label class="form-item">
+                      <span class="form-input-wrapper" data-js-input-wrapper>
+                        <input class="form-input" id="name" name="name" type="text" data-js-input-required="true" required autocomplete="off">
+                      </span>
+                      <span class="form-label"> Name </span>
+                      <span class="form-error" data-js-form-error-msg="true"> true </span>
+                    </label>
+                  </div>
+                  <div class="grid__item">
+                    <button class="button" type="submit" data-js-button>
+                      <span class="button__label">Button</span>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </section>
+          <section class="section container">
+            <header class="section__header">
+              <h2 class="section__title"> Form (success with dynamic modal) </h2>
+            </header>
+            <div class="section__body">
+              <form class="form" novalidate data-js-form="{&#34;url&#34;:&#34;./json/form/successWithDynamicModalExample.json&#34;,&#34;method&#34;:&#34;post&#34;,&#34;type&#34;:&#34;json&#34;}">
+                <div class="form__body grid grid--4">
+                  <div class="grid__item">
+                    <label class="form-item">
+                      <span class="form-input-wrapper" data-js-input-wrapper>
+                        <input class="form-input" id="name-2" name="name-2" type="text" data-js-input-required="true" required autocomplete="off">
+                      </span>
+                      <span class="form-label"> Name </span>
+                      <span class="form-error" data-js-form-error-msg="true"> true </span>
+                    </label>
+                  </div>
+                  <div class="grid__item">
+                    <button class="button" type="submit" data-js-button>
+                      <span class="button__label">Button</span>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </section>
+          <section class="section container">
+            <header class="section__header">
+              <h2 class="section__title"> Form (success with redirect) </h2>
+            </header>
+            <div class="section__body">
+              <form class="form" novalidate data-js-form="{&#34;url&#34;:&#34;./json/form/successWithRedirectExample.json&#34;,&#34;method&#34;:&#34;post&#34;,&#34;type&#34;:&#34;json&#34;}">
+                <div class="form__body grid grid--4">
+                  <div class="grid__item">
+                    <label class="form-item">
+                      <span class="form-input-wrapper" data-js-input-wrapper>
+                        <input class="form-input" id="name-3" name="name-3" type="text" data-js-input-required="true" required autocomplete="off">
+                      </span>
+                      <span class="form-label"> Name </span>
+                      <span class="form-error" data-js-form-error-msg="true"> true </span>
+                    </label>
+                  </div>
+                  <div class="grid__item">
+                    <button class="button" type="submit" data-js-button>
+                      <span class="button__label">Button</span>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </section>
+          <section class="section container">
+            <header class="section__header">
+              <h2 class="section__title"> Form (success:false with static modal and custom error messages) </h2>
+            </header>
+            <div class="section__body">
+              <form class="form" novalidate data-js-form="{&#34;url&#34;:&#34;./json/form/successFalseWithStaticModalExample.json&#34;,&#34;method&#34;:&#34;post&#34;}">
+                <div class="form__body grid grid--4">
+                  <div class="grid__item">
+                    <label class="form-item">
+                      <span class="form-input-wrapper" data-js-input-wrapper>
+                        <input class="form-input" id="name-4" name="name-4" type="text" data-js-input-required="true" required autocomplete="off">
+                      </span>
+                      <span class="form-label"> Name </span>
+                      <span class="form-error" data-js-form-error-msg="true"> true </span>
+                    </label>
+                  </div>
+                  <div class="grid__item">
+                    <button class="button" type="submit" data-js-button>
+                      <span class="button__label">Button</span>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </section>
+          <section class="section container">
+            <header class="section__header">
+              <h2 class="section__title"> Accordion </h2>
+            </header>
+            <div class="section__body">
+              <div class="accordion" data-js-accordion='{"isAutoClosing":true,"wholeSummaryClickable":true,"animationParams":{"duration":500,"easing":"ease"}}'>
+                <details class="accordion__item" data-js-accordion-item>
+                  <summary class="accordion__summary" data-js-accordion-summary>
+                    <div class="accordion__summary-inner">
+                      <div class="accordion__title"> Accordion title 1 </div>
+                      <button class="accordion__button" type="button" data-js-accordion-button>
+                        <span class="accordion__button-caption accordion__button-caption--before"> Развернуть </span>
+                        <span class="accordion__button-caption accordion__button-caption--after"> Свернуть </span>
+                        <span class="accordion__button-icon-wrapper">
+                          <svg class="i-icon">
+                            <use href="#icon-arrow-down"></use>
+                          </svg>
+                        </span>
+                      </button>
+                    </div>
+                  </summary>
+                  <div class="accordion__content" data-js-accordion-content>
+                    <div class="accordion__content-inner">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos earum excepturi explicabo explicabo minima modi numquam quam quia ratione, rem soluta vitae?</p>
+                    </div>
+                  </div>
+                </details>
+                <details class="accordion__item" data-js-accordion-item>
+                  <summary class="accordion__summary" data-js-accordion-summary>
+                    <div class="accordion__summary-inner">
+                      <div class="accordion__title"> Accordion title 2 </div>
+                      <button class="accordion__button" type="button" data-js-accordion-button>
+                        <span class="accordion__button-caption accordion__button-caption--before"> Развернуть </span>
+                        <span class="accordion__button-caption accordion__button-caption--after"> Свернуть </span>
+                        <span class="accordion__button-icon-wrapper">
+                          <svg class="i-icon">
+                            <use href="#icon-arrow-down"></use>
+                          </svg>
+                        </span>
+                      </button>
+                    </div>
+                  </summary>
+                  <div class="accordion__content" data-js-accordion-content>
+                    <div class="accordion__content-inner">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos earum excepturi explicabo explicabo minima modi numquam quam quia ratione, rem soluta vitae?</p>
+                    </div>
+                  </div>
+                </details>
+                <details class="accordion__item" data-js-accordion-item>
+                  <summary class="accordion__summary" data-js-accordion-summary>
+                    <div class="accordion__summary-inner">
+                      <div class="accordion__title"> Accordion title 3 </div>
+                      <button class="accordion__button" type="button" data-js-accordion-button>
+                        <span class="accordion__button-caption accordion__button-caption--before"> Развернуть </span>
+                        <span class="accordion__button-caption accordion__button-caption--after"> Свернуть </span>
+                        <span class="accordion__button-icon-wrapper">
+                          <svg class="i-icon">
+                            <use href="#icon-arrow-down"></use>
+                          </svg>
+                        </span>
+                      </button>
+                    </div>
+                  </summary>
+                  <div class="accordion__content" data-js-accordion-content>
+                    <div class="accordion__content-inner">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos earum excepturi explicabo explicabo minima modi numquam quam quia ratione, rem soluta vitae?</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+            </div>
+          </section>
+          <section class="section container">
+            <header class="section__header">
+              <h2 class="section__title"> Accordions (title is link, isAutoClosing: false, wholeSummaryClickable: false) </h2>
+            </header>
+            <div class="section__body">
+              <div class="accordion" data-js-accordion='{"isAutoClosing":false,"wholeSummaryClickable":false,"animationParams":{"duration":500,"easing":"ease"}}'>
+                <details class="accordion__item" data-js-accordion-item>
+                  <summary class="accordion__summary" data-js-accordion-summary>
+                    <div class="accordion__summary-inner">
+                      <div class="accordion__title">
+                        <a href="#">Accordion link-title</a>
+                      </div>
+                      <button class="accordion__button" type="button" data-js-accordion-button>
+                        <span class="accordion__button-caption accordion__button-caption--before"> Развернуть </span>
+                        <span class="accordion__button-caption accordion__button-caption--after"> Свернуть </span>
+                        <span class="accordion__button-icon-wrapper">
+                          <svg class="i-icon">
+                            <use href="#icon-arrow-down"></use>
+                          </svg>
+                        </span>
+                      </button>
+                    </div>
+                  </summary>
+                  <div class="accordion__content" data-js-accordion-content>
+                    <div class="accordion__content-inner">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos earum excepturi explicabo explicabo minima modi numquam quam quia ratione, rem soluta vitae?</p>
+                    </div>
+                  </div>
+                </details>
+                <details class="accordion__item" data-js-accordion-item>
+                  <summary class="accordion__summary" data-js-accordion-summary>
+                    <div class="accordion__summary-inner">
+                      <div class="accordion__title">
+                        <a href="#">Accordion link-title</a>
+                      </div>
+                      <button class="accordion__button" type="button" data-js-accordion-button>
+                        <span class="accordion__button-caption accordion__button-caption--before"> Развернуть </span>
+                        <span class="accordion__button-caption accordion__button-caption--after"> Свернуть </span>
+                        <span class="accordion__button-icon-wrapper">
+                          <svg class="i-icon">
+                            <use href="#icon-arrow-down"></use>
+                          </svg>
+                        </span>
+                      </button>
+                    </div>
+                  </summary>
+                  <div class="accordion__content" data-js-accordion-content>
+                    <div class="accordion__content-inner">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos earum excepturi explicabo explicabo minima modi numquam quam quia ratione, rem soluta vitae?</p>
+                    </div>
+                  </div>
+                </details>
+                <details class="accordion__item" data-js-accordion-item>
+                  <summary class="accordion__summary" data-js-accordion-summary>
+                    <div class="accordion__summary-inner">
+                      <div class="accordion__title">
+                        <a href="#">Accordion link-title</a>
+                      </div>
+                      <button class="accordion__button" type="button" data-js-accordion-button>
+                        <span class="accordion__button-caption accordion__button-caption--before"> Развернуть </span>
+                        <span class="accordion__button-caption accordion__button-caption--after"> Свернуть </span>
+                        <span class="accordion__button-icon-wrapper">
+                          <svg class="i-icon">
+                            <use href="#icon-arrow-down"></use>
+                          </svg>
+                        </span>
+                      </button>
+                    </div>
+                  </summary>
+                  <div class="accordion__content" data-js-accordion-content>
+                    <div class="accordion__content-inner">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos earum excepturi explicabo explicabo minima modi numquam quam quia ratione, rem soluta vitae?</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+            </div>
+          </section>
+          <section class="section container">
+            <header class="section__header">
+              <h2 class="section__title"> Article </h2>
+            </header>
+            <div class="section__body">
+              <article class="article">
+                <header class="article__header">
+                  <div class="article__title">Article title</div>
+                  <time class="article__date" datetime="2022-01-02">2 january 2022</time>
+                </header>
+                <div class="article__body">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, mollitia?</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad asperiores at facilis fugit magnam mollitia optio possimus repudiandae vitae voluptatem?</p>
+                </div>
+              </article>
+            </div>
+          </section>
+        </div>
+      </main>
+      <footer class="footer container" id="contacts">
+        <div class="footer__inner card">
+          <div class="footer__body">
+            <div class="footer__title h2">Shall we discuss <span class="accent-color">your project?</span></div>
+            <div class="footer__description">
+              <p> Contact me. I am in touch mon-fri from 2 pm to 4 am (gmt). </p>
+            </div>
+          </div>
+          <div class="footer__contacts">
+            <div class="footer__socials socials">
+              <ul class="socials__list flow">
+                <li class="socials__item">
+                  <a class="socials__link" href="https://www.linkedin.com/in/aleksander-lamkov-569b87231/?locale=en_US" target="_blank" title="LinkedIn" aria-label="LinkedIn">
+                    <svg class="i-icon">
+                      <use href="#icon-linkedin"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="socials__item">
+                  <a class="socials__link" href="https://t.me/a1rth" target="_blank" title="Telegram" aria-label="Telegram">
+                    <svg class="i-icon">
+                      <use href="#icon-telegram"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="socials__item">
+                  <a class="socials__link" href="mailto:aleksanderlamkov@gmail.com" target="_blank" title="Email" aria-label="Email">
+                    <svg class="i-icon">
+                      <use href="#icon-email"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__copyright"> © Alexander Lamkov, 2022 </div>
+          </div>
+        </div>
+      </footer>
+      <div class="overlay"></div>
+    </div>
+    <div class="preloader is-shown" data-js-preloader>
+      <div class="preloader__part"></div>
+      <div class="preloader__part"></div>
+      <div class="preloader__part" data-js-preloader-last-part></div>
+    </div>
+    <noscript></noscript>
+    <script src="bundle.js"></script>
+  </body>
+
+</html>

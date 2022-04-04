@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Aleksander Lamkov. Frontend developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="address=no" />
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/ico" />
+    <link rel="apple-touch-icon-precomposed" href="./images/apple-touch-icon.png">
+    <link rel="preload" href="./bundle.js" as="script" />
+    <link href="styles/main.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="flow-container ">
+      <header class="header" data-js-header>
+        <div class="header__inner container">
+          <a class="header__logo logo" href="/">
+            <svg class="logo__svg" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M45.6001 34.7586C45.6001 33.6157 44.5258 32.6896 43.2001 32.6896H20.8C19.4743 32.6896 18.4 33.6157 18.4 34.7586V51.3103C18.4 51.6909 18.7586 52 19.2 52H44.8001C45.2415 52 45.6001 51.6909 45.6001 51.3103V34.7586ZM32.8412 37.9889L29.6412 46.2647C29.5019 46.6256 29.7283 47.0166 30.1476 47.1372C30.5662 47.2573 31.0198 47.0621 31.1597 46.7007L34.3597 38.4248C34.499 38.064 34.2726 37.6729 33.8533 37.5523C33.4347 37.4322 32.9812 37.6274 32.8412 37.9889ZM27.8658 46.1L24.9619 42.3447L27.8658 38.5895C28.1105 38.2723 28.0115 37.8441 27.6444 37.6328C27.2765 37.4219 26.7797 37.5072 26.5347 37.8237L23.3347 41.9617C23.1554 42.1935 23.1554 42.4955 23.3347 42.7271L26.5347 46.865C26.7794 47.1815 27.2761 47.2671 27.6444 47.0559C28.0115 46.845 28.1108 46.4167 27.8658 46.0993V46.1ZM37.4658 46.8654L40.6658 42.7275C40.8451 42.4956 40.8451 42.1936 40.6658 41.9621L37.4658 37.8241C37.2212 37.5076 36.7244 37.422 36.3562 37.6333C35.989 37.8442 35.8897 38.2724 36.1347 38.5899L39.0387 42.3451L36.1347 46.1004C35.8901 46.4175 35.989 46.8458 36.3562 47.057C36.724 47.2679 37.2208 47.1826 37.4658 46.8661V46.8654Z" fill="white" />
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M43.2 21.6552C43.2 26.9877 38.1857 31.3103 32 31.3103C25.8143 31.3103 20.8 26.9877 20.8 21.6552C20.8 16.3227 25.8143 12 32 12C38.1857 12 43.2 16.3227 43.2 21.6552Z" fill="white" />
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M16.8 39.2126C13.8104 42.4657 12 46.692 12 51.3103C12 51.6909 12.3586 52 12.8 52H16.9368C16.8478 51.7842 16.8 51.5523 16.8 51.3103L16.8 39.2126Z" fill="white" />
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M47.2 39.2126V51.3103C47.2 51.5523 47.1522 51.7842 47.0632 52H51.2C51.6414 52 52 51.6909 52 51.3103C52 46.6918 50.1896 42.4654 47.2 39.2126H47.2Z" fill="white" />
+            </svg>
+          </a>
+          <nav class="header__menu hidden-mobile">
+            <ul class="header__menu-list">
+              <li class="header__menu-item">
+                <button class="header__menu-button" type="button" data-js-scroll-to='{"anchor": "#about"}'> About </button>
+              </li>
+              <li class="header__menu-item">
+                <button class="header__menu-button" type="button" data-js-scroll-to='{"anchor": "#skills"}'> Skills </button>
+              </li>
+              <li class="header__menu-item">
+                <button class="header__menu-button" type="button" data-js-scroll-to='{"anchor": "#portfolio"}'> Portfolio </button>
+              </li>
+              <li class="header__menu-item">
+                <button class="header__menu-button" type="button" data-js-scroll-to='{"anchor": "#work-experience"}'> Work Experience </button>
+              </li>
+              <li class="header__menu-item">
+                <button class="header__menu-button" type="button" data-js-scroll-to='{"anchor": "#contacts"}'> Contacts </button>
+              </li>
+            </ul>
+          </nav>
+          <label class="header__theme-switcher theme-switcher" data-js-theme-switcher>
+            <input class="theme-switcher__checkbox visually-hidden" type="checkbox" data-js-theme-switcher-checkbox />
+            <span class="theme-switcher__body">
+              <span class="theme-switcher__icon-wrapper theme-switcher__icon-wrapper--dark-theme">
+                <svg class="i-icon">
+                  <use href="#icon-moon"></use>
+                </svg>
+              </span>
+              <span class="theme-switcher__icon-wrapper theme-switcher__icon-wrapper--light-theme">
+                <svg class="i-icon">
+                  <use href="#icon-sun"></use>
+                </svg>
+              </span>
+            </span>
+          </label>
+          <button class="header__burger-button visible-mobile burger-button" type="button" title="Open menu" aria-label="Open menu" data-js-burger-button>
+            <svg class="burger-button__svg" width="30" height="30" viewBox="0 0 100 100">
+              <path class="burger-button__line burger-button__line--1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+              <path class="burger-button__line burger-button__line--2" d="M 20,50 H 80" />
+              <path class="burger-button__line burger-button__line--3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+            </svg>
+          </button>
+        </div>
+        <div class="visible-mobile mobile-menu" data-js-mobile-menu>
+          <div class="mobile-menu__inner container">
+            <div class="mobile-menu__navigation">
+              <ul class="mobile-menu__navigation-list">
+                <li class="mobile-menu__navigation-item">
+                  <button class="mobile-menu__navigation-button" type="button" data-js-scroll-to='{"anchor": "#about"}'> About </button>
+                </li>
+                <li class="mobile-menu__navigation-item">
+                  <button class="mobile-menu__navigation-button" type="button" data-js-scroll-to='{"anchor": "#skills"}'> Skills </button>
+                </li>
+                <li class="mobile-menu__navigation-item">
+                  <button class="mobile-menu__navigation-button" type="button" data-js-scroll-to='{"anchor": "#portfolio"}'> Portfolio </button>
+                </li>
+                <li class="mobile-menu__navigation-item">
+                  <button class="mobile-menu__navigation-button" type="button" data-js-scroll-to='{"anchor": "#work-experience"}'> Work Experience </button>
+                </li>
+                <li class="mobile-menu__navigation-item">
+                  <button class="mobile-menu__navigation-button" type="button" data-js-scroll-to='{"anchor": "#contacts"}'> Contacts </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="content">
+        <div class="content__sections">
+          <div class="hero section" id="about">
+            <div class="hero__inner container">
+              <div class="hero__body">
+                <h1 class="hero__title live-typing scroll-effect" data-js-live-typing data-js-scroll-effect>
+                  <div class="live-typing__stage" data-js-live-typing-stage='{"isHideAfterTyping": false}'>
+                    <span class="accent-color"><span class="live-typing__char" data-js-live-typing-char>H</span><span class="live-typing__char" data-js-live-typing-char>e</span><span class="live-typing__char" data-js-live-typing-char>l</span><span class="live-typing__char" data-js-live-typing-char>l</span><span class="live-typing__char" data-js-live-typing-char>o</span><span class="live-typing__char" data-js-live-typing-char>!</span></span><span class="live-typing__char" data-js-live-typing-char> </span><span class="live-typing__char" data-js-live-typing-char>M</span><span class="live-typing__char" data-js-live-typing-char>y</span><span class="live-typing__char" data-js-live-typing-char> </span><span class="live-typing__char" data-js-live-typing-char>n</span><span class="live-typing__char" data-js-live-typing-char>a</span><span class="live-typing__char" data-js-live-typing-char>m</span><span class="live-typing__char" data-js-live-typing-char>e</span><span class="live-typing__char" data-js-live-typing-char> </span><span class="live-typing__char" data-js-live-typing-char>i</span><span class="live-typing__char" data-js-live-typing-char>s</span><span class="live-typing__char" data-js-live-typing-char> </span><span class="live-typing__char" data-js-live-typing-char>A</span><span class="live-typing__char" data-js-live-typing-char>l</span><span class="live-typing__char" data-js-live-typing-char>e</span><span class="live-typing__char" data-js-live-typing-char>k</span><span class="live-typing__char" data-js-live-typing-char>s</span><span class="live-typing__char" data-js-live-typing-char>a</span><span class="live-typing__char" data-js-live-typing-char>n</span><span class="live-typing__char" data-js-live-typing-char>d</span><span class="live-typing__char" data-js-live-typing-char>e</span><span class="live-typing__char" data-js-live-typing-char>r</span><span class="live-typing__char" data-js-live-typing-char> </span><span class="live-typing__char" data-js-live-typing-char>L</span><span class="live-typing__char" data-js-live-typing-char>a</span><span class="live-typing__char" data-js-live-typing-char>m</span><span class="live-typing__char" data-js-live-typing-char>k</span><span class="live-typing__char" data-js-live-typing-char>o</span><span class="live-typing__char" data-js-live-typing-char>v</span><span class="live-typing__char" data-js-live-typing-char>.</span>
+                  </div>
+                  <div class="live-typing__stage" data-js-live-typing-stage='{"isHideAfterTyping": true}'>
+                    <span class="live-typing__char" data-js-live-typing-char>I</span><span class="live-typing__char" data-js-live-typing-char> </span><span class="live-typing__char" data-js-live-typing-char>a</span><span class="live-typing__char" data-js-live-typing-char>m</span><span class="live-typing__char" data-js-live-typing-char> </span><span class="live-typing__char" data-js-live-typing-char>f</span><span class="live-typing__char" data-js-live-typing-char>r</span><span class="live-typing__char" data-js-live-typing-char>o</span><span class="live-typing__char" data-js-live-typing-char>n</span><span class="live-typing__char" data-js-live-typing-char>t</span><span class="live-typing__char" data-js-live-typing-char>e</span><span class="live-typing__char" data-js-live-typing-char>n</span><span class="live-typing__char" data-js-live-typing-char>d</span><span class="live-typing__char" data-js-live-typing-char> </span><span class="live-typing__char" data-js-live-typing-char>d</span><span class="live-typing__char" data-js-live-typing-char>e</span><span class="live-typing__char" data-js-live-typing-char>v</span><span class="live-typing__char" data-js-live-typing-char>e</span><span class="live-typing__char" data-js-live-typing-char>l</span><span class="live-typing__char" data-js-live-typing-char>o</span><span class="live-typing__char" data-js-live-typing-char>p</span><span class="live-typing__char" data-js-live-typing-char>e</span><span class="live-typing__char" data-js-live-typing-char>r</span><span class="live-typing__char" data-js-live-typing-char>.</span>
+                  </div>
+                  <div class="live-typing__stage" data-js-live-typing-stage='{"isHideAfterTyping": false}'>
+                    <span class="live-typing__char" data-js-live-typing-char>I</span><span class="live-typing__char" data-js-live-typing-char> </span><span class="live-typing__char" data-js-live-typing-char>c</span><span class="live-typing__char" data-js-live-typing-char>a</span><span class="live-typing__char" data-js-live-typing-char>n</span><span class="live-typing__char" data-js-live-typing-char> </span><span class="live-typing__char" data-js-live-typing-char>d</span><span class="live-typing__char" data-js-live-typing-char>o</span><span class="live-typing__char" data-js-live-typing-char> </span><span class="live-typing__char" data-js-live-typing-char>s</span><span class="live-typing__char" data-js-live-typing-char>o</span><span class="live-typing__char" data-js-live-typing-char>m</span><span class="live-typing__char" data-js-live-typing-char>e</span><span class="live-typing__char" data-js-live-typing-char> </span><span class="live-typing__char" data-js-live-typing-char>g</span><span class="live-typing__char" data-js-live-typing-char>r</span><span class="live-typing__char" data-js-live-typing-char>e</span><span class="live-typing__char" data-js-live-typing-char>a</span><span class="live-typing__char" data-js-live-typing-char>t</span><br /><span class="live-typing__char" data-js-live-typing-char>t</span><span class="live-typing__char" data-js-live-typing-char>h</span><span class="live-typing__char" data-js-live-typing-char>i</span><span class="live-typing__char" data-js-live-typing-char>n</span><span class="live-typing__char" data-js-live-typing-char>g</span><span class="live-typing__char" data-js-live-typing-char>s</span><span class="live-typing__char" data-js-live-typing-char> </span><span class="live-typing__char" data-js-live-typing-char>f</span><span class="live-typing__char" data-js-live-typing-char>o</span><span class="live-typing__char" data-js-live-typing-char>r</span><span class="live-typing__char" data-js-live-typing-char> </span><span class="live-typing__char" data-js-live-typing-char>y</span><span class="live-typing__char" data-js-live-typing-char>o</span><span class="live-typing__char" data-js-live-typing-char>u</span><span class="live-typing__char" data-js-live-typing-char>.</span>
+                  </div>
+                </h1>
+                <button class="button hero__button" type="button" data-js-button data-js-scroll-to='{"anchor": "#contacts"}'>
+                  <span class="button__label">Let’s check!</span>
+                </button>
+              </div>
+              <div class="hero__scene-wrapper">
+                <div class="hero-scene scroll-effect" data-js-scroll-effect>
+                  <div class="laptop-bottom-panel">
+                    <div class="laptop-bottom-panel__shadow"></div>
+                    <div class="laptop-bottom-panel__base"></div>
+                    <div class="laptop-bottom-panel__keyboard">
+                      <button class="laptop-bottom-panel__key laptop-bottom-panel__key--3" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                      <button class="laptop-bottom-panel__key laptop-bottom-panel__key--3" type="button"></button>
+                      <button class="laptop-bottom-panel__key laptop-bottom-panel__key--3" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                      <button class="laptop-bottom-panel__key laptop-bottom-panel__key--4" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                      <button class="laptop-bottom-panel__key laptop-bottom-panel__key--3" type="button"></button>
+                      <button class="laptop-bottom-panel__key laptop-bottom-panel__key--5" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                      <button class="laptop-bottom-panel__key laptop-bottom-panel__key--3" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                      <button class="laptop-bottom-panel__key laptop-bottom-panel__key--14" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                      <button class="laptop-bottom-panel__key" type="button"></button>
+                    </div>
+                    <div class="laptop-bottom-panel__shine"></div>
+                  </div>
+                  <div class="laptop-top-panel">
+                    <div class="laptop-top-panel__base"></div>
+                    <div class="laptop-top-panel__screen"></div>
+                    <div class="laptop-top-panel__shine"></div>
+                  </div>
+                  <div class="uml-diagram">
+                    <div class="uml-diagram__ellipse uml-diagram__ellipse--top"></div>
+                    <div class="uml-diagram__direction-arrow uml-diagram__direction-arrow--top"></div>
+                    <div class="uml-diagram__rhombus">
+                      <\>
+                    </div>
+                    <div class="uml-diagram__direction-arrow uml-diagram__direction-arrow--left"></div>
+                    <div class="uml-diagram__direction-line uml-diagram__direction-line--top-left"></div>
+                    <div class="uml-diagram__direction-line uml-diagram__direction-line--top-right"></div>
+                    <div class="uml-diagram__direction-arrow uml-diagram__direction-arrow--right"></div>
+                    <div class="uml-diagram__rectangle uml-diagram__rectangle--left"></div>
+                    <div class="uml-diagram__rectangle uml-diagram__rectangle--right"></div>
+                    <div class="uml-diagram__direction-line uml-diagram__direction-line--bottom"></div>
+                    <div class="uml-diagram__direction-line uml-diagram__direction-line--bottom-left"></div>
+                    <div class="uml-diagram__direction-line uml-diagram__direction-line--bottom-right"></div>
+                    <div class="uml-diagram__direction-arrow uml-diagram__direction-arrow--bottom"></div>
+                    <div class="uml-diagram__ellipse uml-diagram__ellipse--bottom"></div>
+                  </div>
+                  <div class="code-signs">
+                    <div class="code-signs__sign code-signs__sign--left code-signs__sign--tag">
+                      <\>
+                    </div>
+                    <div class="code-signs__sign code-signs__sign--left code-signs__sign--ejs">EJS</div>
+                    <div class="code-signs__sign code-signs__sign--right code-signs__sign--react">React</div>
+                    <div class="code-signs__sign code-signs__sign--right code-signs__sign--css">CSS</div>
+                    <div class="code-signs__sign code-signs__sign--left code-signs__sign--js">JS</div>
+                    <div class="code-signs__sign code-signs__sign--left code-signs__sign--stars">******</div>
+                    <div class="code-signs__sign code-signs__sign--left code-signs__sign--triangles">▶▶▶▶▶</div>
+                    <div class="code-signs__sign code-signs__sign--left code-signs__sign--gear">
+                      <svg class="i-icon">
+                        <use href="#icon-gear"></use>
+                      </svg>
+                    </div>
+                    <div class="code-signs__sign code-signs__sign--left code-signs__sign--search">
+                      <svg class="i-icon">
+                        <use href="#icon-search"></use>
+                      </svg>
+                    </div>
+                    <div class="code-signs__sign code-signs__sign--right code-signs__sign--idea">
+                      <svg class="i-icon">
+                        <use href="#icon-idea"></use>
+                      </svg>
+                    </div>
+                    <div class="code-signs__sign code-signs__sign--right code-signs__sign--shield">
+                      <svg class="i-icon">
+                        <use href="#icon-shield"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="code-panel">
+                    <div class="code-panel__word code-panel__word--4 code-panel__word--yellow-color"></div>
+                    <div class="code-panel__word code-panel__word--2 code-panel__word--bright-color"></div>
+                    <div class="code-panel__word"></div>
+                    <div class="code-panel__word"></div>
+                    <div class="code-panel__word"></div>
+                    <div class="code-panel__word code-panel__word--2"></div>
+                    <div class="code-panel__word code-panel__word--transparent-color"></div>
+                    <div class="code-panel__word code-panel__word--2 code-panel__word--transparent-color"></div>
+                    <div class="code-panel__word code-panel__word--4 code-panel__word--yellow-color"></div>
+                    <div class="code-panel__word code-panel__word--2 code-panel__word--bright-color"></div>
+                    <div class="code-panel__word code-panel__word--2"></div>
+                    <div class="code-panel__word code-panel__word--2"></div>
+                    <div class="code-panel__word code-panel__word--2 code-panel__word--transparent-color"></div>
+                    <div class="code-panel__word code-panel__word--3 code-panel__word--bright-color"></div>
+                    <div class="code-panel__word code-panel__word--2"></div>
+                    <div class="code-panel__word code-panel__word--bright-color"></div>
+                    <div class="code-panel__word code-panel__word--2 code-panel__word--bright-color"></div>
+                    <div class="code-panel__word"></div>
+                    <div class="code-panel__word code-panel__word--transparent-color"></div>
+                    <div class="code-panel__word code-panel__word--2 code-panel__word--transparent-color"></div>
+                    <div class="code-panel__word code-panel__word--2"></div>
+                    <div class="code-panel__word code-panel__word--3 code-panel__word--yellow-color"></div>
+                    <div class="code-panel__word"></div>
+                    <div class="code-panel__word"></div>
+                    <div class="code-panel__word"></div>
+                    <div class="code-panel__word code-panel__word--2"></div>
+                    <div class="code-panel__word code-panel__word--2 code-panel__word--transparent-color"></div>
+                    <div class="code-panel__word code-panel__word--2"></div>
+                    <div class="code-panel__word"></div>
+                    <div class="code-panel__word code-panel__word--2"></div>
+                    <div class="code-panel__word code-panel__word--bright-color"></div>
+                    <div class="code-panel__word code-panel__word--2"></div>
+                    <div class="code-panel__word code-panel__word--transparent-color"></div>
+                    <div class="code-panel__word code-panel__word--2 code-panel__word--transparent-color"></div>
+                    <div class="code-panel__word code-panel__word--4 code-panel__word--yellow-color"></div>
+                    <div class="code-panel__word code-panel__word--3 code-panel__word--yellow-color"></div>
+                    <div class="code-panel__word code-panel__word--2"></div>
+                    <div class="code-panel__word code-panel__word--transparent-color"></div>
+                    <div class="code-panel__word code-panel__word--2 code-panel__word--transparent-color"></div>
+                    <div class="code-panel__word code-panel__word--3"></div>
+                    <div class="code-panel__word code-panel__word--2"></div>
+                    <div class="code-panel__word code-panel__word--bright-color"></div>
+                    <div class="code-panel__word code-panel__word--2"></div>
+                    <div class="code-panel__word"></div>
+                    <div class="code-panel__word code-panel__word--transparent-color"></div>
+                    <div class="code-panel__word code-panel__word--2 code-panel__word--transparent-color"></div>
+                    <div class="code-panel__word code-panel__word--bright-color"></div>
+                    <div class="code-panel__word code-panel__word--2 code-panel__word--3 code-panel__word--yellow-color"></div>
+                    <div class="code-panel__word"></div>
+                    <div class="code-panel__word"></div>
+                    <div class="code-panel__word"></div>
+                    <div class="code-panel__word code-panel__word--3"></div>
+                    <div class="code-panel__word code-panel__word--2 code-panel__word--transparent-color"></div>
+                    <div class="code-panel__word"></div>
+                    <div class="code-panel__word"></div>
+                    <div class="code-panel__word code-panel__word--2 code-panel__word--bright-color"></div>
+                    <div class="code-panel__word code-panel__word--bright-color"></div>
+                    <div class="code-panel__word code-panel__word--2"></div>
+                    <div class="code-panel__word code-panel__word--3 code-panel__word--transparent-color"></div>
+                    <div class="code-panel__word code-panel__word--4 code-panel__word--yellow-color"></div>
+                    <div class="code-panel__word code-panel__word--2 code-panel__word--bright-color"></div>
+                    <div class="code-panel__word"></div>
+                    <div class="code-panel__word"></div>
+                    <div class="code-panel__word"></div>
+                    <div class="code-panel__word code-panel__word--2"></div>
+                    <div class="code-panel__word code-panel__word--transparent-color"></div>
+                    <div class="code-panel__word code-panel__word--2 code-panel__word--transparent-color"></div>
+                    <div class="code-panel__word code-panel__word--4 code-panel__word--yellow-color"></div>
+                    <div class="code-panel__word code-panel__word--2 code-panel__word--bright-color"></div>
+                    <div class="code-panel__word code-panel__word--2"></div>
+                    <div class="code-panel__word code-panel__word--2"></div>
+                    <div class="code-panel__word code-panel__word--2 code-panel__word--transparent-color"></div>
+                    <div class="code-panel__word code-panel__word--3 code-panel__word--bright-color"></div>
+                    <div class="code-panel__word code-panel__word--2"></div>
+                    <div class="code-panel__word code-panel__word--bright-color"></div>
+                    <div class="code-panel__word code-panel__word--2 code-panel__word--bright-color"></div>
+                    <div class="code-panel__word"></div>
+                    <div class="code-panel__word code-panel__word--transparent-color"></div>
+                    <div class="code-panel__word code-panel__word--2 code-panel__word--transparent-color"></div>
+                    <div class="code-panel__word code-panel__word--2"></div>
+                    <div class="code-panel__word code-panel__word--3 code-panel__word--yellow-color"></div>
+                    <div class="code-panel__word"></div>
+                    <div class="code-panel__word"></div>
+                    <div class="code-panel__word"></div>
+                    <div class="code-panel__word code-panel__word--2"></div>
+                    <div class="code-panel__word code-panel__word--2 code-panel__word--transparent-color"></div>
+                    <div class="code-panel__word code-panel__word--2"></div>
+                    <div class="code-panel__word"></div>
+                    <div class="code-panel__word code-panel__word--2"></div>
+                    <div class="code-panel__word code-panel__word--bright-color"></div>
+                    <div class="code-panel__word code-panel__word--2"></div>
+                    <div class="code-panel__word code-panel__word--transparent-color"></div>
+                    <div class="code-panel__word code-panel__word--2 code-panel__word--transparent-color"></div>
+                    <div class="code-panel__word code-panel__word--4 code-panel__word--yellow-color"></div>
+                    <div class="code-panel__word code-panel__word--3 code-panel__word--yellow-color"></div>
+                    <div class="code-panel__word code-panel__word--2"></div>
+                    <div class="code-panel__word code-panel__word--transparent-color"></div>
+                    <div class="code-panel__word code-panel__word--2 code-panel__word--transparent-color"></div>
+                    <div class="code-panel__word code-panel__word--3"></div>
+                    <div class="code-panel__word code-panel__word--2"></div>
+                    <div class="code-panel__word code-panel__word--bright-color"></div>
+                    <div class="code-panel__word code-panel__word--2"></div>
+                    <div class="code-panel__word"></div>
+                    <div class="code-panel__word code-panel__word--transparent-color"></div>
+                    <div class="code-panel__word code-panel__word--2 code-panel__word--transparent-color"></div>
+                    <div class="code-panel__word code-panel__word--bright-color"></div>
+                    <div class="code-panel__word code-panel__word--2 code-panel__word--3 code-panel__word--yellow-color"></div>
+                    <div class="code-panel__word"></div>
+                    <div class="code-panel__word"></div>
+                    <div class="code-panel__word"></div>
+                    <div class="code-panel__word code-panel__word--3"></div>
+                    <div class="code-panel__word code-panel__word--2 code-panel__word--transparent-color"></div>
+                    <div class="code-panel__word"></div>
+                    <div class="code-panel__word"></div>
+                    <div class="code-panel__word code-panel__word--2 code-panel__word--bright-color"></div>
+                    <div class="code-panel__word code-panel__word--bright-color"></div>
+                  </div>
+                  <div class="byte-code">
+                    <span class="byte-code__char">1</span>
+                    <span class="byte-code__char">1</span>
+                    <span class="byte-code__char">0</span>
+                    <span class="byte-code__char">1</span>
+                    <span class="byte-code__char">0</span>
+                    <span class="byte-code__char">0</span>
+                    <span class="byte-code__char">0</span>
+                    <span class="byte-code__char">1</span>
+                    <span class="byte-code__char">1</span>
+                    <span class="byte-code__char">0</span>
+                    <span class="byte-code__char">0</span>
+                    <span class="byte-code__char">1</span>
+                    <span class="byte-code__char">0</span>
+                    <span class="byte-code__char">1</span>
+                    <span class="byte-code__char">1</span>
+                    <span class="byte-code__char">1</span>
+                    <span class="byte-code__char">0</span>
+                    <span class="byte-code__char">1</span>
+                    <span class="byte-code__char">1</span>
+                    <span class="byte-code__char">0</span>
+                    <span class="byte-code__char">0</span>
+                    <span class="byte-code__char">1</span>
+                    <span class="byte-code__char">1</span>
+                    <span class="byte-code__char">0</span>
+                    <span class="byte-code__char">1</span>
+                    <span class="byte-code__char">1</span>
+                    <span class="byte-code__char">0</span>
+                    <span class="byte-code__char">0</span>
+                    <span class="byte-code__char">1</span>
+                    <span class="byte-code__char">1</span>
+                    <span class="byte-code__char">0</span>
+                    <span class="byte-code__char">1</span>
+                    <span class="byte-code__char">1</span>
+                    <span class="byte-code__char">1</span>
+                    <span class="byte-code__char">1</span>
+                  </div>
+                  <div class="hero-slider" data-js-slider>
+                    <button class="hero-slider__button hero-slider__button--prev" type="button" title="To prev slide" aria-label="To prev slide">
+                      <svg class="i-icon">
+                        <use href="#icon-arrow-left"></use>
+                      </svg>
+                    </button>
+                    <div class="hero-slider__inner swiper">
+                      <ul class="hero-slider__list swiper-wrapper">
+                        <li class="hero-slider__item swiper-slide">
+                          <div class="hero-slider__icon-wrapper">
+                            <svg class="i-icon">
+                              <use href="#icon-html"></use>
+                            </svg>
+                          </div>
+                        </li>
+                        <li class="hero-slider__item swiper-slide">
+                          <div class="hero-slider__icon-wrapper">
+                            <svg class="i-icon">
+                              <use href="#icon-css"></use>
+                            </svg>
+                          </div>
+                        </li>
+                        <li class="hero-slider__item swiper-slide">
+                          <div class="hero-slider__icon-wrapper">
+                            <svg class="i-icon">
+                              <use href="#icon-javascript"></use>
+                            </svg>
+                          </div>
+                        </li>
+                        <li class="hero-slider__item swiper-slide">
+                          <div class="hero-slider__icon-wrapper">
+                            <svg class="i-icon">
+                              <use href="#icon-react"></use>
+                            </svg>
+                          </div>
+                        </li>
+                        <li class="hero-slider__item swiper-slide">
+                          <div class="hero-slider__icon-wrapper">
+                            <svg class="i-icon">
+                              <use href="#icon-redux"></use>
+                            </svg>
+                          </div>
+                        </li>
+                        <li class="hero-slider__item swiper-slide">
+                          <div class="hero-slider__icon-wrapper">
+                            <svg class="i-icon">
+                              <use href="#icon-typescript"></use>
+                            </svg>
+                          </div>
+                        </li>
+                        <li class="hero-slider__item swiper-slide">
+                          <div class="hero-slider__icon-wrapper">
+                            <svg class="i-icon">
+                              <use href="#icon-webpack"></use>
+                            </svg>
+                          </div>
+                        </li>
+                        <li class="hero-slider__item swiper-slide">
+                          <div class="hero-slider__icon-wrapper">
+                            <svg class="i-icon">
+                              <use href="#icon-postcss"></use>
+                            </svg>
+                          </div>
+                        </li>
+                        <li class="hero-slider__item swiper-slide">
+                          <div class="hero-slider__icon-wrapper">
+                            <svg class="i-icon">
+                              <use href="#icon-ejs"></use>
+                            </svg>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <button class="hero-slider__button hero-slider__button--next" type="button" title="To next slide" aria-label="To next slide">
+                      <svg class="i-icon">
+                        <use href="#icon-arrow-right"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <section class="section skills" id="skills">
+            <div class="skills__inner grid grid--2 container">
+              <div class="skills__column">
+                <h2 class="skills__title">
+                  <span class="accent-color">Hard</span> skills
+                </h2>
+                <div class="skills__body">
+                  <ul class="skills__list grid scroll-effect" data-js-scroll-effect>
+                    <li class="skills__item grid__item">
+                      <div class="skill-card"> HTML, (HTML5), EJS, JSX </div>
+                    </li>
+                    <li class="skills__item grid__item">
+                      <div class="skill-card"> CSS (CSS3), SASS (SCSS), PostCSS, Bootstrap, Tailwind, Animations </div>
+                    </li>
+                    <li class="skills__item grid__item">
+                      <div class="skill-card"> JavaScript (ES6+, OOP), jQuery </div>
+                    </li>
+                    <li class="skills__item grid__item">
+                      <div class="skill-card"> React, Redux, TypeScript </div>
+                    </li>
+                    <li class="skills__item grid__item">
+                      <div class="skill-card"> Webpack, Gulp </div>
+                    </li>
+                    <li class="skills__item grid__item">
+                      <div class="skill-card"> BEM </div>
+                    </li>
+                    <li class="skills__item grid__item">
+                      <div class="skill-card"> Git (GitHub, BitBucket, GitLab) </div>
+                    </li>
+                    <li class="skills__item grid__item">
+                      <div class="skill-card"> Figma, Adobe Photoshop, Avocode </div>
+                    </li>
+                    <li class="skills__item grid__item">
+                      <div class="skill-card"> CMS 1C-Bitrix, Drupal, OpenCart, MODX </div>
+                    </li>
+                    <li class="skills__item grid__item">
+                      <div class="skill-card"> Basic understanding PHP, Blade, Twig </div>
+                    </li>
+                    <li class="skills__item grid__item">
+                      <div class="skill-card"> Agile, Waterfall, SCRUM </div>
+                    </li>
+                    <li class="skills__item grid__item">
+                      <div class="skill-card"> Competent written and oral speech </div>
+                    </li>
+                    <li class="skills__item grid__item">
+                      <div class="skill-card"> English level - B1 </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="skills__column">
+                <h2 class="skills__title">
+                  <span class="accent-color">Soft</span> skills
+                </h2>
+                <div class="skills__body">
+                  <ul class="skills__list grid scroll-effect" data-js-scroll-effect>
+                    <li class="skills__item grid__item">
+                      <div class="skill-card"> I know how to work in a team, I have experience in communication with designers, managers and other developers </div>
+                    </li>
+                    <li class="skills__item grid__item">
+                      <div class="skill-card"> I am responsible about deadlines </div>
+                    </li>
+                    <li class="skills__item grid__item">
+                      <div class="skill-card"> I am attentive to the details of the terms of reference </div>
+                    </li>
+                    <li class="skills__item grid__item">
+                      <div class="skill-card"> I am demanding of the quality of my code, I follow the code-style </div>
+                    </li>
+                    <li class="skills__item grid__item">
+                      <div class="skill-card"> I have time management skills </div>
+                    </li>
+                    <li class="skills__item grid__item">
+                      <div class="skill-card"> I welcome constructive criticism and am always happy to find new points of professional and personal growth </div>
+                    </li>
+                    <li class="skills__item grid__item">
+                      <div class="skill-card"> I know how to solve conflict situations </div>
+                    </li>
+                    <li class="skills__item grid__item">
+                      <div class="skill-card"> I am correctly convey thoughts, formulate questions </div>
+                    </li>
+                    <li class="skills__item grid__item">
+                      <div class="skill-card"> I write detailed reports on the work done, if required </div>
+                    </li>
+                    <li class="skills__item grid__item">
+                      <div class="skill-card"> I have experience working with a geographically distributed team (remote work) </div>
+                    </li>
+                    <li class="skills__item grid__item">
+                      <div class="skill-card"> I have experience in mentoring, training of junior specialists </div>
+                    </li>
+                    <li class="skills__item grid__item">
+                      <div class="skill-card"> I am motivated to improve my skills, constantly studying new technologies in my field of activity </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="section scroll-effect" id="portfolio" data-js-scroll-effect>
+            <div class="section__inner container">
+              <header class="section__header">
+                <h2 class="section__title"> My <span class="accent-color">Portfolio</span>
+                </h2>
+              </header>
+              <div class="section__body">
+                <div class="portfolio">
+                  <ul class="portfolio__list grid">
+                    <li class="portfolio__item grid__item">
+                      <article class="portfolio-card card card--hoverable">
+                        <img class="portfolio-card__image" src="./images/projects/2022-03.jpg" alt="" width="400" height="320" loading="lazy" />
+                        <div class="portfolio-card__body">
+                          <time class="portfolio-card__date" datetime="2022-03"> March 2022 </time>
+                          <h3 class="portfolio-card__title"> Short landing for transport company </h3>
+                          <div class="stack">
+                            <ul class="stack__list flow">
+                              <li class="stack__item">
+                                <img class="stack__image" src="./images/icons/ejs.svg" alt="EJS" title="EJS" width="36" height="36" loading="lazy" />
+                              </li>
+                              <li class="stack__item">
+                                <img class="stack__image" src="./images/icons/postcss.svg" alt="PostCSS" title="PostCSS" width="36" height="36" loading="lazy" />
+                              </li>
+                              <li class="stack__item">
+                                <img class="stack__image" src="./images/icons/js.svg" alt="JS" title="JS" width="36" height="36" loading="lazy" />
+                              </li>
+                              <li class="stack__item">
+                                <img class="stack__image" src="./images/icons/webpack.svg" alt="WebPack" title="WebPack" width="36" height="36" loading="lazy" />
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </article>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="section scroll-effect" id="work-experience" data-js-scroll-effect>
+            <div class="section__inner container">
+              <header class="section__header">
+                <h2 class="section__title"> Work <span class="accent-color">Experience</span>
+                </h2>
+              </header>
+              <div class="section__body">
+                <div class="work-experience">
+                  <ul class="work-experience__list grid">
+                    <li class="work-experience__item grid__item">
+                      <article class="work-experience-card card card--hoverable">
+                        <time class="work-experience-card__date" datetime="2022-04"> April 2022 - present </time>
+                        <h3 class="work-experience-card__title">
+                          <a class="work-experience-card__link" href="https://good-factory.ru/" target="_blank" title="Open a new tab"> Good Factory </a>
+                        </h3>
+                        <div class="work-experience-card__position"> Middle Frontend Developer </div>
+                        <div class="work-experience-card__description">
+                          <p>Development of highly loaded complex web applications on a modern technology stack.</p>
+                        </div>
+                        <div class="stack">
+                          <ul class="stack__list flow">
+                            <li class="stack__item">
+                              <img class="stack__image" src="./images/icons/react.svg" alt="React" title="React" width="36" height="36" loading="lazy" />
+                            </li>
+                            <li class="stack__item">
+                              <img class="stack__image" src="./images/icons/redux.svg" alt="Redux" title="Redux" width="36" height="36" loading="lazy" />
+                            </li>
+                            <li class="stack__item">
+                              <img class="stack__image" src="./images/icons/typescript.svg" alt="TypeScript" title="TypeScript" width="36" height="36" loading="lazy" />
+                            </li>
+                            <li class="stack__item">
+                              <img class="stack__image" src="./images/icons/scss.svg" alt="SCSS" title="SCSS" width="36" height="36" loading="lazy" />
+                            </li>
+                            <li class="stack__item">
+                              <img class="stack__image" src="./images/icons/webpack.svg" alt="WebPack" title="WebPack" width="36" height="36" loading="lazy" />
+                            </li>
+                          </ul>
+                        </div>
+                      </article>
+                    </li>
+                    <li class="work-experience__item grid__item">
+                      <article class="work-experience-card card card--hoverable">
+                        <time class="work-experience-card__date" datetime="2021-06/2022-03"> June 2021 - March 2022 </time>
+                        <h3 class="work-experience-card__title">
+                          <a class="work-experience-card__link" href="https://d-element.ru/" target="_blank" title="Open a new tab"> Digital Element </a>
+                        </h3>
+                        <div class="work-experience-card__position"> Frontend Developer </div>
+                        <div class="work-experience-card__description">
+                          <p>Development of the frontend part of projects in the field of e-commerce and fintech. Development in pure JavaScript in the OOP style. Creating simple React components. Writing autotests for interface components.</p>
+                        </div>
+                        <div class="stack">
+                          <ul class="stack__list flow">
+                            <li class="stack__item">
+                              <img class="stack__image" src="./images/icons/ejs.svg" alt="EJS" title="EJS" width="36" height="36" loading="lazy" />
+                            </li>
+                            <li class="stack__item">
+                              <img class="stack__image" src="./images/icons/postcss.svg" alt="PostCSS" title="PostCSS" width="36" height="36" loading="lazy" />
+                            </li>
+                            <li class="stack__item">
+                              <img class="stack__image" src="./images/icons/javascript.svg" alt="JavaScript" title="JavaScript" width="36" height="36" loading="lazy" />
+                            </li>
+                            <li class="stack__item">
+                              <img class="stack__image" src="./images/icons/react.svg" alt="React" title="React" width="36" height="36" loading="lazy" />
+                            </li>
+                            <li class="stack__item">
+                              <img class="stack__image" src="./images/icons/webpack.svg" alt="WebPack" title="WebPack" width="36" height="36" loading="lazy" />
+                            </li>
+                            <li class="stack__item">
+                              <img class="stack__image" src="./images/icons/jest.svg" alt="Jest" title="Jest" width="36" height="36" loading="lazy" />
+                            </li>
+                            <li class="stack__item">
+                              <img class="stack__image" src="./images/icons/figma.svg" alt="Figma" title="Figma" width="36" height="36" loading="lazy" />
+                            </li>
+                            <li class="stack__item">
+                              <img class="stack__image" src="./images/icons/bitrix.svg" alt="Bitrix" title="Bitrix" width="36" height="36" loading="lazy" />
+                            </li>
+                          </ul>
+                        </div>
+                      </article>
+                    </li>
+                    <li class="work-experience__item grid__item">
+                      <article class="work-experience-card card card--hoverable">
+                        <time class="work-experience-card__date" datetime="2020-09/2021-05"> September 2020 - May 2021 </time>
+                        <h3 class="work-experience-card__title">
+                          <a class="work-experience-card__link" href="https://ribbla.com/" target="_blank" title="Open a new tab"> Ribbla </a>
+                        </h3>
+                        <div class="work-experience-card__position"> Frontend Developer </div>
+                        <div class="work-experience-card__description">
+                          <p>Development of the frontend part of landing pages and e-commerce projects.</p>
+                        </div>
+                        <div class="stack">
+                          <ul class="stack__list flow">
+                            <li class="stack__item">
+                              <img class="stack__image" src="./images/icons/html.svg" alt="HTML" title="HTML" width="36" height="36" loading="lazy" />
+                            </li>
+                            <li class="stack__item">
+                              <img class="stack__image" src="./images/icons/css.svg" alt="CSS" title="CSS" width="36" height="36" loading="lazy" />
+                            </li>
+                            <li class="stack__item">
+                              <img class="stack__image" src="./images/icons/scss.svg" alt="SCSS" title="SCSS" width="36" height="36" loading="lazy" />
+                            </li>
+                            <li class="stack__item">
+                              <img class="stack__image" src="./images/icons/javascript.svg" alt="JavaScript" title="JavaScript" width="36" height="36" loading="lazy" />
+                            </li>
+                            <li class="stack__item">
+                              <img class="stack__image" src="./images/icons/jquery.svg" alt="jQuery" title="jQuery" width="36" height="36" loading="lazy" />
+                            </li>
+                            <li class="stack__item">
+                              <img class="stack__image" src="./images/icons/gulp.svg" alt="Gulp" title="Gulp" width="36" height="36" loading="lazy" />
+                            </li>
+                            <li class="stack__item">
+                              <img class="stack__image" src="./images/icons/figma.svg" alt="Figma" title="Figma" width="36" height="36" loading="lazy" />
+                            </li>
+                            <li class="stack__item">
+                              <img class="stack__image" src="./images/icons/drupal.svg" alt="Drupal" title="Drupal" width="36" height="36" loading="lazy" />
+                            </li>
+                          </ul>
+                        </div>
+                      </article>
+                    </li>
+                    <li class="work-experience__item grid__item">
+                      <article class="work-experience-card card card--hoverable">
+                        <time class="work-experience-card__date" datetime="2019-07/2020-08"> July 2019 - August 2020 </time>
+                        <h3 class="work-experience-card__title"> Freelance </h3>
+                        <div class="work-experience-card__position"> Web Developer </div>
+                        <div class="work-experience-card__description">
+                          <p>Website development. Fixing layout bugs. Writing simple scripts.</p>
+                        </div>
+                        <div class="stack">
+                          <ul class="stack__list flow">
+                            <li class="stack__item">
+                              <img class="stack__image" src="./images/icons/html.svg" alt="HTML" title="HTML" width="36" height="36" loading="lazy" />
+                            </li>
+                            <li class="stack__item">
+                              <img class="stack__image" src="./images/icons/css.svg" alt="CSS" title="CSS" width="36" height="36" loading="lazy" />
+                            </li>
+                            <li class="stack__item">
+                              <img class="stack__image" src="./images/icons/javascript.svg" alt="JavaScript" title="JavaScript" width="36" height="36" loading="lazy" />
+                            </li>
+                            <li class="stack__item">
+                              <img class="stack__image" src="./images/icons/jquery.svg" alt="jQuery" title="jQuery" width="36" height="36" loading="lazy" />
+                            </li>
+                            <li class="stack__item">
+                              <img class="stack__image" src="./images/icons/php.svg" alt="PHP" title="PHP" width="36" height="36" loading="lazy" />
+                            </li>
+                            <li class="stack__item">
+                              <img class="stack__image" src="./images/icons/gulp.svg" alt="Gulp" title="Gulp" width="36" height="36" loading="lazy" />
+                            </li>
+                            <li class="stack__item">
+                              <img class="stack__image" src="./images/icons/adobe-photoshop.svg" alt="Adobe Photoshop" title="Adobe Photoshop" width="36" height="36" loading="lazy" />
+                            </li>
+                          </ul>
+                        </div>
+                      </article>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+      <footer class="footer container" id="contacts">
+        <div class="footer__inner card">
+          <div class="footer__body">
+            <div class="footer__title h2">Shall we discuss <span class="accent-color">your project?</span></div>
+            <div class="footer__description">
+              <p> Contact me. I am in touch mon-fri from 2 pm to 4 am (gmt). </p>
+            </div>
+          </div>
+          <div class="footer__contacts">
+            <div class="footer__socials socials">
+              <ul class="socials__list flow">
+                <li class="socials__item">
+                  <a class="socials__link" href="https://www.linkedin.com/in/aleksander-lamkov-569b87231/?locale=en_US" target="_blank" title="LinkedIn" aria-label="LinkedIn">
+                    <svg class="i-icon">
+                      <use href="#icon-linkedin"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="socials__item">
+                  <a class="socials__link" href="https://t.me/a1rth" target="_blank" title="Telegram" aria-label="Telegram">
+                    <svg class="i-icon">
+                      <use href="#icon-telegram"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="socials__item">
+                  <a class="socials__link" href="mailto:aleksanderlamkov@gmail.com" target="_blank" title="Email" aria-label="Email">
+                    <svg class="i-icon">
+                      <use href="#icon-email"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__copyright"> © Alexander Lamkov, 2022 </div>
+          </div>
+        </div>
+      </footer>
+      <div class="overlay"></div>
+    </div>
+    <div class="preloader is-shown" data-js-preloader>
+      <div class="preloader__part"></div>
+      <div class="preloader__part"></div>
+      <div class="preloader__part" data-js-preloader-last-part></div>
+    </div>
+    <noscript></noscript>
+    <script src="bundle.js"></script>
+  </body>
+
+</html>
