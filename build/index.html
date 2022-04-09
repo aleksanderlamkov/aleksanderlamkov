@@ -222,7 +222,13 @@
                     <div class="code-signs__sign code-signs__sign--right code-signs__sign--css">CSS</div>
                     <div class="code-signs__sign code-signs__sign--left code-signs__sign--js">JS</div>
                     <div class="code-signs__sign code-signs__sign--left code-signs__sign--stars">******</div>
-                    <div class="code-signs__sign code-signs__sign--left code-signs__sign--triangles">▶▶▶▶▶</div>
+                    <div class="code-signs__sign code-signs__sign--left code-signs__sign--triangles">
+                      <span class="code-signs__triangle"></span>
+                      <span class="code-signs__triangle"></span>
+                      <span class="code-signs__triangle"></span>
+                      <span class="code-signs__triangle"></span>
+                      <span class="code-signs__triangle"></span>
+                    </div>
                     <div class="code-signs__sign code-signs__sign--left code-signs__sign--gear">
                       <svg class="i-icon">
                         <use href="#icon-gear"></use>
@@ -589,11 +595,14 @@
                 <div class="portfolio">
                   <ul class="portfolio__list grid">
                     <li class="portfolio__item grid__item">
-                      <article class="portfolio-card card card--hoverable">
-                        <img class="portfolio-card__image" src="./images/projects/2022-03.jpg" alt="" width="400" height="320" loading="lazy" />
+                      <article class="portfolio-card card card--hoverable" data-js-gallery-container>
+                        <a class="portfolio-card__image-wrapper" href="./images/projects/2022-03_full.jpg" data-js-gallery-item='{"caption": "AMD - Transport company"}' title="Open the image in full size">
+                          <img class="portfolio-card__image" src="./images/projects/2022-03.jpg" alt="" width="400" height="320" loading="lazy" />
+                        </a>
                         <div class="portfolio-card__body">
                           <time class="portfolio-card__date" datetime="2022-03"> March 2022 </time>
-                          <h3 class="portfolio-card__title"> Short landing for transport company </h3>
+                          <h3 class="portfolio-card__title"> AMD - Transport company </h3>
+                          <div class="portfolio-card__description"> Short landing with some scroll animations. </div>
                           <div class="stack">
                             <ul class="stack__list flow">
                               <li class="stack__item">
@@ -604,6 +613,70 @@
                               </li>
                               <li class="stack__item">
                                 <img class="stack__image" src="./images/icons/js.svg" alt="JS" title="JS" width="36" height="36" loading="lazy" />
+                              </li>
+                              <li class="stack__item">
+                                <img class="stack__image" src="./images/icons/webpack.svg" alt="WebPack" title="WebPack" width="36" height="36" loading="lazy" />
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </article>
+                    </li>
+                    <li class="portfolio__item grid__item">
+                      <article class="portfolio-card card card--hoverable" data-js-gallery-container>
+                        <a class="portfolio-card__image-wrapper" href="./images/projects/2022-01_full.jpg" data-js-gallery-item='{"caption": "Adeart - Online Gift Shop"}' title="Open the image in full size">
+                          <img class="portfolio-card__image" src="./images/projects/2022-01.jpg" alt="" width="400" height="320" loading="lazy" />
+                        </a>
+                        <div class="portfolio-card__body">
+                          <time class="portfolio-card__date" datetime="2022-01"> January 2022 </time>
+                          <h3 class="portfolio-card__title">
+                            <a class="portfolio-card__link" href="https://adeart.ru/" target="_blank" title="Open the website in a new tab"> Adeart - Online Gift Shop </a>
+                          </h3>
+                          <div class="portfolio-card__description"> Multi-page online store. </div>
+                          <div class="stack">
+                            <ul class="stack__list flow">
+                              <li class="stack__item">
+                                <img class="stack__image" src="./images/icons/ejs.svg" alt="EJS" title="EJS" width="36" height="36" loading="lazy" />
+                              </li>
+                              <li class="stack__item">
+                                <img class="stack__image" src="./images/icons/postcss.svg" alt="PostCSS" title="PostCSS" width="36" height="36" loading="lazy" />
+                              </li>
+                              <li class="stack__item">
+                                <img class="stack__image" src="./images/icons/js.svg" alt="JS" title="JS" width="36" height="36" loading="lazy" />
+                              </li>
+                              <li class="stack__item">
+                                <img class="stack__image" src="./images/icons/webpack.svg" alt="WebPack" title="WebPack" width="36" height="36" loading="lazy" />
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </article>
+                    </li>
+                    <li class="portfolio__item grid__item">
+                      <article class="portfolio-card card card--hoverable" data-js-gallery-container>
+                        <a class="portfolio-card__image-wrapper" href="./images/projects/2021-12_full.jpg" data-js-gallery-item='{"caption": "Multi-page website of the largest bank in the region"}' title="Open the image in full size">
+                          <img class="portfolio-card__image" src="./images/projects/2021-12.jpg" alt="" width="400" height="320" loading="lazy" />
+                        </a>
+                        <div class="portfolio-card__body">
+                          <time class="portfolio-card__date" datetime="2021-12"> December 2021 </time>
+                          <h3 class="portfolio-card__title"> Multi-page website of the largest bank in the region </h3>
+                          <div class="portfolio-card__description"> Many complex components were implemented in the project: credit calculators, multi-stage mortgage application forms, asynchronous filter of bank services, custom maps (REST API YandexMap) with ATMs and office points. </div>
+                          <div class="stack">
+                            <ul class="stack__list flow">
+                              <li class="stack__item">
+                                <img class="stack__image" src="./images/icons/ejs.svg" alt="EJS" title="EJS" width="36" height="36" loading="lazy" />
+                              </li>
+                              <li class="stack__item">
+                                <img class="stack__image" src="./images/icons/postcss.svg" alt="PostCSS" title="PostCSS" width="36" height="36" loading="lazy" />
+                              </li>
+                              <li class="stack__item">
+                                <img class="stack__image" src="./images/icons/js.svg" alt="JS" title="JS" width="36" height="36" loading="lazy" />
+                              </li>
+                              <li class="stack__item">
+                                <img class="stack__image" src="./images/icons/react.svg" alt="React" title="React" width="36" height="36" loading="lazy" />
+                              </li>
+                              <li class="stack__item">
+                                <img class="stack__image" src="./images/icons/redux.svg" alt="Redux" title="Redux" width="36" height="36" loading="lazy" />
                               </li>
                               <li class="stack__item">
                                 <img class="stack__image" src="./images/icons/webpack.svg" alt="WebPack" title="WebPack" width="36" height="36" loading="lazy" />
