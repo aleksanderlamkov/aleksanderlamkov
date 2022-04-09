@@ -56,7 +56,7 @@ export default class SvgUse extends Eventing {
     let url = window.App.tplPath ? (window.App.tplPath + this.path + this.name) : (window.App.debug) ? './' + this.name : this.path + this.name
     const revision = window.App.svgSpriteRevision || false
     if (window.App.tplPath) {
-      url = `${window.App.tplPath}/build/icons.svg?revision=${revision ? revision : 0}`
+      url = `${window.App.tplPath}icons.svg?revision=${revision ? revision : 0}`
     }
     makeRequest({url, type: 'text', mode: 'same-origin'}).then((sprite) => {
       this.data = sprite

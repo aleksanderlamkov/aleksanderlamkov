@@ -16,7 +16,12 @@ export default class Header {
   constructor() {
     this.instance = document.querySelector(instance)
     if (!this.instance) return
+    this.init()
     this.bindEvents()
+  }
+
+  setBodyHeaderHeightProperty() {
+    setCSSVar(document.querySelector('html'), 'headerHeight', `${this.instance.offsetHeight}px`)
   }
 
   handleScroll() {
@@ -24,12 +29,11 @@ export default class Header {
       this.instance.classList.add(this.stateClasses.isScrolled)
     } else {
       this.instance.classList.remove(this.stateClasses.isScrolled)
-      // this.setBodyHeaderHeightProperty()
     }
   }
 
-  setBodyHeaderHeightProperty() {
-    setCSSVar(document.querySelector('html'), 'headerHeight', `${this.instance.offsetHeight}px`)
+  init() {
+    this.setBodyHeaderHeightProperty()
   }
 
   bindEvents() {

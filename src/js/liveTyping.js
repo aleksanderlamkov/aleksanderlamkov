@@ -45,21 +45,20 @@ export class LiveTyping {
         }
       })
     }
-    console.debug(this.state)
-    this.init()
+    // this.init()
     this.bindEvents()
   }
 
-  formatText() {
-    this.stages.forEach((stage) => {
-      const clearText = stage.innerHTML.trim().replace(this.regExp.excludeTabulationAndLineFeedChar, ' ')
-      const textFormatted = clearText.replace(this.regExp.excludeTags, (char) => {
-        return `<span class="live-typing__char" data-js-live-typing-char>${char}</span>`
-      })
-
-      stage.innerHTML = textFormatted
-    })
-  }
+  // formatText() {
+  //   this.stages.forEach((stage) => {
+  //     const clearText = stage.innerHTML.trim().replace(this.regExp.excludeTabulationAndLineFeedChar, ' ')
+  //     const textFormatted = clearText.replace(this.regExp.excludeTags, (char) => {
+  //       return `<span class="live-typing__char" data-js-live-typing-char>${char}</span>`
+  //     })
+  //
+  //     stage.innerHTML = textFormatted
+  //   })
+  // }
 
   removeChars(stage, chars) {
     const reverseChars = [...chars].reverse()

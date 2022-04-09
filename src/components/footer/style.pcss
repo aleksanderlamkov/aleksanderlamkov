@@ -12,6 +12,11 @@
     display: flex;
     justify-content: space-between;
     gap: 30px;
+    box-shadow: var(--box-shadow-3), var(--box-shadow-inset-transparent);
+  
+    .is-light-theme-enabled & {
+      box-shadow: var(--box-shadow-4), var(--box-shadow-inset-transparent);
+    }
     
     @media (--tablet-xs) {
       flex-direction: column;

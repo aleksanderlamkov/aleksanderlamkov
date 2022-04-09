@@ -66,7 +66,6 @@ export default class ScrollTo {
     let fn = () => {
       if (typeof cfg === 'string') {
         if (cfg === 'top') {
-          console.debug((isNoSmooth) ? 'instant' : 'smooth')
           window.scrollTo({
             top: 0,
             behavior: (isNoSmooth) ? 'instant' : 'smooth'
@@ -95,6 +94,7 @@ export default class ScrollTo {
     if (e.target.matches(this.els.button)) {
       e.preventDefault()
       App.MobileMenu?.close()
+      App.BurgerButton?.close()
       ScrollTo.scroll(this.getCfg(e.target))
     }
   }

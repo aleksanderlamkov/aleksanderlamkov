@@ -10,6 +10,14 @@
   &__svg {
     width: var(--size);
     height: var(--size);
+  
+    @media (--hoverable) {
+      &:hover {
+        * {
+          fill: var(--c-accent);
+        }
+      }
+    }
 
     * {
       fill: var(--c-light);
@@ -17,10 +25,6 @@
       .is-light-theme-enabled & {
         fill: var(--c-dark);
       }
-    }
-  
-    &:hover * {
-      fill: var(--c-accent);
     }
   }
 }

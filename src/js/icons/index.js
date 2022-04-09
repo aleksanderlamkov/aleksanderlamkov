@@ -12,7 +12,7 @@ import {onDOMContentLoaded} from '../utils/onDOMContentLoaded'
  * (имя иконки соответствует имени файла в папке app/icons)
  */
 export default class Icons extends Eventing {
-  static path = '/build/'
+  static path = '/'
 
   static name = 'icons.svg'
 
@@ -62,7 +62,7 @@ export default class Icons extends Eventing {
       let url = tplPath ? (tplPath + Icons.path + Icons.name) : (isDebug) ? './' + Icons.name : Icons.path + Icons.name
       const revision = svgSpriteRevision || false
       if (window.App.tplPath) {
-        url = `${window.App.tplPath}/build/icons.svg?revision=${revision ? revision : 0}`
+        url = `${window.App.tplPath}icons.svg?revision=${revision ? revision : 0}`
       }
       makeRequest({url, type: 'text', mode: 'same-origin'}).then(sprite => {
         this.data = sprite

@@ -14,9 +14,13 @@
   
   @media (--mobile) {
     --padding: 15px;
-  
+    
     padding-left: 48px;
     font-size: 16px;
+  }
+  
+  @media (--mobile-s) {
+    padding-left: 40px;
   }
   
   &::before {
@@ -30,5 +34,9 @@
     height: var(--size);
     background-color: var(--c-accent);
     border-radius: 50%;
+  
+    @media (--mobile-s) {
+      --size: 10px;
+    }
   }
 }

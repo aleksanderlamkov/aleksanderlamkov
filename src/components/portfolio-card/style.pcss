@@ -3,7 +3,7 @@
 .portfolio-card {
   display: grid;
   grid-template-columns: 35% auto;
-  gap: 30px max(40px, 10%);
+  gap: 20px max(40px, 10%);
   
   @media (--tablet-s) {
     column-gap: 40px;
@@ -13,21 +13,40 @@
     grid-template-columns: 1fr;
   }
   
-  &__image {
+  &__image-wrapper {
     width: 100%;
     height: 320px;
     border-radius: inherit;
     box-shadow: var(--box-shadow-3);
-    object-fit: cover;
-    object-position: 50% 0;
-  
-    .is-light-theme-enabled & {
-      box-shadow: var(--box-shadow-4);
-    }
+    overflow: hidden;
   
     @media (--mobile) {
       height: 200px;
     }
+  
+    .is-light-theme-enabled & {
+      box-shadow: var(--box-shadow-4);
+    }
+    
+    @media (--hoverable) {
+      &:hover {
+        box-shadow: none;
+        
+        .portfolio-card__image {
+          @mixin scale;
+        }
+      }
+    }
+  }
+  
+  &__image {
+    @mixin transition;
+    
+    object-fit: cover;
+    object-position: 50% 0;
+    border-radius: inherit;
+    will-change: transform;
+    pointer-events: none;
   }
   
   &__date {
@@ -37,6 +56,10 @@
     color: var(--c-accent);
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow-inset-2);
+  
+    @media (--mobile-s) {
+      font-size: 0.9em;
+    }
     
     &:not(:last-child) {
       margin-bottom: 16px;

@@ -75,6 +75,7 @@ import ThemeSwitcher from './components/theme-switcher'
 import MobileMenu from './components/mobile-menu'
 import BurgerButton from './components/burger-button'
 import Header from './components/header'
+import Gallery from './js/gallery'
 
 // Load components
 import './components/preloader'
@@ -106,6 +107,7 @@ const handleDOMReady = () => {
   new Preloader()
   new Icons()
   new Button()
+  new Gallery()
 
   // app components
   App.ThemeSwitcher = new ThemeSwitcher()

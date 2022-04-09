@@ -78,9 +78,10 @@ export default class Preloader {
   }
 
   init() {
+    lock()
+    this.bindEvents()
     wait(this.cfg.startAnimationDelay).then(() => {
       this.startAnimation()
-      this.bindEvents()
     })
   }
 

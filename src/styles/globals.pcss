@@ -21,8 +21,10 @@ html {
   font: var(--baseFontWeight) var(--baseFontSize)/var(--baseLineHeight) var(--baseFontFamily);
   text-size-adjust: none;
   scroll-padding-top: var(--headerHeight);
+  scroll-behavior: smooth;
 
   &.is-light-theme-enabled {
+    --box-shadow-inset-2: inset -2px -2px 4px rgba(255, 255, 255, 0.1), inset 2px 2px 4px rgba(0, 0, 0, 0.35);
     --focus-outline-color: var(--c-light);
   }
 }
@@ -41,6 +43,7 @@ body {
   font: inherit;
   color: var(--c-light);
   background-color: var(--c-dark);
+  scroll-behavior: smooth;
 
   &.compensate-for-scrollbar,
   .with-fancybox & {
@@ -49,8 +52,6 @@ body {
   }
   
   .is-light-theme-enabled & {
-    --box-shadow-inset-2: inset -2px -2px 4px rgba(255, 255, 255, 0.1), inset 2px 2px 4px rgba(0, 0, 0, 0.35);
-    
     color: var(--c-dark);
     background-color: var(--c-light);
   }

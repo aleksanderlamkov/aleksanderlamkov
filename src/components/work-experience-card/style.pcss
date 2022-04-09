@@ -8,14 +8,20 @@
     color: var(--c-accent);
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow-inset-2);
+    
+    @media (--mobile-s) {
+      font-size: 0.9em;
+    }
   
     &:not(:last-child) {
-      margin-bottom: 12px;
+      margin-bottom: 16px;
     }
   }
   
   &__title {
     --marginBottom: 0;
+    
+    line-height: 1.5;
   }
   
   &__position {

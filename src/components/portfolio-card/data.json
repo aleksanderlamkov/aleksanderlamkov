@@ -1,7 +1,7 @@
 {
   "extraClasses": [],
   "extraAttrs": [],
-  "imgSrc": "./images/example.jpg",
+  "imgName": "example",
   "time": {
     "datetime": "2019-11",
     "label": "November 2019"

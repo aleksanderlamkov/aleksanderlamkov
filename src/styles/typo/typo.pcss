@@ -78,6 +78,18 @@ a {
   &[href^="fax:"] {
     white-space: nowrap;
   }
+  
+  &[target="_blank"] {
+    &::after {
+      --size: 0.4em;
+      
+      content: "";
+      width: var(--size);
+      height: var(--size);
+      background: url("../images/icons/link.svg") center/contain no-repeat;
+      margin-left: 0.25em;
+    }
+  }
 }
 
 button {

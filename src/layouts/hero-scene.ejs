@@ -64,7 +64,11 @@
     <div class="code-signs__sign code-signs__sign--right code-signs__sign--css">CSS</div>
     <div class="code-signs__sign code-signs__sign--left code-signs__sign--js">JS</div>
     <div class="code-signs__sign code-signs__sign--left code-signs__sign--stars">******</div>
-    <div class="code-signs__sign code-signs__sign--left code-signs__sign--triangles">▶▶▶▶▶</div>
+    <div class="code-signs__sign code-signs__sign--left code-signs__sign--triangles">
+      <% for (let i = 0; i < 5; i++) { %>
+        <span class="code-signs__triangle"></span>
+      <% } %>
+    </div>
     <div class="code-signs__sign code-signs__sign--left code-signs__sign--gear">
       <svg class="i-icon">
         <use href="#icon-gear"></use>

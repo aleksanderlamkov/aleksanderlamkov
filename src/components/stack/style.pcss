@@ -5,9 +5,13 @@
     &.flow {
       --gapX: 16px;
       --gapY: 8px;
-      
+  
       @media (--mobile) {
         --gapX: 8px;
+      }
+  
+      @media (--mobile-s) {
+        --gapX: 4px;
       }
     }
   }
@@ -31,7 +35,7 @@
     }
   
     @media (--mobile-s) {
-      --size: 48px;
+      --size: 45px;
     }
     
     &:hover {
@@ -45,5 +49,9 @@
     --size: 50%;
     
     @mixin img-contain var(--size);
+  
+    @media (--mobile-s) {
+      --size: 65%;
+    }
   }
 }
