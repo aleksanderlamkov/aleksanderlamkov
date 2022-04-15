@@ -1,38 +1,39 @@
 <div class="hero section" id="about">
-	<div class="hero__inner container">
-		<div class="hero__body">
-			<% const liveTypingStages = [
-				{
-          label: '<span class="accent-color">Hello!</span> My name is Aleksander Lamkov.'
-				},
-				{
-					label: 'I am frontend developer.',
-					isHideAfterTyping: true
-				},
-				{
-					label: 'I can do some great<br/>things for you.'
-				}
-			] %>
-			<h1 class="hero__title live-typing" data-js-live-typing>
-				<% liveTypingStages.forEach(({ label, isHideAfterTyping }) => { %>
-					<% const clearText = label.trim().replace(/\n\t/g, ' ').replace(/<[^<>]+>|./g, (char) => {
-						return char[0] === '<' ? char : `<span class="live-typing__char" data-js-live-typing-char>${char}</span>`;
-					}) %>
-					<div class="live-typing__stage" data-js-live-typing-stage='{"isHideAfterTyping": <%= Boolean(isHideAfterTyping) %>}'>
-						<%- clearText %>
-					</div>
-				<% }) %>
-			</h1>
-			<%- require('../components/button/template.ejs')({
-				extraClasses: 'hero__button',
-				extraAttrs: `data-js-scroll-to='{"anchor": "#contacts"}'`,
-				label: {
-					text: 'Let’s check!'
-				}
-			}) %>
-		</div>
-		<div class="hero__scene-wrapper">
-			<%- require('./hero-scene.ejs')() %>
-		</div>
-	</div>
+  <div class="hero__inner container">
+    <div class="hero__body">
+      <% const liveTypingStages = [
+        {
+          label: '<span class="accent-color">Hello!</span> My name is Aleksander Lamkov.',
+        },
+        {
+          label: 'I am frontend developer.',
+          isHideAfterTyping: true,
+        },
+        {
+          label: 'I can do some great <br/>things for you.',
+        },
+      ] %>
+      <h1 class="hero__title live-typing" data-js-live-typing>
+        <% liveTypingStages.forEach(({label, isHideAfterTyping}) => { %>
+          <% const clearText = label.trim().replace(/\n\t/g, ' ').replace(/<[^<>]+>|./g, (char) => {
+            return char[0] === '<' ? char : `<span class="live-typing__char" data-js-live-typing-char>${char}</span>`
+          }) %>
+          <div class="live-typing__stage"
+               data-js-live-typing-stage='{"isHideAfterTyping": <%= Boolean(isHideAfterTyping) %>}'>
+            <%- clearText %>
+          </div>
+        <% }) %>
+      </h1>
+      <%- require('../components/button/template.ejs')({
+        extraClasses: 'hero__button',
+        extraAttrs: `data-js-scroll-to='{"anchor": "#contacts"}'`,
+        label: {
+          text: 'Let’s check!',
+        },
+      }) %>
+    </div>
+    <div class="hero__scene-wrapper">
+      <%- require('./hero-scene.ejs')() %>
+    </div>
+  </div>
 </div>
