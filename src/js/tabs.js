@@ -1,8 +1,8 @@
 import Collection from './generic/collection'
-import {getNodeIndex} from './utils/getNodeIndex'
-import {getCfg} from './utils/getCfg'
-import {els as sliderEls} from './sliders'
-import {wait} from './utils/wait'
+import { getNodeIndex } from './utils/getNodeIndex'
+import { getCfg } from './utils/getCfg'
+import { els as sliderEls } from './sliders'
+import { wait } from './utils/wait'
 
 export const instance = '[data-js-tabs]'
 
