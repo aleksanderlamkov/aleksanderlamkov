@@ -47,7 +47,11 @@
     cursor: pointer;
 
     &:hover {
-      color: var(--c-main);
+      @media (--hoverable) {
+        .checkbox__emulator {
+          color: var(--c-accent);
+        }
+      }
     }
 
     .i-icon {

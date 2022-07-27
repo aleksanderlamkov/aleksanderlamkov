@@ -86,7 +86,9 @@
     }
 
     &:hover {
-      box-shadow: var(--box-shadow);
+      @media (--hoverable) {
+        box-shadow: var(--box-shadow);
+      }
     }
   }
 
@@ -125,13 +127,9 @@
   &__button-icon-wrapper {
     --size: 24px;
 
+    @mixin flex-center;
+    @mixin square var(--size);
     @mixin transition;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: var(--size);
-    height: var(--size);
 
     .i-icon {
       --size: 50%;

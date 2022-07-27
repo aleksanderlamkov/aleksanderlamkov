@@ -46,12 +46,14 @@
   }
 
   &:hover {
-    color: var(--hoverTextColor);
-    background-color: var(--hoverBgColor);
-    border-color: var(--hoverBorderColor);
+    @media (--hoverable) {
+      color: var(--hoverTextColor);
+      background-color: var(--hoverBgColor);
+      border-color: var(--hoverBorderColor);
 
-    &::placeholder {
-      color: var(--hoverPlaceholderColor);
+      &::placeholder {
+        color: var(--hoverPlaceholderColor);
+      }
     }
   }
 

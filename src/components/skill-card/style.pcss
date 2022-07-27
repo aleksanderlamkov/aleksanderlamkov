@@ -25,13 +25,13 @@
   
   &::before {
     --size: 12px;
+
+    @mixin square var(--size);
     
     content: "";
     position: absolute;
     top: calc(var(--padding) + 0.35em);
     left: var(--padding);
-    width: var(--size);
-    height: var(--size);
     background-color: var(--c-accent);
     border-radius: 50%;
   

@@ -14,14 +14,11 @@
   
   &__link {
     --size: 64px;
-    
+
+    @mixin flex-center;
+    @mixin square var(--size);
     @mixin transition 0.05s;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: var(--size);
-    height: var(--size);
+
     border-radius: 50%;
     box-shadow: var(--box-shadow-inset-2);
     

@@ -18,14 +18,11 @@
   
   &__item {
     --size: 64px;
-    
+
+    @mixin flex-center;
+    @mixin square var(--size);
     @mixin transition;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: var(--size);
-    height: var(--size);
+
     border: 1px solid transparent;
     border-radius: 50%;
     box-shadow: var(--box-shadow-inset-2);

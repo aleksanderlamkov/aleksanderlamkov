@@ -55,7 +55,9 @@ button {
   color: var(--c-light);
 
   &:hover {
-    color: var(--c-accent);
+    @media (--hoverable) {
+      color: var(--c-accent);
+    }
   }
 
   html.safari &:focus,
@@ -82,12 +84,12 @@ a {
   &[target="_blank"] {
     &::after {
       --size: 0.4em;
+
+      @mixin square var(--size);
       
       content: "";
-      width: var(--size);
-      height: var(--size);
-      background: url("../images/icons/link.svg") center/contain no-repeat;
       margin-left: 0.25em;
+      background: url("../images/icons/link.svg") center/contain no-repeat;
     }
   }
 }

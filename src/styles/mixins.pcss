@@ -15,6 +15,25 @@
   }
 }
 
+@define-mixin square $size: 100% {
+  width: $size;
+  height: $size;
+}
+
+@define-mixin flex-center $display: flex {
+  display: $display;
+  justify-content: center;
+  align-items: center;
+}
+
+@define-mixin abs-cover {
+  @mixin square;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 @define-mixin gapX $prop: 30px {
   & > *:not(:last-child) {
     margin-right: $prop;
@@ -50,14 +69,6 @@
   height: 100%;
   border: 0;
   object-fit: cover;
-}
-
-@define-mixin abs-cover {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
 }
 
 @define-mixin reset-link {
@@ -129,6 +140,7 @@
 
 @define-mixin visually-hidden {
   position: absolute !important;
+  top: 0 !important;
   width: 1px !important;
   height: 1px !important;
   padding: 0 !important;
@@ -194,15 +206,11 @@
   border-radius: inherit;
 
   &::after {
+    @mixin abs-cover;
     @mixin hide;
 
     content: "";
-    position: absolute;
     z-index: 1;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     background: linear-gradient(
       135deg,
       rgba(211, 223, 232, .5) 30%,
@@ -224,8 +232,7 @@
 @define-mixin mobile-full-width {
   @media (--mobile) {
     width: calc(100% + var(--gridPadding) * 2);
-    margin-left: calc(var(--gridPadding) * -1);
-    margin-right: calc(var(--gridPadding) * -1);
+    margin-inline: calc(var(--gridPadding) * -1);
   }
 }
 

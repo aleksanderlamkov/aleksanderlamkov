@@ -13,7 +13,9 @@
   cursor: pointer;
   
   &:hover {
-    border-color: var(--c-accent);
+    @media (--hoverable) {
+      border-color: var(--c-accent);
+    }
   }
 
   .is-light-theme-enabled & {
@@ -31,12 +33,12 @@
     border-radius: inherit;
 
     &::after {
+      @mixin square var(--iconWrapperWidth);
+
       content: "";
       position: absolute;
       top: 50%;
       left: 2px;
-      width: var(--iconWrapperWidth);
-      height: var(--iconWrapperHeight);
       background-color: var(--c-white);
       border-radius: inherit;
       transform: translateY(-50%);
@@ -48,13 +50,11 @@
   }
 
   &__icon-wrapper {
+    @mixin flex-center;
+    @mixin square var(--iconWrapperWidth);
+
     position: relative;
     z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: var(--iconWrapperWidth);
-    height: var(--iconWrapperHeight);
 
     .i-icon {
       --size: var(--iconSize);

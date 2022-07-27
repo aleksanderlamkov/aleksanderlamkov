@@ -27,11 +27,11 @@
     .is-light-theme-enabled & {
       box-shadow: var(--box-shadow-4);
     }
-    
-    @media (--hoverable) {
-      &:hover {
+
+    &:hover {
+      @media (--hoverable) {
         box-shadow: none;
-        
+
         .portfolio-card__image {
           @mixin scale;
         }

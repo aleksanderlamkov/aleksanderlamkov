@@ -19,19 +19,19 @@
 
 .form-input-button {
   @mixin reset-button;
+  @mixin flex-center inline-flex;
 
   position: absolute;
   top: 0;
   right: calc(var(--inputPaddingX) / 2);
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
   height: 100%;
   width: var(--inputButtonSize);
 
   &:hover {
-    .i-icon {
-      --color: var(--c-accent);
+    @media (--hoverable) {
+      .i-icon {
+        --color: var(--c-accent);
+      }
     }
   }
 

@@ -32,17 +32,15 @@
     &::before {
       --size: calc(var(--circleSize) * 0.3);
       --borderWidth: calc((var(--circleSize) - var(--size)) / 2);
+
+      @mixin flex-center;
+      @mixin square var(--size);
   
       content: "";
       position: absolute;
       z-index: 1;
       top: 50%;
       right: calc(100% + var(--circleSize));
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: var(--size);
-      height: var(--size);
       background-color: var(--c-accent);
       border: var(--borderWidth) solid var(--c-dark);
       border-radius: 50%;

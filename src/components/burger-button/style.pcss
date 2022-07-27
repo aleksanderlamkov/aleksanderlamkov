@@ -5,13 +5,10 @@
   --size: 36px;
   
   @mixin reset-button;
+  @mixin flex-center;
+  @mixin square var(--size);
   
   flex-shrink: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: var(--size);
-  height: var(--size);
   border: 1px solid var(--c-accent);
   border-radius: var(--border-radius-4);
   
@@ -39,9 +36,8 @@
   
   &__svg {
     --size: 70%;
-    
-    width: var(--size);
-    height: var(--size);
+
+    @mixin square var(--size);
   }
   
   &__line {

@@ -8,13 +8,15 @@
   }
 
   &__svg {
-    width: var(--size);
-    height: var(--size);
-  
-    @media (--hoverable) {
-      &:hover {
+    @mixin square var(--size);
+
+    &:hover {
+      @media (--hoverable) {
         * {
-          fill: var(--c-accent);
+          &,
+          .is-light-theme-enabled & {
+            fill: var(--c-accent);
+          }
         }
       }
     }

@@ -20,8 +20,10 @@
   user-select: none;
 
   &:hover {
-    .checkbox__emulator {
-      border-color: var(--hoverBorderColor);
+    @media (--hoverable) {
+      .checkbox__emulator {
+        border-color: var(--hoverBorderColor);
+      }
     }
   }
 
@@ -62,14 +64,11 @@
   }
 
   &__emulator {
+    @mixin flex-center;
+    @mixin square var(--size);
     @mixin transition;
 
     flex-shrink: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: var(--size);
-    height: var(--size);
     border: var(--border);
     border-radius: var(--borderRadius);
 
@@ -92,12 +91,12 @@
       position: relative;
 
       &::after {
+        @mixin square var(--radioMarkerSize);
+
         content: "";
         position: absolute;
         top: 50%;
         left: 50%;
-        width: var(--radioMarkerSize);
-        height: var(--radioMarkerSize);
         transform: translate(-50%, -50%) scale(0);
         background-color: var(--markerColor);
         border-radius: inherit;

@@ -25,10 +25,9 @@
   --iconSize: 1em;
   --iconOffset: 12px;
 
+  @mixin flex-center inline-flex;
+
   position: relative;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
   height: var(--height);
   overflow: hidden;
   padding-inline: var(--paddingX);
@@ -49,13 +48,13 @@
   &::after {
     --size: 0.5px;
 
+    @mixin square var(--size);
+
     content: "";
     position: absolute;
     z-index: 1;
     left: var(--rippleOffsetX);
     top: var(--rippleOffsetY);
-    width: var(--size);
-    height: var(--size);
     background-color: transparent;
     border-radius: 50%;
     pointer-events: none;
@@ -67,8 +66,8 @@
     }
   }
 
-  @media (--hoverable) {
-    &:hover {
+  &:hover {
+    @media (--hoverable) {
       color: var(--hoverTextColor);
       background-color: var(--hoverBgColor);
       border-color: var(--hoverBorderColor);
@@ -107,8 +106,8 @@
     --hoverShadow: none;
     --iconOffset: 0;
 
-    width: var(--size);
-    height: var(--size);
+    @mixin square var(--size);
+
     border-radius: 0;
     will-change: transform;
 

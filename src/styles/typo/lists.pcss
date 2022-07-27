@@ -24,13 +24,13 @@ ul:not([class]),
     position: relative;
 
     &::before {
+      @mixin square var(--markerSize);
+
       content: "";
       position: absolute;
       top: 0.5em;
       left: 0;
       display: block;
-      width: var(--markerSize);
-      height: var(--markerSize);
       background-color: currentColor;
       border-radius: 50%;
     }
@@ -47,11 +47,11 @@ ol:not([class]),
     position: relative;
 
     &::before {
-      content: counters(custom-counter, ".") ". ";
-      counter-increment: custom-counter;
       position: absolute;
       right: calc(100% - 14px);
       font-weight: 700;
+      content: counters(custom-counter, ".") ". ";
+      counter-increment: custom-counter;
     }
   }
 }

@@ -8,8 +8,8 @@
   &__square {
     --size: 100px;
 
-    width: var(--size);
-    height: var(--size);
+    @mixin square var(--size);
+
     background-color: var(--bgColor);
     box-shadow: var(--box-shadow);
 
