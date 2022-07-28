@@ -151,7 +151,7 @@
   }
   
   &__shine {
-    @mixin transform-on-scroll scale(0), , 2s, 0.6s, , var(--transitionTimingFunction);
+    @mixin transform-on-scroll scale(0), , 2s, 0.6s, , var(--transition-timing-function);
     
     top: 79%;
     left: 48%;
@@ -202,7 +202,7 @@
   }
   
   &__shine {
-    @mixin transform-on-scroll scale(0), , 2s, 0.6s, , var(--transitionTimingFunction);
+    @mixin transform-on-scroll scale(0), , 2s, 0.6s, , var(--transition-timing-function);
   
     top: 0%;
     left: 25%;
@@ -219,7 +219,7 @@
 
 .uml-diagram {
   @mixin abs-cover;
-  @mixin transform-on-scroll scale(0), , 2s, 0.6s, , var(--transitionTimingFunction);
+  @mixin transform-on-scroll scale(0), , 2s, 0.6s, , var(--transition-timing-function);
 
   transform-origin: 50% 25%;
   pointer-events: none;
@@ -550,7 +550,7 @@
 .code-panel {
   --wordDefaultWidth: 5px;
   
-  @mixin transform-on-scroll rotate(35deg) skew(35deg, -5deg) scale(0), rotate(35deg) skew(35deg, -5deg), 2s, 0.6s, , var(--transitionTimingFunction);
+  @mixin transform-on-scroll rotate(35deg) skew(35deg, -5deg) scale(0), rotate(35deg) skew(35deg, -5deg), 2s, 0.6s, , var(--transition-timing-function);
   
   position: absolute;
   top: 28%;

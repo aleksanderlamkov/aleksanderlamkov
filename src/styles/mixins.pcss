@@ -9,7 +9,7 @@
   }
 }
 
-@define-mixin transition $prop: var(--baseTransitionDuration) {
+@define-mixin transition $prop: var(--base-transition-duration) {
   .dom-is-ready & {
     transition: $prop;
   }
@@ -495,7 +495,7 @@ $timing-function: ease {
     @mixin hide;
 
     transform: rotateX(-100deg) translateZ(0);
-    transition-timing-function: var(--transitionTimingFunction);
+    transition-timing-function: var(--transition-timing-function);
     transition-property: opacity, transform;
 
     .dom-is-ready & {
@@ -522,7 +522,7 @@ $timing-function: ease {
     @mixin hide;
 
     transform: rotateX(100deg) translateZ(0);
-    transition-timing-function: var(--transitionTimingFunction);
+    transition-timing-function: var(--transition-timing-function);
     transition-property: opacity, transform;
 
     .dom-is-ready & {
@@ -549,7 +549,7 @@ $timing-function: ease {
     @mixin hide;
 
     transform: rotateY(-100deg) translateZ(0);
-    transition-timing-function: var(--transitionTimingFunction);
+    transition-timing-function: var(--transition-timing-function);
     transition-property: opacity, transform;
 
     .dom-is-ready & {
@@ -576,7 +576,7 @@ $timing-function: ease {
     @mixin hide;
 
     transform: rotateY(100deg) translateZ(0);
-    transition-timing-function: var(--transitionTimingFunction);
+    transition-timing-function: var(--transition-timing-function);
     transition-property: opacity, transform;
 
     .dom-is-ready & {
@@ -603,7 +603,7 @@ $timing-function: ease {
     @mixin hide;
 
     transform: scale(0.6) translateZ(0);
-    transition-timing-function: var(--transitionTimingFunction);
+    transition-timing-function: var(--transition-timing-function);
     transition-property: opacity, transform;
 
     .dom-is-ready & {
@@ -630,7 +630,7 @@ $timing-function: ease {
     @mixin hide;
 
     transform: translate3d(0, 100px, 0) scale(0.6);
-    transition-timing-function: var(--transitionTimingFunction);
+    transition-timing-function: var(--transition-timing-function);
     transition-property: opacity, transform;
 
     .dom-is-ready & {
@@ -657,7 +657,7 @@ $timing-function: ease {
     @mixin hide;
 
     transform: translate3d(0, -100px, 0) scale(0.6);
-    transition-timing-function: var(--transitionTimingFunction);
+    transition-timing-function: var(--transition-timing-function);
     transition-property: opacity, transform;
 
     .dom-is-ready & {
@@ -684,7 +684,7 @@ $timing-function: ease {
     @mixin hide;
 
     transform: translate3d(100px, 0, 0) scale(0.6);
-    transition-timing-function: var(--transitionTimingFunction);
+    transition-timing-function: var(--transition-timing-function);
     transition-property: opacity, transform;
 
     .dom-is-ready & {
@@ -711,7 +711,7 @@ $timing-function: ease {
     @mixin hide;
 
     transform: translate3d(-100px, 0, 0) scale(0.6);
-    transition-timing-function: var(--transitionTimingFunction);
+    transition-timing-function: var(--transition-timing-function);
     transition-property: opacity, transform;
 
     .dom-is-ready & {
@@ -738,7 +738,7 @@ $timing-function: ease {
     @mixin hide;
 
     transform: scale(1.2) translateZ(0);
-    transition-timing-function: var(--transitionTimingFunction);
+    transition-timing-function: var(--transition-timing-function);
     transition-property: opacity, transform;
 
     .dom-is-ready & {
@@ -765,7 +765,7 @@ $timing-function: ease {
     @mixin hide;
 
     transform: translate3d(0, 100px, 0) scale(1.2);
-    transition-timing-function: var(--transitionTimingFunction);
+    transition-timing-function: var(--transition-timing-function);
     transition-property: opacity, transform;
 
     .dom-is-ready & {
@@ -792,7 +792,7 @@ $timing-function: ease {
     @mixin hide;
 
     transform: translate3d(0, -100px, 0) scale(1.2);
-    transition-timing-function: var(--transitionTimingFunction);
+    transition-timing-function: var(--transition-timing-function);
     transition-property: opacity, transform;
 
     .dom-is-ready & {
@@ -819,7 +819,7 @@ $timing-function: ease {
     @mixin hide;
 
     transform: translate3d(100px, 0, 0) scale(1.2);
-    transition-timing-function: var(--transitionTimingFunction);
+    transition-timing-function: var(--transition-timing-function);
     transition-property: opacity, transform;
 
     .dom-is-ready & {
@@ -846,7 +846,7 @@ $timing-function: ease {
     @mixin hide;
 
     transform: translate3d(-100px, 0, 0) scale(1.2);
-    transition-timing-function: var(--transitionTimingFunction);
+    transition-timing-function: var(--transition-timing-function);
     transition-property: opacity, transform;
 
     .dom-is-ready & {
