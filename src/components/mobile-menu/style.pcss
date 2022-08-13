@@ -1,6 +1,9 @@
 @import "../../styles/mixins.pcss";
 
 .mobile-menu {
+  --textColor: var(--c-light);
+  --bgColor: var(--c-dark);
+
   @mixin transition;
   
   position: fixed;
@@ -10,10 +13,11 @@
   width: 100%;
   height: 100%;
   padding-block: 80px;
-  background-color: var(--c-dark);
+  background-color: var(--bgColor);
 
   .is-light-theme-enabled & {
-    background-color: var(--c-light);
+    --textColor: var(--c-accent);
+    --bgColor: var(--c-light);
   }
   
   &:not(.is-open) {
@@ -42,6 +46,7 @@
       width: 100%;
       padding-block: 12px;
       font-size: 32px;
+      color: var(--textColor);
     }
   }
 }
