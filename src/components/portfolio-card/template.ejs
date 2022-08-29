@@ -9,7 +9,8 @@ const {
 	title,
 	href,
 	description,
-	stack
+	stack,
+	hasImageWrapperBorder,
 } = cfg
 %>
 
@@ -24,7 +25,9 @@ const attrs = Array.isArray(extraAttrs) ? extraAttrs.join(' ') : extraAttrs
 	data-js-gallery-container
 >
 	<a
-		class="portfolio-card__image-wrapper"
+		class="<%= classNames("portfolio-card__image-wrapper", {
+      "portfolio-card__image-wrapper--border": hasImageWrapperBorder,
+		})%>"
 		href="./images/projects/<%= imgName %>_full.jpg"
 		data-js-gallery-item='{"caption": "<%= title %>"}'
 		title="Open the image in full size"

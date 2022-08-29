@@ -12,5 +12,6 @@
   "stack": [
     "HTML",
     "CSS"
-  ]
+  ],
+  "hasImageWrapperBorder": false
 }
