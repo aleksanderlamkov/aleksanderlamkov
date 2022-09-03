@@ -26,11 +26,15 @@
     }
   
     .is-light-theme-enabled & {
-      box-shadow: var(--box-shadow-4);
+      box-shadow: var(--box-shadow-6);
     }
 
     &--border {
       border: 2px solid var(--c-accent);
+
+      .is-light-theme-enabled & {
+        border: none;
+      }
     }
 
     &:hover {

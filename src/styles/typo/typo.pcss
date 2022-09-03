@@ -54,6 +54,10 @@ button {
   display: inline-flex;
   color: var(--c-light);
 
+  .is-light-theme-enabled & {
+    color: var(--c-dark);
+  }
+
   &:hover {
     @media (--hoverable) {
       color: var(--c-accent);
