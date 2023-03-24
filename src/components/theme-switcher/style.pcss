@@ -23,6 +23,15 @@
     box-shadow: var(--box-shadow-4);
   }
 
+  &__checkbox {
+    &:focus {
+      & ~ .theme-switcher__body {
+        outline: var(--focus-outline);
+        outline-offset: 4px;
+      }
+    }
+  }
+
   &__body {
     @mixin gapX var(--padding);
 
