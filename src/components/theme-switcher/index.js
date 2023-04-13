@@ -1,5 +1,6 @@
 import './style.pcss';
 import { getCookie, setCookie } from '../../js/utils/cookie'
+import { isMedia } from '../../js/utils/isMedia'
 
 export const instance = '[data-js-theme-switcher]'
 
@@ -51,6 +52,18 @@ export default class ThemeSwitcher {
   }
 
   setInitialState() {
+    const isPrefersLightTheme = isMedia('(prefers-color-scheme: light)')
+    if (isPrefersLightTheme) {
+      this.enableLightTheme()
+      return
+    }
+
+    const isPrefersDarkTheme = isMedia('(prefers-color-scheme: dark)')
+    if (isPrefersDarkTheme) {
+      this.disableLightTheme()
+      return
+    }
+
     const isLightThemeEnabled = getCookie(this.cookieKeys.isLightThemeEnabled)
     if (isLightThemeEnabled) {
       this.enableLightTheme()
