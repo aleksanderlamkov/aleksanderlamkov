@@ -14,19 +14,25 @@
         }
       ] %>
       <h1 class="hero__title live-typing" data-js-live-typing>
+        <div class="visually-hidden">
+          Hello! My name is Aleksander Lamkov. I am a frontend developer. I can do some great things for you.
+        </div>
         <% liveTypingStages.forEach(({label, isHideAfterTyping}) => { %>
           <% const clearText = label.trim().replace(/\n\t/g, ' ').replace(/<[^<>]+>|./g, (char) => {
             return char[0] === '<' ? char : `<span class="live-typing__char" data-js-live-typing-char>${char}</span>`
           }) %>
-          <div class="live-typing__stage"
-               data-js-live-typing-stage='{"isHideAfterTyping": <%= Boolean(isHideAfterTyping) %>}'>
+          <div
+            class="live-typing__stage"
+            aria-hidden="true"
+            data-js-live-typing-stage='{"isHideAfterTyping": <%= Boolean(isHideAfterTyping) %>}'
+          >
             <%- clearText %>
           </div>
         <% }) %>
       </h1>
       <%- require('../components/button/template.ejs')({
         extraClasses: 'hero__button',
-        extraAttrs: `data-js-scroll-to='{"anchor": "#contacts"}'`,
+        extraAttrs: `data-js-scroll-to='{"anchor": "#contacts"}' aria-label="Go to contacts"`,
         label: {
           text: 'Let’s check!',
         },
