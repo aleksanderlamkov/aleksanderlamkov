@@ -3,6 +3,7 @@ import {stateClasses as scrollEffectsStateClasses} from './scrollEffects'
 import {bubbles as preloaderBubbles} from '../components/preloader'
 import { getCfg } from './utils/getCfg'
 import { wait } from './utils/wait'
+import { isMedia } from './utils/isMedia'
 
 export const instance = '[data-js-live-typing]'
 
@@ -30,6 +31,7 @@ export class LiveTyping {
   }
 
   constructor(instance) {
+    if (isMedia('(prefers-reduced-motion)')) return
     this.instance = instance
     this.stages = this.instance.querySelectorAll(this.els.stage)
     this.cfg = getCfg(this.instance, this.els.instance, this.defaultCfg)

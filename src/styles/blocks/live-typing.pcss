@@ -5,6 +5,10 @@
   &__char {
     &:not(.is-visible) {
       display: none;
+
+      @media (prefers-reduced-motion) {
+        display: initial;
+      }
     }
   }
 
@@ -15,6 +19,7 @@
   }
 
   &__char {
+
     &.is-visible + .live-typing__char:not(.is-visible) {
       display: inline;
       color: transparent;
@@ -28,6 +33,10 @@
         
         .is-light-theme-enabled & {
           color: var(--c-dark);
+        }
+
+        @media (prefers-reduced-motion) {
+          display: none;
         }
       }
     }
