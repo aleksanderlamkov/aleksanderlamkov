@@ -1,8 +1,6 @@
 @import "../../styles/mixins.pcss";
 
 .header {
-  @mixin transition;
-  
   position: fixed;
   z-index: var(--layoutHeader);
   top: 0;
@@ -12,6 +10,12 @@
   
   @media (--mobile) {
     padding-block: 12px;
+  }
+
+  .dom-is-ready & {
+    transition: padding-block var(--base-transition-duration),
+      background-color var(--base-transition-duration),
+      box-shadow var(--base-transition-duration);
   }
   
   &.is-scrolled {

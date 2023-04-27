@@ -45,7 +45,16 @@ export default class BurgerButton {
     this.toggle()
   }
 
+  handleBlur() {
+    const isMenuOpen = App.MobileMenu.state.isOpen
+
+    if (isMenuOpen) {
+      App.MobileMenu.firstFocusableElement.focus()
+    }
+  }
+
   bindEvents() {
     this.instance.addEventListener('click', (event) => this.handleClick(event))
+    this.instance.addEventListener('blur', (event) => this.handleBlur(event))
   }
 }
