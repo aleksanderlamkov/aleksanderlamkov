@@ -2,10 +2,18 @@
 
 .socials {
   &__list {
+    @media (--mobile-above) {
+      justify-content: flex-end;
+    }
+
     &.flow {
       --gapX: 16px;
       --gapY: 8px;
-      
+
+      @media (--tablet-s) {
+        --gapX: 10px;
+      }
+
       @media (--mobile) {
         --gapX: 8px;
       }
@@ -21,9 +29,13 @@
 
     border-radius: 50%;
     box-shadow: var(--box-shadow-inset-2);
-    
-    @media (--mobile) {
+
+    @media (--tablet-s) {
       --size: 50px;
+    }
+
+    @media (--mobile-xxs) {
+      --size: 58px;
     }
     
     &::after {
