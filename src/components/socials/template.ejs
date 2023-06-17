@@ -9,7 +9,7 @@ const {
 %>
 
 <%
-const classes = classNames(extraClasses, 'socials')
+const classes = classNames(extraClasses, 'soc1als')
 const attrs = Array.isArray(extraAttrs) ? extraAttrs.join(' ') : extraAttrs
 %>
 
@@ -17,11 +17,11 @@ const attrs = Array.isArray(extraAttrs) ? extraAttrs.join(' ') : extraAttrs
 	class="<%= classes %>"
 	<%- attrs %>
 >
-	<ul class="socials__list flow">
+	<ul class="soc1als__list flow">
 		<% items.forEach(({ label, href, icon }) => { %>
-			<li class="socials__item">
+			<li class="soc1als__item">
 				<a
-					class="socials__link"
+					class="soc1als__link"
 					href="<%= href %>"
 					target="_blank"
 					title="<%= label %>"
