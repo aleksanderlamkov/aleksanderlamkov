@@ -23,9 +23,11 @@
   --border-radius-3: 60px;
   --border-radius-4: 4px;
 
+  --c-dark-for-shadow: #000000;
+
   --box-shadow: -12px -12px 12px rgba(255, 255, 255, 0.32), 12px 12px 12px rgba(0, 0, 0, 0.32);
-  --box-shadow-2: -4px -4px 12px rgba(255, 255, 255, 0.8), 4px 4px 12px #000000;
-  --box-shadow-3: -4px -4px 12px rgba(255, 255, 255, 0.05), 4px 4px 12px #000000;
+  --box-shadow-2: -4px -4px 12px rgba(255, 255, 255, 0.8), 4px 4px 12px var(--c-dark-for-shadow);
+  --box-shadow-3: -4px -4px 12px rgba(255, 255, 255, 0.05), 4px 4px 12px var(--c-dark-for-shadow);
   --box-shadow-3-transparent: -4px -4px 12px rgba(255, 255, 255, 0), 4px 4px 12px rgba(0, 0, 0, 0);
   --box-shadow-4: -8px -8px 12px rgb(255 255 255 / 80%), 8px 8px 12px rgb(0 0 0 / 5%);
   --box-shadow-4-transparent: -8px -8px 12px rgb(255 255 255 / 0), 8px 8px 12px rgb(0 0 0 / 0);
@@ -90,5 +92,13 @@
   
   @media (--mobile) {
     --section-padding-y: 30px;
+  }
+
+  @media (prefers-contrast : more) {
+    --c-dark: #000000;
+    --c-dark-for-shadow: var(--c-gray);
+    --c-light: #FFFFFF;
+    --c-accent: #FFF000;
+    --focus-outline: 4px solid var(--focus-outline-color);
   }
 }
