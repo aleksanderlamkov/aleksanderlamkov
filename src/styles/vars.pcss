@@ -16,7 +16,8 @@
   --c-error: var(--c-red);
   --c-success: var(--c-green);
 
-  --c-overlay: rgba(0, 0, 0, 0.6);
+  --overlay-opacity: 0.6;
+  --c-overlay: rgba(0, 0, 0, var(--overlay-opacity));
 
   --border-radius: 16px;
   --border-radius-2: 32px;
@@ -100,5 +101,9 @@
     --c-light: #FFFFFF;
     --c-accent: #FFF000;
     --focus-outline: 4px solid var(--focus-outline-color);
+  }
+
+  @media (prefers-reduced-transparency) {
+    --overlay-opacity: 0.9;
   }
 }
