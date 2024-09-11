@@ -1,5 +1,4 @@
 import './style.pcss';
-import { getCookie, setCookie } from '../../js/utils/cookie'
 import { isMedia } from '../../js/utils/isMedia'
 
 export const instance = '[data-js-theme-switcher]'
@@ -14,7 +13,7 @@ export default class ThemeSwitcher {
     isLightThemeEnabled: 'is-light-theme-enabled'
   }
 
-  cookieKeys = {
+  localStorageKeys = {
     isLightThemeEnabled: 'isLightThemeEnabled'
   }
 
@@ -38,20 +37,26 @@ export default class ThemeSwitcher {
   }
 
   enableLightTheme() {
-    setCookie(this.cookieKeys.isLightThemeEnabled, 'true')
+    localStorage.setItem(this.localStorageKeys.isLightThemeEnabled, 'true')
     this.state.isLightThemeEnabled = true
     document.documentElement.classList.add(this.stateClasses.isLightThemeEnabled)
     this.checkbox.checked = true
   }
 
   disableLightTheme() {
-    setCookie(this.cookieKeys.isLightThemeEnabled, '')
+    localStorage.removeItem(this.localStorageKeys.isLightThemeEnabled)
     this.state.isLightThemeEnabled = false
     document.documentElement.classList.remove(this.stateClasses.isLightThemeEnabled)
     this.checkbox.checked = false
   }
 
   setInitialState() {
+    const isLightThemeEnabled = localStorage.getItem(this.localStorageKeys.isLightThemeEnabled)
+    if (isLightThemeEnabled) {
+      this.enableLightTheme()
+      return
+    }
+
     const isPrefersLightTheme = isMedia('(prefers-color-scheme: light)')
     if (isPrefersLightTheme) {
       this.enableLightTheme()
@@ -61,12 +66,6 @@ export default class ThemeSwitcher {
     const isPrefersDarkTheme = isMedia('(prefers-color-scheme: dark)')
     if (isPrefersDarkTheme) {
       this.disableLightTheme()
-      return
-    }
-
-    const isLightThemeEnabled = getCookie(this.cookieKeys.isLightThemeEnabled)
-    if (isLightThemeEnabled) {
-      this.enableLightTheme()
     }
   }
 

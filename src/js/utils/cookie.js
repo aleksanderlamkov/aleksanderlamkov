@@ -17,6 +17,7 @@ export const getCookie = (name) => {
  * @param options{Object=} = опции cookie
  */
 export const setCookie = (name, value, options = {}) => {
+    console.debug('setCookie')
     let expires = options.expires;
     if (typeof expires == 'number' && expires) {
         let d = new Date();
