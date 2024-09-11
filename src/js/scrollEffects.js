@@ -70,6 +70,7 @@ export default class ScrollEffects {
   }
 
   defaultSettings = {
+    loglevel: 0,
     triggerHook: .9,
     duration: '80%',
     offset: 25,
