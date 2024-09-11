@@ -24,7 +24,7 @@
   }
 
   &__checkbox {
-    &:focus {
+    &:focus-visible {
       & ~ .theme-switcher__body {
         outline: var(--focus-outline);
         outline-offset: 4px;
@@ -54,7 +54,7 @@
       will-change: transform;
 
       .is-light-theme-enabled & {
-        transform: translate3d(calc(var(--iconWrapperWidth) + var(--padding) * 2), -50%, 0);
+        transform: translate3d(calc(var(--iconWrapperWidth) + var(--padding)), -50%, 0);
       }
     }
   }
