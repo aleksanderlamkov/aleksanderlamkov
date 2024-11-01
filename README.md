@@ -16,7 +16,7 @@
 - <img src="assets/icons/platforms/rutube.svg" width="10"/>[ Rutube](https://rutube.ru/channel/39067233/)
 - <img src="assets/icons/platforms/tiktok.svg" width="10"/>[ TikTok](https://www.tiktok.com/@aleksanderlamkov)
 
-### 📚 Мои курсы:
+### 📚 Мои бесплатные курсы:
 - <img src="assets/icons/technologies/html.svg" width="10"/>[ HTML с 0 для начинающих](https://www.youtube.com/playlist?list=PL0MUAHwery4ot0KmgGxlBSB7rXssLeA6h)
 - <img src="assets/icons/technologies/css.svg" width="11"/>[ CSS с 0 для начинающих](https://www.youtube.com/playlist?list=PL0MUAHwery4o9I7QQVj_RP4ZVpmdx6evz)
 - <img src="assets/icons/technologies/js.svg" width="9"/>[ JavaScript с 0 для начинающих](https://www.youtube.com/playlist?list=PL0MUAHwery4qn4Y27iUxmzC-JiauX7vSL)
@@ -33,3 +33,9 @@
 - <img src="assets/icons/technologies/sass.svg" width="10"/>[ Ускоряем верстку | Гайд по препроцессору стилей | Sass (SCSS)](https://youtu.be/pBSch5AsJWs?si=VXcpbKTIBCu9BBwu)
 - <img src="assets/icons/technologies/bem.svg" width="10"/>[ БЭМ методология за 10 минут | Основы для начинающих](https://youtu.be/FH-t1mt-lSs?si=rTjJBYuirBi8xx4a)
 - 🤔 [Имена классов в верстке | Как лучше называть элементы в разметке](https://youtu.be/EVWT4exv4jA)
+
+### 🔬 Мои Open-Source проекты:
+- CSS Normalize — современная нормализация стилей
+  - <img src="assets/icons/platforms/github.svg" width="10"/>[ GitHub](https://github.com/aleksanderlamkov/css-normalize)
+  - <img src="assets/icons/platforms/npm.svg" width="10"/>[ NPM](https://www.npmjs.com/package/@a1rth/css-normalize)
+  - <img src="assets/icons/platforms/youtube.svg" width="10"/>[ YouTube](https://www.youtube.com/watch?v=A4Y5VwXGG9g&t=262s)
