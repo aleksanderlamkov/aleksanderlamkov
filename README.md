@@ -4,39 +4,39 @@
 
 * 🧐 Фронтенд-инженер самоучка
 * 💻 4+ года опыта коммерческой разработки
-* 💼 Работаю в [VK Team](https://team.vk.company/)
+* 💼 Работаю в <a href="https://team.vk.company/" target="_blank">VK Team</a>
 * 🎓 Окончил магистратуру по направлению _Software engineering_
-* 📺 Автор [YouTube-канала](https://www.youtube.com/@AleksanderLamkov) про фронтенд-разработку
-* 💬 Развиваю сообщество [Friendly Frontend Community](https://t.me/friendlyFrontendChat) для новичков во фронтенд-разработке
+* 📺 Автор <a href="https://www.youtube.com/@AleksanderLamkov" target="_blank">YouTube-канала</a> про фронтенд-разработку
+* 💬 Развиваю сообщество <a href="https://t.me/friendlyFrontendChat" target="_blank">Friendly Frontend Community</a> для новичков во фронтенд-разработке
 
 ### 📺 Где меня посмотреть / послушать / почитать
-- <img src="assets/icons/platforms/youtube.svg" width="10"/>[ YouTube](https://www.youtube.com/@AleksanderLamkov)
-- <img src="assets/icons/platforms/telegram.svg" width="10"/>[ Telegram](https://t.me/friendlyFrontend)
-- <img src="assets/icons/platforms/dzen.svg" width="10"/>[ Дзен](https://dzen.ru/aleksanderlamkov)
-- <img src="assets/icons/platforms/rutube.svg" width="10"/>[ Rutube](https://rutube.ru/channel/39067233/)
-- <img src="assets/icons/platforms/tiktok.svg" width="10"/>[ TikTok](https://www.tiktok.com/@aleksanderlamkov)
+- <img src="assets/icons/platforms/youtube.svg" width="10"/><a href="https://www.youtube.com/@AleksanderLamkov" target="_blank"> YouTube</a>
+- <img src="assets/icons/platforms/telegram.svg" width="10"/><a href="https://t.me/friendlyFrontend" target="_blank"> Telegram</a>
+- <img src="assets/icons/platforms/dzen.svg" width="10"/><a href="https://dzen.ru/aleksanderlamkov" target="_blank"> Дзен</a>
+- <img src="assets/icons/platforms/rutube.svg" width="10"/><a href="https://rutube.ru/channel/39067233/" target="_blank"> Rutube</a>
+- <img src="assets/icons/platforms/tiktok.svg" width="10"/><a href="https://www.tiktok.com/@aleksanderlamkov" target="_blank"> TikTok</a>
 
 ### 📚 Мои бесплатные курсы:
-- <img src="assets/icons/technologies/html.svg" width="10"/>[ HTML с 0 для начинающих](https://www.youtube.com/playlist?list=PL0MUAHwery4ot0KmgGxlBSB7rXssLeA6h)
-- <img src="assets/icons/technologies/css.svg" width="11"/>[ CSS с 0 для начинающих](https://www.youtube.com/playlist?list=PL0MUAHwery4o9I7QQVj_RP4ZVpmdx6evz)
-- <img src="assets/icons/technologies/js.svg" width="9"/>[ JavaScript с 0 для начинающих](https://www.youtube.com/playlist?list=PL0MUAHwery4qn4Y27iUxmzC-JiauX7vSL)
-- <img src="assets/icons/technologies/a11y.svg" width="10"/>[ Accessibility](https://www.youtube.com/playlist?list=PL0MUAHwery4r4gCA3AOtHgArM_UOb2QUV)
+- <img src="assets/icons/technologies/html.svg" width="10"/><a href="https://www.youtube.com/playlist?list=PL0MUAHwery4ot0KmgGxlBSB7rXssLeA6h" target="_blank"> HTML с 0 для начинающих</a>
+- <img src="assets/icons/technologies/css.svg" width="11"/><a href="https://www.youtube.com/playlist?list=PL0MUAHwery4o9I7QQVj_RP4ZVpmdx6evz" target="_blank"> CSS с 0 для начинающих</a>
+- <img src="assets/icons/technologies/js.svg" width="9"/><a href="https://www.youtube.com/playlist?list=PL0MUAHwery4qn4Y27iUxmzC-JiauX7vSL" target="_blank"> JavaScript с 0 для начинающих</a>
+- <img src="assets/icons/technologies/a11y.svg" width="10"/><a href="https://www.youtube.com/playlist?list=PL0MUAHwery4r4gCA3AOtHgArM_UOb2QUV" target="_blank"> Accessibility</a>
 
 ### 💻 Мои мастер-классы по разработке:
-- 👨‍💻[ Адаптивная верстка сайта с 0 для начинающих | HTML, CSS, Figma практика](https://www.youtube.com/playlist?list=PL0MUAHwery4rqkzKF1mDBCIH_eZgjY6uN)
-- 🧑‍💻[ Адаптивная верстка сайта с 0 для начинающих | HTML, БЭМ, SCSS, Figma практика](https://www.youtube.com/playlist?list=PL0MUAHwery4rdZt-8E9p9zty2ZUCH6Ai3)
+- 👨‍💻<a href="https://www.youtube.com/playlist?list=PL0MUAHwery4rqkzKF1mDBCIH_eZgjY6uN" target="_blank"> Адаптивная верстка сайта с 0 для начинающих | HTML, CSS, Figma практика</a>
+- 🧑‍💻<a href="https://www.youtube.com/playlist?list=PL0MUAHwery4rdZt-8E9p9zty2ZUCH6Ai3" target="_blank"> Адаптивная верстка сайта с 0 для начинающих | HTML, БЭМ, SCSS, Figma практика</a>
 
 ### ⭐ Мои избранные видеоматериалы:
-- <img src="assets/icons/platforms/shorts.svg" width="8"/>[ Frontend Tricks & Tips (Shorts)](https://www.youtube.com/@AleksanderLamkov/shorts)
-- <img src="assets/icons/technologies/chrome.svg" width="10"/>[ Редкие и малоизвестные фичи DevTools, о которых ты не знал](https://www.youtube.com/playlist?list=PL0MUAHwery4qW_mKistLNWlh5ss1tstNi)
-- 👨‍🏫 [Frontend Roadmap 2024 | Что должен учить фронтенд-разработчик в 2024 году](https://youtu.be/1WRJKgwlX9w?si=c11wdZqqMfa-B3xL)
-- <img src="assets/icons/technologies/sass.svg" width="10"/>[ Ускоряем верстку | Гайд по препроцессору стилей | Sass (SCSS)](https://youtu.be/pBSch5AsJWs?si=VXcpbKTIBCu9BBwu)
-- <img src="assets/icons/technologies/bem.svg" width="10"/>[ БЭМ методология за 10 минут | Основы для начинающих](https://youtu.be/FH-t1mt-lSs?si=rTjJBYuirBi8xx4a)
-- 🤔 [Имена классов в верстке | Как лучше называть элементы в разметке](https://youtu.be/EVWT4exv4jA)
+- <img src="assets/icons/platforms/shorts.svg" width="8"/><a href="https://www.youtube.com/@AleksanderLamkov/shorts" target="_blank"> Frontend Tricks & Tips (Shorts)</a>
+- <img src="assets/icons/technologies/chrome.svg" width="10"/><a href="https://www.youtube.com/playlist?list=PL0MUAHwery4qW_mKistLNWlh5ss1tstNi" target="_blank"> Редкие и малоизвестные фичи DevTools, о которых ты не знал</a>
+- 👨‍🏫 <a href="https://youtu.be/1WRJKgwlX9w?si=c11wdZqqMfa-B3xL" target="_blank">Frontend Roadmap 2024 | Что должен учить фронтенд-разработчик в 2024 году</a>
+- <img src="assets/icons/technologies/sass.svg" width="10"/><a href="https://youtu.be/pBSch5AsJWs?si=VXcpbKTIBCu9BBwu" target="_blank"> Ускоряем верстку | Гайд по препроцессору стилей | Sass (SCSS)</a>
+- <img src="assets/icons/technologies/bem.svg" width="10"/><a href="https://youtu.be/FH-t1mt-lSs?si=rTjJBYuirBi8xx4a" target="_blank"> БЭМ методология за 10 минут | Основы для начинающих</a>
+- 🤔 <a href="https://youtu.be/EVWT4exv4jA" target="_blank">Имена классов в верстке | Как лучше называть элементы в разметке</a>
 
 ### 🔬 Open-Source проекты:
 - CSS Normalize — современная нормализация стилей
-  - <img src="assets/icons/platforms/github.svg" width="10"/>[ GitHub](https://github.com/aleksanderlamkov/css-normalize)
-  - <img src="assets/icons/platforms/npm.svg" width="10"/>[ NPM](https://www.npmjs.com/package/@a1rth/css-normalize)
-  - <img src="assets/icons/platforms/youtube.svg" width="10"/>[ YouTube](https://www.youtube.com/watch?v=A4Y5VwXGG9g&t=262s)
-- Статьи и FAQ на [doka.guide](https://doka.guide/people/aleksanderlamkov/)
+  - <img src="assets/icons/platforms/github.svg" width="10"/> <a href="https://github.com/aleksanderlamkov/css-normalize" target="_blank">GitHub</a>
+  - <img src="assets/icons/platforms/npm.svg" width="10"/> <a href="https://www.npmjs.com/package/@a1rth/css-normalize" target="_blank">NPM</a>
+  - <img src="assets/icons/platforms/youtube.svg" width="10"/> <a href="https://www.youtube.com/watch?v=A4Y5VwXGG9g&t=262s" target="_blank">YouTube</a>
+- Статьи и FAQ на <a href="https://doka.guide/people/aleksanderlamkov/" target="_blank">doka.guide</a>
