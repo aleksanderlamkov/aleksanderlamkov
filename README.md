@@ -34,8 +34,9 @@
 - <img src="assets/icons/technologies/bem.svg" width="10"/>[ БЭМ методология за 10 минут | Основы для начинающих](https://youtu.be/FH-t1mt-lSs?si=rTjJBYuirBi8xx4a)
 - 🤔 [Имена классов в верстке | Как лучше называть элементы в разметке](https://youtu.be/EVWT4exv4jA)
 
-### 🔬 Мои Open-Source проекты:
+### 🔬 Open-Source проекты:
 - CSS Normalize — современная нормализация стилей
   - <img src="assets/icons/platforms/github.svg" width="10"/>[ GitHub](https://github.com/aleksanderlamkov/css-normalize)
   - <img src="assets/icons/platforms/npm.svg" width="10"/>[ NPM](https://www.npmjs.com/package/@a1rth/css-normalize)
   - <img src="assets/icons/platforms/youtube.svg" width="10"/>[ YouTube](https://www.youtube.com/watch?v=A4Y5VwXGG9g&t=262s)
+- Статьи и FAQ на [doka.guide](https://doka.guide/people/aleksanderlamkov/)
