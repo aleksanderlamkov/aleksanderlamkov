@@ -6,6 +6,26 @@
 * 💻 4+ года опыта коммерческой разработки
 * 💼 Работаю в <a href="https://team.vk.company/" target="_blank">VK Team</a>
 * 🎓 Окончил магистратуру по направлению _Software engineering_
+* <details>
+  <summary>🔧 Стек технологий</summary>
+
+  - HTML (HTML5), EJS, JSX
+  - CSS (CSS3), Sass (SCSS), PostCSS, Bootstrap, Tailwind, Animations
+  - JavaScript (ES6+, OOP), jQuery, TypeScript
+  - React
+  - Redux (Redux Toolkit, Redux Persist), Zustand
+  - Formik, React Hook Form, Yup, Axios, React Router, React Query
+  - Webpack, Vite, Gulp, Rollup
+  - Jest, React Testing Library, Enzyme, Chai, Mocha, Vitest
+  - REST API, WebSockets, Long Polling
+  - BEM, Feature-Sliced Design, Accessibility, UX
+  - Git (GitHub, BitBucket, GitLab)
+  - Figma, Adobe Photoshop, Avocode
+  - CMS 1С-Битрикс, Drupal, OpenCart, MODX
+  - CRM Битрикс24, Asana, Trello, Jira, Notion
+  - PHP, Blade, Twig
+  - Agile, Waterfall, SCRUM
+  </details>
 * 📺 Автор <a href="https://www.youtube.com/@AleksanderLamkov" target="_blank">YouTube-канала</a> про фронтенд-разработку
 * 💬 Развиваю сообщество <a href="https://t.me/friendlyFrontendChat" target="_blank">Friendly Frontend Community</a> для новичков во фронтенд-разработке
 
