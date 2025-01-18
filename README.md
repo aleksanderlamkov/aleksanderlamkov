@@ -45,11 +45,12 @@
 ### 💻 Мои мастер-классы по разработке:
 - 👨‍💻<a href="https://www.youtube.com/playlist?list=PL0MUAHwery4rqkzKF1mDBCIH_eZgjY6uN" target="_blank"> Адаптивная верстка сайта с 0 для начинающих | HTML, CSS, Figma практика</a>
 - 🧑‍💻<a href="https://www.youtube.com/playlist?list=PL0MUAHwery4rdZt-8E9p9zty2ZUCH6Ai3" target="_blank"> Адаптивная верстка сайта с 0 для начинающих | HTML, БЭМ, SCSS, Figma практика</a>
+- 🧑‍💻<a href="https://youtu.be/hkYzqTKnSIg" target="_blank"> Вёрстка сайта с нуля • HTML, SCSS, JS практика • Подробное объяснение по шагам • Проект в портфолио</a>
 
 ### ⭐ Мои избранные видеоматериалы:
 - <img src="assets/icons/platforms/shorts.svg" width="8"/><a href="https://www.youtube.com/@AleksanderLamkov/shorts" target="_blank"> Frontend Tricks & Tips (Shorts)</a>
 - <img src="assets/icons/technologies/chrome.svg" width="10"/><a href="https://www.youtube.com/playlist?list=PL0MUAHwery4qW_mKistLNWlh5ss1tstNi" target="_blank"> Редкие и малоизвестные фичи DevTools, о которых ты не знал</a>
-- 👨‍🏫 <a href="https://youtu.be/1WRJKgwlX9w?si=c11wdZqqMfa-B3xL" target="_blank">Frontend Roadmap 2024 | Что должен учить фронтенд-разработчик в 2024 году</a>
+- 👨‍🏫 <a href="https://youtu.be/1WRJKgwlX9w?si=c11wdZqqMfa-B3xL" target="_blank">Frontend Roadmap 2024 | Что должен учить фронтенд-разработчик в 2024-2025 году</a>
 - <img src="assets/icons/technologies/sass.svg" width="10"/><a href="https://youtu.be/pBSch5AsJWs?si=VXcpbKTIBCu9BBwu" target="_blank"> Ускоряем верстку | Гайд по препроцессору стилей | Sass (SCSS)</a>
 - <img src="assets/icons/technologies/bem.svg" width="10"/><a href="https://youtu.be/FH-t1mt-lSs?si=rTjJBYuirBi8xx4a" target="_blank"> БЭМ методология за 10 минут | Основы для начинающих</a>
 - 🤔 <a href="https://youtu.be/EVWT4exv4jA" target="_blank">Имена классов в верстке | Как лучше называть элементы в разметке</a>
