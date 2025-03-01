@@ -35,7 +35,7 @@
 - <img src="assets/icons/platforms/dzen.svg" width="10"/><a href="https://dzen.ru/aleksanderlamkov" target="_blank"> Дзен</a>
 - <img src="assets/icons/platforms/rutube.svg" width="10"/><a href="https://rutube.ru/channel/39067233/" target="_blank"> Rutube</a>
 - <img src="assets/icons/platforms/tiktok.svg" width="10"/><a href="https://www.tiktok.com/@aleksanderlamkov" target="_blank"> TikTok</a>
-- <img src="assets/icons/platforms/instagram.svg" width="10"/><a href="hhttps://www.instagram.com/a1rth" target="_blank"> Instagram</a>
+- <img src="assets/icons/platforms/instagram.svg" width="10"/><a href="https://www.instagram.com/a1rth" target="_blank"> Instagram</a>
 
 ### 🙈 Менторство, платные материалы, поддержка донатом
 - <img src="assets/icons/platforms/getmentor.png" width="10"/><a href="https://getmentor.dev/mentor/aleksandr-lamkov-1480" target="_blank"> GetMentor</a>
