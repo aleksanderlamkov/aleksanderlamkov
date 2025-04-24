@@ -37,6 +37,13 @@
 - <img src="assets/icons/platforms/tiktok.svg" width="10"/><a href="https://www.tiktok.com/@aleksanderlamkov" target="_blank"> TikTok</a>
 - <img src="assets/icons/platforms/instagram.svg" width="10"/><a href="https://www.instagram.com/a1rth" target="_blank"> Instagram</a>
 
+### 🎙 Интервью со мной:
+- Всё про FRONTEND | С Чего начать | Работа в VK | Roadmap | Большие зарплаты | Александр Ламков
+  - <img src="assets/icons/platforms/youtube.svg" width="10"/><a href="https://youtu.be/DD5v6p4fFQg" target="_blank"> YouTube</a>
+  - <img src="assets/icons/platforms/dzen.svg" width="10"/><a href="https://dzen.ru/video/watch/67fbc037a35c9016d914693f" target="_blank"> Дзен</a>
+  - <img src="assets/icons/platforms/rutube.svg" width="10"/><a href="https://rutube.ru/video/0743b60b6e3d3c78ff7f2c77325d618b/" target="_blank"> Rutube</a>
+  - <img src="assets/icons/platforms/vk.svg" width="10"/><a href="https://vk.com/video-229700318_456239050" target="_blank"> VK</a>
+
 ### 🙈 Менторство, платные материалы, поддержка донатом
 - <img src="assets/icons/platforms/getmentor.png" width="10"/><a href="https://getmentor.dev/mentor/aleksandr-lamkov-1480" target="_blank"> GetMentor</a>
 - <img src="assets/icons/platforms/stepik.svg" width="10"/><a href="https://stepik.org/users/1001545715/teach" target="_blank"> Stepik</a>
