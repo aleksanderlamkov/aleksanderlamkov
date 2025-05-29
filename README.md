@@ -27,11 +27,11 @@
   - Agile, Waterfall, SCRUM
   </details>
 * 📺 Автор <a href="https://www.youtube.com/@AleksanderLamkov" target="_blank">YouTube-канала</a> про фронтенд-разработку
-* 💬 Развиваю сообщество <a href="https://t.me/friendlyFrontendChat" target="_blank">Friendly Frontend Community</a> для новичков во фронтенд-разработке
+* 💬 Развиваю сообщество <a href="https://t.me/FriendlyFrontend" target="_blank">Friendly Frontend Community</a> для новичков во фронтенд-разработке
 
 ### 📺 Где меня посмотреть / послушать / почитать
 - <img src="assets/icons/platforms/youtube.svg" width="10"/><a href="https://www.youtube.com/@AleksanderLamkov" target="_blank"> YouTube</a>
-- <img src="assets/icons/platforms/telegram.svg" width="10"/><a href="https://t.me/friendlyFrontend" target="_blank"> Telegram</a>
+- <img src="assets/icons/platforms/telegram.svg" width="10"/><a href="https://t.me/AleksanderLamkov" target="_blank"> Telegram</a>
 - <img src="assets/icons/platforms/dzen.svg" width="10"/><a href="https://dzen.ru/aleksanderlamkov" target="_blank"> Дзен</a>
 - <img src="assets/icons/platforms/rutube.svg" width="10"/><a href="https://rutube.ru/channel/39067233/" target="_blank"> Rutube</a>
 - <img src="assets/icons/platforms/tiktok.svg" width="10"/><a href="https://www.tiktok.com/@aleksanderlamkov" target="_blank"> TikTok</a>
@@ -53,7 +53,8 @@
 - <img src="assets/icons/technologies/html.svg" width="10"/><a href="https://www.youtube.com/playlist?list=PL0MUAHwery4ot0KmgGxlBSB7rXssLeA6h" target="_blank"> HTML с 0 для начинающих</a>
 - <img src="assets/icons/technologies/css.svg" width="11"/><a href="https://www.youtube.com/playlist?list=PL0MUAHwery4o9I7QQVj_RP4ZVpmdx6evz" target="_blank"> CSS с 0 для начинающих</a>
 - <img src="assets/icons/technologies/js.svg" width="9"/><a href="https://www.youtube.com/playlist?list=PL0MUAHwery4qn4Y27iUxmzC-JiauX7vSL" target="_blank"> JavaScript с 0 для начинающих</a>
-- <img src="assets/icons/technologies/a11y.svg" width="10"/><a href="https://www.youtube.com/playlist?list=PL0MUAHwery4r4gCA3AOtHgArM_UOb2QUV" target="_blank"> Accessibility</a>
+- <img src="assets/icons/technologies/a11y.svg" width="10"/><a href="https://www.youtube.com/playlist?list=PL0MUAHwery4r4gCA3AOtHgArM_UOb2QUV" target="_blank"> Accessibility (мини-курс) </a>
+- <img src="assets/icons/technologies/git.svg" width="10"/><a href="https://youtu.be/eMETcugEX_c" target="_blank"> Git для начинающих (мини-курс)</a>
 
 ### 💻 Мои мастер-классы по разработке:
 - 👨‍💻<a href="https://www.youtube.com/playlist?list=PL0MUAHwery4rqkzKF1mDBCIH_eZgjY6uN" target="_blank"> Адаптивная верстка сайта с 0 для начинающих | HTML, CSS, Figma практика (3.5 часа практики)</a>
@@ -69,6 +70,7 @@
 - <img src="assets/icons/technologies/bem.svg" width="10"/><a href="https://youtu.be/FH-t1mt-lSs?si=rTjJBYuirBi8xx4a" target="_blank"> БЭМ методология за 10 минут | Основы для начинающих</a>
 - 🤔 <a href="https://youtu.be/EVWT4exv4jA" target="_blank">Имена классов в верстке | Как лучше называть элементы в разметке</a>
 - <img src="assets/icons/platforms/npm.svg" width="10"/><a href="https://youtu.be/IsRl03T9VMo" target="_blank"> NPM для начинающих. Полный гайд: установка, команды, флаги, разбор package.json, версионирование</a>
+- <img src="assets/icons/soft/webstorm.svg" width="10"/><a href="https://youtu.be/PLU2AuU6wlU" target="_blank"> WebStorm настройки для быстрой и удобной работы • Плагины • Git GUI • Шаблоны и сниппеты • Обзор IDE</a>
 
 ### 🔬 Open-Source проекты:
 - CSS Normalize — современная нормализация стилей
