@@ -3,7 +3,7 @@
 ![](assets/bg.jpg)
 
 * 🧐 Фронтенд-инженер самоучка
-* 💻 ~5 лет опыта коммерческой разработки
+* 💻 5+ лет опыта коммерческой разработки
 * 💼 Работаю в <a href="https://team.vk.company/" target="_blank">VK Team</a>
 * 🎓 Окончил магистратуру по направлению _Software engineering_
 * <details>
@@ -16,6 +16,7 @@
   - Redux (Redux Toolkit, Redux Persist), Zustand
   - Formik, React Hook Form, Yup, Axios, React Router, React Query
   - Webpack, Vite, Gulp, Rollup
+  - ESLint, Stylelint, Prettier
   - Jest, React Testing Library, Enzyme, Chai, Mocha, Vitest
   - REST API, WebSockets, Long Polling
   - BEM, Feature-Sliced Design, Accessibility, UX
@@ -55,12 +56,14 @@
 - <img src="assets/icons/technologies/js.svg" width="9"/><a href="https://www.youtube.com/playlist?list=PL0MUAHwery4qn4Y27iUxmzC-JiauX7vSL" target="_blank"> JavaScript с 0 для начинающих</a>
 - <img src="assets/icons/technologies/a11y.svg" width="10"/><a href="https://www.youtube.com/playlist?list=PL0MUAHwery4r4gCA3AOtHgArM_UOb2QUV" target="_blank"> Accessibility (мини-курс) </a>
 - <img src="assets/icons/technologies/git.svg" width="10"/><a href="https://youtu.be/eMETcugEX_c" target="_blank"> Git для начинающих (мини-курс)</a>
+- <img src="assets/icons/technologies/react.svg" width="9"/><a href="https://youtube.com/playlist?list=PL0MUAHwery4omH4GyVQ-lI2R326tOdN7A" target="_blank"> React JS с 0 для начинающих</a>
 
 ### 💻 Мои мастер-классы по разработке:
 - 👨‍💻<a href="https://www.youtube.com/playlist?list=PL0MUAHwery4rqkzKF1mDBCIH_eZgjY6uN" target="_blank"> Адаптивная верстка сайта с 0 для начинающих | HTML, CSS, Figma практика (3.5 часа практики)</a>
 - 🧑‍💻<a href="https://www.youtube.com/playlist?list=PL0MUAHwery4rdZt-8E9p9zty2ZUCH6Ai3" target="_blank"> Адаптивная верстка сайта с 0 для начинающих | HTML, БЭМ, SCSS, Figma практика (4 часа практики)</a>
 - 🧑‍💻<a href="https://youtu.be/hkYzqTKnSIg" target="_blank"> Вёрстка сайта с нуля • HTML, SCSS, JS практика • Подробное объяснение по шагам • Проект в портфолио (12 часов практики)</a>
 - 🧑‍💻<a href="https://stepik.org/a/228315" target="_blank"> Вёрстка сайта с нуля • JSX, SCSS, JS, Vite, Minista, БЭМ (16 часов практики)</a>
+- <img src="assets/icons/technologies/js.svg" width="10"/><a href="https://youtu.be/tBl1n9VPdMk" target="_blank"> To Do List на чистом JavaScript — без фреймворков и библиотек</a>
 
 ### ⭐ Мои избранные видеоматериалы:
 - <img src="assets/icons/platforms/shorts.svg" width="8"/><a href="https://www.youtube.com/@AleksanderLamkov/shorts" target="_blank"> Frontend Tricks & Tips (Shorts)</a>
@@ -71,10 +74,22 @@
 - 🤔 <a href="https://youtu.be/EVWT4exv4jA" target="_blank">Имена классов в верстке | Как лучше называть элементы в разметке</a>
 - <img src="assets/icons/platforms/npm.svg" width="10"/><a href="https://youtu.be/IsRl03T9VMo" target="_blank"> NPM для начинающих. Полный гайд: установка, команды, флаги, разбор package.json, версионирование</a>
 - <img src="assets/icons/soft/webstorm.svg" width="10"/><a href="https://youtu.be/PLU2AuU6wlU" target="_blank"> WebStorm настройки для быстрой и удобной работы • Плагины • Git GUI • Шаблоны и сниппеты • Обзор IDE</a>
+- <img src="assets/icons/technologies/vite.svg" width="10"/><a href="https://youtu.be/Ib7Pj38m0wQ" target="_blank"> Vite — лучший сборщик для фронтенда в 2025: почему его выбирают все</a>
+- <img src="assets/icons/technologies/react.svg" width="10"/><a href="https://youtu.be/WoolADiqRE8" target="_blank"> Как писать сайты на JSX (без React) и собирать их через Vite: Minista в деле</a>
+- <img src="assets/icons/technologies/eslint.svg" width="10"/><a href="https://youtu.be/jwTwnI3hwig" target="_blank"> Линтеры и форматтеры в фронтенде: ESLint, Stylelint и Prettier без боли</a>
+- <img src="assets/icons/technologies/vite.svg" width="10"/><a href="https://youtu.be/0nqwWprv5Qs" target="_blank"> Мой стартовый шаблон для вёрстки: Minista + JSX + Vite — без Gulp и Webpack</a>
 
 ### 🔬 Open-Source проекты:
 - CSS Normalize — современная нормализация стилей
   - <img src="assets/icons/platforms/github.svg" width="10"/> <a href="https://github.com/aleksanderlamkov/css-normalize" target="_blank">GitHub</a>
   - <img src="assets/icons/platforms/npm.svg" width="10"/> <a href="https://www.npmjs.com/package/@a1rth/css-normalize" target="_blank">NPM</a>
   - <img src="assets/icons/platforms/youtube.svg" width="10"/> <a href="https://www.youtube.com/watch?v=A4Y5VwXGG9g&t=262s" target="_blank">YouTube</a>
+- Friendly Frontend Lint Config — общие конфигурации для линтеров и форматтеров во фронтенд-проектах
+  - <img src="assets/icons/platforms/github.svg" width="10"/> <a href="https://github.com/aleksanderlamkov/friendly-frontend-lint-config" target="_blank">GitHub</a>
+  - <img src="assets/icons/platforms/npm.svg" width="10"/> <a href="https://www.npmjs.com/package/friendly-frontend-lint-config" target="_blank">NPM</a>
+  - <img src="assets/icons/platforms/youtube.svg" width="10"/> <a href="https://www.youtube.com/watch?v=0nqwWprv5Qs&t=836s" target="_blank">YouTube</a>
+- Create Friendly Frontend — удобный старт для вёрстки с JSX
+  - <img src="assets/icons/platforms/github.svg" width="10"/> <a href="https://github.com/aleksanderlamkov/create-friendly-frontend" target="_blank">GitHub</a>
+  - <img src="assets/icons/platforms/npm.svg" width="10"/> <a href="https://www.npmjs.com/package/create-friendly-frontend" target="_blank">NPM</a>
+  - <img src="assets/icons/platforms/youtube.svg" width="10"/> <a href="https://youtu.be/0nqwWprv5Qs" target="_blank">YouTube</a>
 - Статьи и FAQ на <a href="https://doka.guide/people/aleksanderlamkov/" target="_blank">doka.guide</a>
