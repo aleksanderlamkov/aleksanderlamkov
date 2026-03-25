@@ -4,7 +4,6 @@
 
 * 🧐 Фронтенд-инженер самоучка
 * 💻 5+ лет опыта коммерческой разработки
-* 💼 Работаю в <a href="https://team.vk.company/" target="_blank">VK Team</a>
 * 🎓 Окончил магистратуру по направлению _Software engineering_
 * <details>
   <summary>🔧 Стек технологий</summary>
